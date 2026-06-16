@@ -1,0 +1,103 @@
+/* ============================================
+   Álbumes y sencillos populares (cards cuadradas)
+   ============================================ */
+
+.popular-albums-sec {
+  margin-top: 10px;
+}
+
+.popular-albums-grid {
+  display: grid;
+  gap: clamp(16px, 2vw, 22px);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* Para la página de "Mostrar todo" (un poco más denso en desktop) */
+.popular-albums-grid--all {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.popular-album {
+  min-width: 0;
+}
+
+/* Cuando el card es un <button>, reseteamos estilos nativos */
+button.popular-album {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+button.popular-album:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--brand) 75%, white);
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+.popular-album-coverWrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0b0f14;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  transition: transform var(--transition-quick), box-shadow var(--transition-smooth), filter var(--transition-smooth);
+}
+
+.popular-album:hover .popular-album-coverWrap {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.62);
+  filter: saturate(1.05);
+}
+
+.popular-album-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.popular-album-title {
+  margin-top: 10px;
+  font-size: 1.02rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.15;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular-album-artist {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .popular-albums-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .popular-albums-grid--all { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+@media (max-width: 980px) {
+  .popular-albums-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .popular-albums-grid--all { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .popular-albums-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .popular-albums-grid--all { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .popular-albums-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .popular-albums-grid--all { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

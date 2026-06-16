@@ -1,0 +1,263 @@
+
+/* src/dashboard/dashboard.css */
+
+.dash {
+  display: block;
+  padding: 16px 24px;
+  color: #fff;
+  background: #0f0f10;
+}
+
+.loading-section {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1a1a1b 25%, #222325 37%, #1a1a1b 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  margin: 16px 0;
+}
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+.sec {
+  margin: 24px 0;
+}
+
+.sec-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* ---------- Géneros (chips antiguos, por si aún se usa en otra vista) ---------- */
+.chips-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.chip {
+  background: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #2a3443;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+  background: #243244;
+  border-color: #3a4962;
+}
+
+/* ---------- Artistas ---------- */
+.artist-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.artist-img {
+  width: 110px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #111;
+  border: 1px solid #222;
+}
+
+.artist-name {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+/* ---------- Álbumes (Novedades) ---------- */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.album-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* cuadrada */
+  object-fit: cover;    /* sin deformación */
+  border-radius: 8px;
+  background: #111;
+  border: 1px solid #222;
+}
+
+.album-title {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f3f4f6;
+}
+
+.album-artist {
+  margin-top: 2px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   Cabecera de sección (título + mostrar todo / controles)
+================================ */
+.sec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-1px);
+}
+
+.carousel-btn:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.9);
+  outline-offset: 2px;
+}
+
+/* ================================
+   GÉNEROS: 3 cards en una sola línea, ocupando todo el ancho
+   (sin scroll horizontal)
+================================ */
+
+/* Track (fila) */
+.genre-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
+
+  overflow: hidden;   /* ⬅️ sin scroll */
+  padding: 4px 2px 6px;
+  margin-top: 8px;
+
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Card (3 visibles siempre) */
+.genre-card {
+  flex: 0 0 calc((100% - 36px) / 3); /* 18px gap * 2 = 36px */
+  height: 72px;                      /* ⬅️ altura suficiente para círculo 64px */
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 14px;
+
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.genre-card:hover {
+  opacity: 0.98;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.30);
+}
+
+
+/* Título del género (si tu span tiene clase, mejor) */
+.genre-title {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 1.05rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.1;
+
+  /* Evita que el texto “salte” con nombres largos */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* Responsive: en pantallas pequeñas permite 1 o 2 por fila (mejor UX) */
+@media (max-width: 900px) {
+  .genre-carousel {
+    overflow-x: auto;                 /* en móvil sí dejamos scroll */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .genre-carousel::-webkit-scrollbar { height: 0px; }
+
+  .genre-card {
+    flex: 0 0 70%;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 520px) {
+  .genre-card {
+    flex: 0 0 88%;
+  }
+}
+/* Fondo blanco solo para dashboard admin */
+.dash-admin {
+  background-color: #ffffff;
+  color: #111;
+  min-height: 100vh;
+}
+
+/* también el header en claro */
+.dash-admin .dash-header {
+  background-color: #ffffff;
+}
+
+/* texto en oscuro */
+.dash-admin .dash-title {
+  color: #111;
+}

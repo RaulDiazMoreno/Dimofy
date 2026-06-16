@@ -1,0 +1,21 @@
+.simple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.simple-card {
+  background: #111;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #333;
+  transition: 0.2s ease;
+}
+
+.simple-card:hover {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+}

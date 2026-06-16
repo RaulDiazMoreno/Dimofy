@@ -1,0 +1,37 @@
+INFORME DE ÁLBUMES SIN IMAGEN
+Fecha: 2026-05-03T18:23:41.738415600
+Carpeta revisada: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover
+==================================================
+
+ID Album: 312
+Título: Classic Pt. II
+Artista: BRYAN ADAMS
+Cover en BD: /assets/Cover/Bryan Adams - Classic Pt. II.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Bryan Adams - Classic Pt. II.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 775
+Título: Tax Free Bounces
+Artista: ABC
+Cover en BD: /assets/Cover/ABC - Tax Free Bounces.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\ABC - Tax Free Bounces.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 3794
+Título: AMAB/ACAB
+Artista: Evan Greer
+Cover en BD: /assets/Cover/ACAB.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\ACAB.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 3997
+Título: Horizons/West
+Artista: THRICE
+Cover en BD: /assets/Cover/West.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\West.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+
+==================================================
+Total álbumes revisados: 5267
+Total álbumes sin imagen: 4

@@ -1,0 +1,189 @@
+/* consultar-lista-dark.css */
+
+.cl-page{
+  min-height: 100vh;
+  padding: 22px 26px 34px;
+  color: rgba(255,255,255,.92);
+  background:
+    radial-gradient(1200px 700px at 12% 8%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(900px 600px at 90% 12%, rgba(255,255,255,.06), transparent 55%),
+    radial-gradient(900px 700px at 70% 90%, rgba(255,255,255,.05), transparent 55%),
+    #070a0e;
+}
+
+.cl-panel{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 18px 22px;
+  border-radius: 16px;
+  background: rgba(10, 14, 20, .62);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 14px 36px rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== Header card (cover + info) ===== */
+.cl-header{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.28);
+  box-shadow: 0 14px 34px rgba(0,0,0,.45);
+  margin-bottom: 16px;
+}
+
+.cl-cover{
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+.cl-htext{
+  flex: 1;
+  min-width: 0;
+}
+
+.cl-title{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin: 0;
+  font-size: 1.5rem; /* ~h5 */
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: rgba(255,255,255,.92);
+}
+
+.cl-sub{
+  margin: 6px 0 0;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cl-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.cl-actions{
+  display:flex;
+  justify-content: flex-end;
+}
+
+/* botón dashboard */
+.cl-btn{
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  background: rgba(255,255,255,.08) !important;
+  color: rgba(255,255,255,.92) !important;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+.cl-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.22) !important;
+}
+
+/* ===== Tabla canciones ===== */
+.cl-table-wrap{
+  margin-top: 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 18px 44px rgba(0,0,0,.55);
+  background: rgba(0,0,0,.22);
+}
+
+/* react-data-table-component */
+.cl-table .rdt_Table{ background: transparent; }
+
+/* Cabecera oscura */
+.cl-table .rdt_TableHeadRow{
+  background: #121212 !important;
+  border-bottom: 2px solid rgba(255,255,255,.18) !important;
+}
+.cl-table .rdt_TableCol{
+  color: #fff !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  letter-spacing: .2px;
+}
+
+/* Cuerpo claro + texto negro */
+.cl-table .rdt_TableBody{ background: #f2f2f2 !important; }
+.cl-table .rdt_TableRow{
+  background: #f2f2f2 !important;
+  color: #111 !important;
+  border-bottom: 1px solid rgba(0,0,0,.10) !important;
+  min-height: 54px;
+}
+.cl-table .rdt_TableRow:hover{ background: #e7e7e7 !important; }
+.cl-table .rdt_TableCell{ color: #111 !important; font-size: 13px; }
+
+/* Paginación */
+.cl-table .rdt_Pagination{
+  background: rgba(0,0,0,.22) !important;
+  color: rgba(255,255,255,.85) !important;
+  border-top: 1px solid rgba(255,255,255,.10) !important;
+}
+
+@media (max-width: 560px){
+  .cl-header{ flex-direction: column; align-items: flex-start; }
+  .cl-cover{ width: 100%; height: 180px; }
+  .cl-actions{ width: 100%; justify-content: flex-start; }
+}
+/* Cover más grande */
+.cl-cover{
+  width: 220px;
+  height: 220px;
+}
+
+
+/* Un pelín más de aire en el header */
+.cl-header{
+  padding: 16px;
+  gap: 16px;
+}
+
+/* En móvil: cover grande a ancho completo */
+@media (max-width: 560px){
+  .cl-cover{
+    width: 100%;
+    height: 220px;
+  }
+}
+
+.cl-footer{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+/* Permite que los títulos no se corten */
+.cl-table .rdt_TableCol {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+
+

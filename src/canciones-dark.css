@@ -1,0 +1,332 @@
+/* canciones-dark.css */
+
+/* ====== Página estilo dashboard (oscuro) ====== */
+.canciones-page{
+  min-height: 100vh;
+  padding: 22px 26px 34px;
+  color: rgba(255,255,255,.92);
+  background:
+    radial-gradient(1200px 700px at 12% 8%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(900px 600px at 90% 12%, rgba(255,255,255,.06), transparent 55%),
+    radial-gradient(900px 700px at 70% 90%, rgba(255,255,255,.05), transparent 55%),
+    #070a0e;
+}
+
+.canciones-panel{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 18px 22px;
+  border-radius: 16px;
+  background: rgba(10, 14, 20, .62);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 14px 36px rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+}
+
+.canciones-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.canciones-title{
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 20px;
+}
+
+/* ====== Filtros (grid) ====== */
+.canciones-filters{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+/* spans */
+.cf-4{ grid-column: span 4; }
+.cf-6{ grid-column: span 6; }
+.cf-2{ grid-column: span 2; }
+
+@media (max-width: 980px){
+  .canciones-filters{ grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .cf-4{ grid-column: span 3; }
+  .cf-6{ grid-column: span 6; }
+  .cf-2{ grid-column: span 3; }
+}
+
+@media (max-width: 560px){
+  .canciones-filters{ grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .cf-4,.cf-6,.cf-2{ grid-column: span 1; }
+}
+
+/* ====== Inputs oscuros (bootstrap) ====== */
+.form-control.c-input,
+.form-select.c-input{
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,.35) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: rgba(255,255,255,.92) !important;
+}
+
+.form-control.c-input::placeholder{
+  color: rgba(255,255,255,.45);
+}
+
+.form-control.c-input:focus,
+.form-select.c-input:focus{
+  box-shadow: 0 0 0 3px rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.22) !important;
+}
+
+/* ====== Botones dashboard ====== */
+.c-btn{
+  height: 42px;                 /* más alto */
+  padding: 0 16px;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  background: rgba(255,255,255,.08) !important;
+  color: rgba(255,255,255,.92) !important;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.c-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.22) !important;
+}
+
+.c-btn-primary{
+  border: none !important;
+  background: linear-gradient(135deg, rgba(255,110,196,.92), rgba(120,115,245,.92)) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+.c-btn-primary:hover{ filter: brightness(1.05); }
+
+/* Acciones: que ocupen ancho y se repartan el espacio */
+.c-actions{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.c-actions .c-btn{
+  flex: 1 1 0;        /* 50/50 si hay 2 botones */
+  min-width: 0;
+}
+
+@media (max-width: 560px){
+  .c-actions{ flex-direction: column; }
+  .c-actions .c-btn{ width: 100%; }
+}
+
+/* ====== Tabla ====== */
+.c-table-wrap{
+  margin-top: 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.25);
+}
+
+/* ================================
+   FIX DEFINITIVO CABECERA TABLA
+   (forzando variables Bootstrap)
+   ================================ */
+
+.table.c-table{
+  /* Fuerza colores base dentro de ESTA tabla */
+  --bs-table-color: #111;
+  --bs-table-bg: #f2f2f2;
+  --bs-table-border-color: rgba(0,0,0,.12);
+  --bs-table-striped-color: #111;
+  --bs-table-striped-bg: #ececec;
+  --bs-table-hover-color: #111;
+  --bs-table-hover-bg: #e7e7e7;
+}
+
+/* Cabecera SIEMPRE visible */
+.table.c-table thead{
+  display: table-header-group !important;
+  background: #121212 !important;
+}
+
+.table.c-table thead tr{
+  background: #121212 !important;
+}
+
+.table.c-table thead th{
+  background: #121212 !important;   /* fondo real en cada th */
+  color: #ffffff !important;         /* texto blanco */
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  letter-spacing: .2px;
+  border-bottom: 2px solid rgba(255,255,255,.15) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  vertical-align: middle;
+}
+
+/* Cuerpo claro + texto negro (refuerzo) */
+.table.c-table tbody{
+  background: #f2f2f2 !important;
+}
+
+.table.c-table tbody td{
+  color: #111 !important;
+}
+
+/* Por si algún estilo global estuviera “apagando” el texto */
+.table.c-table th,
+.table.c-table td{
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+/* Botones dentro de tabla */
+.c-mini-btn.btn{
+  border-radius: 10px;
+  border-color: rgba(0,0,0,.15) !important;
+}
+
+.c-mini-btn.btn:hover{
+  filter: brightness(1.05);
+}
+
+/* ====== Paginación oscura ====== */
+.pagination.c-pagination .page-link{
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.85);
+}
+
+.pagination.c-pagination .page-link:hover{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.22);
+}
+
+.pagination.c-pagination .page-item.active .page-link{
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.22);
+  color: rgba(255,255,255,.92);
+}
+
+/* ====== Modal oscuro ====== */
+.modal-content.c-modal{
+  background: #0b0f14;
+  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+}
+
+.modal-header.c-modal,
+.modal-footer.c-modal{
+  border-color: rgba(255,255,255,.10);
+}
+
+/* X de cerrar en blanco */
+.btn-close{
+  filter: invert(1);
+}
+
+/* ====== TÍTULO estilo Albums/Artistas ====== */
+.canciones-title{
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 22px;                 /* más parecido a MUI h5/h4 */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* (opcional) añade “subrayado” suave como sección */
+.canciones-title::after{
+  content: "";
+  display: block;
+  height: 1px;
+  flex: 1;
+  margin-left: 12px;
+  background: linear-gradient(90deg, rgba(255,255,255,.18), transparent);
+}
+
+/* ====== MÁS SEPARACIÓN ANTES DE LA TABLA ====== */
+/* Aumenta margen superior del bloque de tabla */
+.c-table-wrap{
+  margin-top: 22px;                /* antes 14px */
+}
+
+/* Si quieres aún más aire en pantallas grandes */
+@media (min-width: 980px){
+  .c-table-wrap{ margin-top: 26px; }
+}
+
+/* ====== MARCO MÁS “FUERTE” PARA DIFERENCIAR ====== */
+.c-table-wrap{
+  border-radius: 14px;
+  overflow: hidden;
+
+  /* borde más visible */
+  border: 1px solid rgba(255,255,255,.18);   /* antes .10 */
+  box-shadow: 0 18px 44px rgba(0,0,0,.55);   /* añade presencia */
+  background: rgba(0,0,0,.22);
+}
+
+/* Refuerzo: “doble borde” interior sutil */
+.c-table-wrap::before{
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgba(255,255,255,.10);
+}
+
+/* ====== CABECERA con más contraste y separación ====== */
+.table.c-table thead th{
+  padding: 12px 10px !important;    /* cabecera más “chunky” */
+  border-bottom: 2px solid rgba(255,255,255,.18) !important;
+}
+
+/* ====== CUERPO con padding un poco más cómodo ====== */
+.table.c-table tbody td{
+  padding: 10px 10px !important;
+}
+/* separación clara después del grid de filtros */
+.canciones-filters{
+  margin-bottom: 18px; /* antes 12px */
+}
+/* ====== TÍTULO estilo idéntico a Albums (Typography h5) ====== */
+
+.canciones-head{
+  margin-bottom: 16px;
+}
+
+.canciones-title{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 1.5rem;       /* equivalente a MUI h5 */
+  font-weight: 800;
+  letter-spacing: .2px;
+
+  margin: 0;
+  color: rgba(255,255,255,.92);
+}
+
+.c-title-icon{
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+}

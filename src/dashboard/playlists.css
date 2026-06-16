@@ -1,0 +1,50 @@
+
+/* ============================================
+   PlaylistsSection: grid limpio y compacto
+   ============================================ */
+
+.playlists-sec { margin-top: 4px; }
+
+.playlist-grid {
+  --min-col: 160px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-col), 1fr));
+  gap: clamp(14px, 2vw, 18px);
+}
+
+.playlist-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+  padding: 10px;
+  transition: transform var(--transition-quick), box-shadow var(--transition-smooth), background var(--transition-quick);
+}
+
+.playlist-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+}
+
+.playlist-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;    /* ✅ sin deformación */
+  object-fit: cover;      /* ✅ como Spotify */
+  border-radius: var(--radius-sm);
+  background: #0b0e12;
+  border: 1px solid var(--border);
+}
+
+.playlist-card h3 {
+  margin: 10px 2px 0;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.playlist-card p {
+  margin: 2px 2px 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

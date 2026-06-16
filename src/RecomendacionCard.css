@@ -1,0 +1,22 @@
+.recomendacion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  width: 120px;
+}
+
+.recomendacion-imagen {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  /* border-radius eliminado para que sea cuadrada */
+}
+
+
+.recomendacion-nombre {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: 200;
+}

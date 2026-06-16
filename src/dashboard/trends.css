@@ -1,0 +1,50 @@
+
+/* ============================================
+   TrendsSection (Novedades): grid tipo Spotify
+   ============================================ */
+
+.trends-sec { margin-top: 6px; }
+
+.trends-grid {
+  --min-col: 160px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-col), 1fr));
+  gap: clamp(14px, 2vw, 18px);
+}
+
+.trend-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px;
+  box-shadow: var(--shadow-1);
+  transition: transform var(--transition-quick), box-shadow var(--transition-smooth), background var(--transition-quick);
+}
+
+.trend-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+}
+
+.trend-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* ✅ sin deformación */
+  object-fit: cover;     /* ✅ como Spotify */
+  border-radius: var(--radius-sm);
+  background: #0b0e12;
+  border: 1px solid var(--border);
+}
+
+.trend-title {
+  margin: 10px 2px 0;
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.trend-artist {
+  margin: 2px 2px 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

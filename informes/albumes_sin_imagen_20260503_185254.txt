@@ -1,0 +1,14 @@
+INFORME DE ÁLBUMES SIN IMAGEN
+Fecha: 2026-05-03T18:52:55.565210900
+Carpeta revisada: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover
+==================================================
+
+ID Album: 5273
+Título: null
+Cover en BD: VACÍO
+Motivo: El campo cover está vacío o es null
+--------------------------------------------------
+
+==================================================
+Total álbumes revisados: 5268
+Total álbumes sin imagen: 1

@@ -1,0 +1,16 @@
+INFORME DE ÁLBUMES SIN IMAGEN
+Fecha: 2026-05-17T15:14:19.022794300
+Carpeta revisada: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover
+==================================================
+
+ID Album: 3163
+Título: Nude #9
+Artista: CAMILLE SCHMIDT
+Cover en BD: /assets/Cover/Camille Schmidt - Nude 9.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Camille Schmidt - Nude 9.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+
+==================================================
+Total álbumes revisados: 5267
+Total álbumes sin imagen: 1

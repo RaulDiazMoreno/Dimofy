@@ -1,0 +1,219 @@
+INFORME DE ÁLBUMES SIN IMAGEN
+Fecha: 2026-05-03T17:57:50.261970300
+Carpeta revisada: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover
+==================================================
+
+ID Album: 57
+Título: Into The Fire - Live At The Royal Albert Hall
+Artista: BRYAN ADAMS
+Cover en BD: /assets/Cover/Bryan Adams - Into The Fire - Live At The Royal Albert Hall.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Bryan Adams - Into The Fire - Live At The Royal Albert Hall.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 70
+Título: How Were We To Know
+Artista: EMELI SANDÉ
+Cover en BD: /assets/Cover/Emeli Sandé - How Were We To Know.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Emeli Sandé - How Were We To Know.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 83
+Título: TRAVIS COVERS
+Artista: TRAVIS
+Cover en BD: /assets/Cover/Travis - TRAVIS COVERS.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Travis - TRAVIS COVERS.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 99
+Título: Out Of The Shadows
+Artista: ESCAPE THE FATE
+Cover en BD: /assets/Cover/Escape the Fate - Out Of The Shadows.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Escape the Fate - Out Of The Shadows.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 312
+Título: Classic Pt. II
+Artista: BRYAN ADAMS
+Cover en BD: /assets/Cover/Bryan Adams - Classic Pt. II.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Bryan Adams - Classic Pt. II.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 319
+Título: So Happy It Hurts
+Artista: BRYAN ADAMS
+Cover en BD: /assets/Cover/Bryan Adams - So Happy It Hurts.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Bryan Adams - So Happy It Hurts.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 348
+Título: Classic
+Artista: BRYAN ADAMS
+Cover en BD: /assets/Cover/Bryan Adams - Classic.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Bryan Adams - Classic.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 449
+Título: School Nights
+Artista: CHAPPELL ROAN
+Cover en BD: /assets/Cover/Chappell Roan - School Nights.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Chappell Roan - School Nights.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 450
+Título: Bitter
+Artista: CHAPPELL ROAN
+Cover en BD: /assets/Cover/Chappell Roan - Bitter.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Chappell Roan - Bitter.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 534
+Título: Please Don't Fall In Love With Me
+Artista: KHALID
+Cover en BD: /assets/Cover/Khalid - Please Don't Fall In Love With Me.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Khalid - Please Don't Fall In Love With Me.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 600
+Título: Cheaper Than Cheep: The Soundtrack (Live)
+Artista: FRANK ZAPPA
+Cover en BD: /assets/Cover/Frank Zappa - Cheaper Than Cheep The Soundtrack (Live).webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Frank Zappa - Cheaper Than Cheep The Soundtrack (Live).webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 703
+Título: Inflight (The Extended Essentials)
+Artista: A FLOCK OF SEAGULLS
+Cover en BD: /assets/Cover/A Flock Of Seagulls - Inflight (The Extended Essentials).webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\A Flock Of Seagulls - Inflight (The Extended Essentials).webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 775
+Título: Tax Free Bounces
+Artista: ABC
+Cover en BD: /assets/Cover/ABC - Tax Free Bounces.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\ABC - Tax Free Bounces.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 784
+Título: Up
+Artista: ABC
+Cover en BD: /assets/Cover/ABC - Up.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\ABC - Up.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 812
+Título: VELVET: Side A
+Artista: ADAM LAMBERT
+Cover en BD: /assets/Cover/Adam Lambert - VELVET Side A.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Adam Lambert - VELVET Side A.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 816
+Título: VELVET: Side A (The Live Sessions)
+Artista: ADAM LAMBERT
+Cover en BD: /assets/Cover/Adam Lambert - VELVET Side A (The Live Sessions).webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Adam Lambert - VELVET Side A (The Live Sessions).webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 818
+Título: The Original High
+Artista: ADAM LAMBERT
+Cover en BD: /assets/Cover/Adam Lambert - The Original High.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Adam Lambert - The Original High.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 827
+Título: The Original High (Deluxe Version)
+Artista: ADAM LAMBERT
+Cover en BD: /assets/Cover/Adam Lambert - The Original High (Deluxe Version).webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Adam Lambert - The Original High (Deluxe Version).webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 1047
+Título: Songs in A minor
+Artista: ALICIA KEYS
+Cover en BD: /assets/Cover/Alicia Keys - Songs in A minor.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Alicia Keys - Songs in A minor.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 1050
+Título: Alicia Keys: Sweet Dreams - EP
+Artista: ALICIA KEYS
+Cover en BD: /assets/Cover/Alicia Keys - Alicia Keys Sweet Dreams - EP.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Alicia Keys - Alicia Keys Sweet Dreams - EP.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 1744
+Título: The Nightmare Of Being
+Artista: AT THE GATES
+Cover en BD: /assets/Cover/At The Gates - The Nightmare Of Being.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\At The Gates - The Nightmare Of Being.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 1975
+Título: Now Thats What I Call The 80s
+Artista: Varios Artistas
+Cover en BD: /assets/Cover/Varios Artistas - Now Thats What I Call The 80s.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Varios Artistas - Now Thats What I Call The 80s.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 3592
+Título: Born To Do It
+Artista: CRAIG DAVID
+Cover en BD: /assets/Cover/Craig David - Born To Do It.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Craig David - Born To Do It.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 3679
+Título: Vampires Of Black Imperial Blood
+Artista: Mutiilation
+Cover en BD: /assets/Cover/Mutiilation - Vampires Of Black Imperial Blood.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Mutiilation - Vampires Of Black Imperial Blood.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 3794
+Título: AMAB/ACAB
+Artista: Evan Greer
+Cover en BD: /assets/Cover/ACAB.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\ACAB.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 3997
+Título: Horizons/West
+Artista: THRICE
+Cover en BD: /assets/Cover/West.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\West.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 4140
+Título: We'll Live and Die in These Towns
+Artista: THE ENEMY
+Cover en BD: /assets/Cover/The Enemy - We'll Live and Die in These Towns.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\The Enemy - We'll Live and Die in These Towns.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 4489
+Título: Seven and the Ragged Tiger
+Artista: DURAN DURAN
+Cover en BD: /assets/Cover/Duran Duran - Seven and the Ragged Tiger.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Duran Duran - Seven and the Ragged Tiger.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 4522
+Título: I Love You All The Time: Live At The Olympia Paris
+Artista: EAGLES OF DEATH METAL
+Cover en BD: /assets/Cover/Eagles Of Death Metal - I Love You All The Time Live At The Olympia Paris.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Eagles Of Death Metal - I Love You All The Time Live At The Olympia Paris.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 4626
+Título: Orphans of the Light
+Artista: BlackRain
+Cover en BD: /assets/Cover/BlackRain - Orphans of the Light.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\BlackRain - Orphans of the Light.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+
+==================================================
+Total álbumes revisados: 5267
+Total álbumes sin imagen: 30

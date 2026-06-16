@@ -1,0 +1,354 @@
+/* =========================
+   Layout base
+   ========================= */
+.dash-new {
+  padding: 16px;
+}
+
+/* =========================
+   Header sección (UNA sola versión)
+   ========================= */
+.dash-section-head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 6px 0 14px;
+  padding: 0 2px;
+}
+
+.dash-section-title{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+
+  flex: 1 1 auto;
+  min-width: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-section-back{
+  margin-left: auto;
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  max-width: max-content;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+
+  font-weight: 800;
+  font-size: 0.95rem;
+
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.dash-section-back:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+}
+
+.dash-section-back:active{
+  transform: translateY(0px);
+}
+
+/* =========================
+   Grid responsive: 1 / 2 / 3 (igual que tenías)
+   ========================= */
+.genres-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .genres-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .genres-grid-2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* =========================
+   Card: menos alto + contenido anclado arriba/izquierda
+   ========================= */
+.genre-card-colored {
+  height: 190px;                 /* 🔥 menos alto (ajusta 170-210 a gusto) */
+  border-radius: 16px;
+
+  display: flex;
+  align-items: flex-start;       /* 🔥 se alinea arriba */
+  justify-content: flex-start;   /* 🔥 se alinea a la izquierda */
+
+  padding: 18px 20px;            /* 🔥 margen interno constante */
+  border: 0;
+  cursor: pointer;
+
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-position 0.6s ease;
+}
+
+.genre-card-colored:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2, 0 10px 26px rgba(0, 0, 0, 0.28));
+  background-position: 100% 50%;
+}
+
+/* Fila icono + texto:
+   IMPORTANTE: antes lo centrabas con width:fit-content y justify-content:center.
+   Ahora ocupa el ancho y empieza desde el mismo punto en todos. */
+.genre-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;                   /* 🔥 mismo anclaje para todos */
+  max-width: 100%;
+
+  justify-content: flex-start;   /* 🔥 empieza a la izquierda */
+  padding: 0;                    /* 🔥 sin padding extra */
+}
+
+/* =========================
+   Icono (igual, solo mantiene tamaño)
+   ========================= */
+.genre-icon-wrapper {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+    0 8px 18px rgba(0, 0, 0, 0.25);
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 0;
+
+  transition: transform 180ms ease;
+}
+
+.genre-icon-inner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+}
+
+.genre-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+
+  filter: brightness(0) saturate(100%);
+}
+
+.genre-card-colored:hover .genre-icon-wrapper {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Texto
+   ========================= */
+.genre-card-text {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.45rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  min-width: 0; /* clave para ellipsis dentro de flex */
+}
+/* =========================
+   HEADER como IMAGEN 2 (título izq + botón pill dcha)
+   ========================= */
+.dash-section-head{
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  gap: 14px;
+  margin: 6px 0 14px;
+  padding: 0 2px;
+}
+
+.dash-section-title{
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  margin: 0;
+
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* 🔥 Botón “Volver” como la imagen 2 */
+.dash-section-back{
+  margin-left: auto !important;
+  flex: 0 0 auto !important;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: auto !important;              /* evita barra larga */
+  max-width: max-content !important;
+
+  padding: 10px 16px !important;
+  border-radius: 999px !important;
+
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  color: #fff !important;
+
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.dash-section-back:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+}
+
+.dash-section-back:active{
+  transform: translateY(0px);
+}
+
+/* =========================
+   CARDS como IMAGEN 1
+   (menos altas + icono/texto alineados a la izquierda,
+    centrados verticalmente dentro del card)
+   ========================= */
+.genre-card-colored{
+  height: 190px;                 /* menos alto */
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;           /* centrado vertical */
+  justify-content: flex-start;   /* alineado a la izquierda */
+
+  padding: 0 26px;               /* separación del borde como imagen 1 */
+  border: 0;
+  cursor: pointer;
+
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-position 0.6s ease;
+}
+
+.genre-card-colored:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2, 0 10px 26px rgba(0,0,0,0.28));
+  background-position: 100% 50%;
+}
+
+/* fila icono + texto */
+.genre-content{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 100%;
+  padding: 0;                    /* importante para que no “se desplace” */
+}
+
+/* Icono (igual que el tuyo) */
+.genre-icon-wrapper{
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3),
+              0 8px 18px rgba(0,0,0,0.25);
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform 180ms ease;
+}
+
+.genre-card-colored:hover .genre-icon-wrapper{
+  transform: scale(1.05);
+}
+
+.genre-icon{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) saturate(100%);
+}
+
+/* Texto */
+.genre-card-text{
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.45rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  min-width: 0;
+}
+

@@ -1,0 +1,226 @@
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Sección */
+.albums-section {
+  margin-bottom: 2rem;
+  padding-inline: 8px;
+}
+
+.albums-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.albums-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.albums-meta {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* GRID responsive: 5 columnas desktop, 3 tablet, 2 móvil */
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .albums-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .albums-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Tarjeta */
+.album-card {
+  text-align: center;
+}
+
+.album-cover-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.album-cover {
+  width: 400px;
+  height: 400px;
+  object-fit: cover; 
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.album-cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Información */
+.album-info {
+  margin-top: 0.5rem;
+}
+.album-title {
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.album-artist {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0.15rem 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.albums-empty {
+  color: #aaa;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Paginación */
+.albums-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: transparent;
+  color: var(--accent-color, #1DB954);
+  border: 1px solid var(--accent-color, #1DB954);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease, opacity 120ms ease;
+}
+.page-btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.page-btn:not([disabled]):hover {
+  background: var(--accent-color, #1DB954);
+  color: #0b0b0b;
+}
+
+/* Lista de números */
+.page-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-ellipsis {
+  color: #999;
+}
+
+.page-number {
+  background: #1c1c1c;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.page-number:hover {
+  background: #242424;
+  border-color: #3a3a3a;
+}
+.page-number.active {
+  background: var(--accent-color, #1DB954);
+  color: #0b0b0b;
+  border-color: var(--accent-color, #1DB954);
+}
+
+/* Mejora accesible del foco */
+.page-btn:focus,
+.page-number:focus {
+  outline: 2px solid var(--accent-color, #1DB954);
+  outline-offset: 2px;
+}
+.album-cover.blur-loading {
+  filter: blur(20px);
+  transition: filter 0.3s ease;
+}
+
+.album-cover.blur-loading[src*="/images/placeholder.png"] {
+  filter: blur(20px);
+}
+
+.album-cover.blur-loading:not([src*="/images/placeholder.png"]) {
+  filter: blur(0);
+}
+
+.album-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #111;
+}
+
+.admin-main {
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.user-main {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+
+.paginated-albums__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.paginated-albums__item {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.paginated-albums__title {
+  margin-top: .6rem;
+  font-weight: 600;
+}
+.paginated-albums__artist {
+  color: var(--muted);
+  font-size: .9rem;
+}

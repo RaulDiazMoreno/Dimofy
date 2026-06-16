@@ -1,0 +1,250 @@
+[ {
+  "id" : 1,
+  "nombreGenero" : "AFRICAN MUSIC"
+}, {
+  "id" : 2,
+  "nombreGenero" : "ALTERNATIVE"
+}, {
+  "id" : 3,
+  "nombreGenero" : "ACID JAZZ"
+}, {
+  "id" : 4,
+  "nombreGenero" : "AMBIENT"
+}, {
+  "id" : 5,
+  "nombreGenero" : "ASIAN MUSIC"
+}, {
+  "id" : 6,
+  "nombreGenero" : "BLUES"
+}, {
+  "id" : 7,
+  "nombreGenero" : "CHRISTMAS MUSIC"
+}, {
+  "id" : 8,
+  "nombreGenero" : "CLASSIC"
+}, {
+  "id" : 9,
+  "nombreGenero" : "COUNTRY"
+}, {
+  "id" : 10,
+  "nombreGenero" : "CROSSOVER"
+}, {
+  "id" : 11,
+  "nombreGenero" : "CELTIC"
+}, {
+  "id" : 12,
+  "nombreGenero" : "CHRISTIAN"
+}, {
+  "id" : 13,
+  "nombreGenero" : "COMEDY"
+}, {
+  "id" : 14,
+  "nombreGenero" : "CROONER"
+}, {
+  "id" : 15,
+  "nombreGenero" : "DANCE"
+}, {
+  "id" : 16,
+  "nombreGenero" : "DRUM & BASS"
+}, {
+  "id" : 17,
+  "nombreGenero" : "DOWNTEMPO"
+}, {
+  "id" : 18,
+  "nombreGenero" : "DUBSTEP"
+}, {
+  "id" : 19,
+  "nombreGenero" : "ELECTRONIC"
+}, {
+  "id" : 20,
+  "nombreGenero" : "EASY LISTENING"
+}, {
+  "id" : 21,
+  "nombreGenero" : "EXPERIMENTAL"
+}, {
+  "id" : 22,
+  "nombreGenero" : "FOLK"
+}, {
+  "id" : 23,
+  "nombreGenero" : "FUNK"
+}, {
+  "id" : 24,
+  "nombreGenero" : "FREE IMPROVISATION"
+}, {
+  "id" : 25,
+  "nombreGenero" : "GOSPEL"
+}, {
+  "id" : 26,
+  "nombreGenero" : "GRUNGE"
+}, {
+  "id" : 27,
+  "nombreGenero" : "HIP-HOP"
+}, {
+  "id" : 28,
+  "nombreGenero" : "HOUSE"
+}, {
+  "id" : 29,
+  "nombreGenero" : "INDIE"
+}, {
+  "id" : 30,
+  "nombreGenero" : "JAZZ"
+}, {
+  "id" : 31,
+  "nombreGenero" : "JUNGLE"
+}, {
+  "id" : 32,
+  "nombreGenero" : "KIDS"
+}, {
+  "id" : 33,
+  "nombreGenero" : "LATIN MUSIC"
+}, {
+  "id" : 34,
+  "nombreGenero" : "LO-FI"
+}, {
+  "id" : 35,
+  "nombreGenero" : "METAL"
+}, {
+  "id" : 36,
+  "nombreGenero" : "MUSICAL"
+}, {
+  "id" : 37,
+  "nombreGenero" : "NEW AGE"
+}, {
+  "id" : 38,
+  "nombreGenero" : "NEW WAVE"
+}, {
+  "id" : 39,
+  "nombreGenero" : "OPERA"
+}, {
+  "id" : 40,
+  "nombreGenero" : "PIANO"
+}, {
+  "id" : 41,
+  "nombreGenero" : "POP"
+}, {
+  "id" : 42,
+  "nombreGenero" : "PUNK"
+}, {
+  "id" : 43,
+  "nombreGenero" : "PSYCHEDELIC"
+}, {
+  "id" : 44,
+  "nombreGenero" : "R&B"
+}, {
+  "id" : 45,
+  "nombreGenero" : "REGGAE"
+}, {
+  "id" : 46,
+  "nombreGenero" : "ROCK"
+}, {
+  "id" : 47,
+  "nombreGenero" : "RELIGIOUS"
+}, {
+  "id" : 48,
+  "nombreGenero" : "ROCK & ROLL"
+}, {
+  "id" : 49,
+  "nombreGenero" : "SINGER SONGWRITTER"
+}, {
+  "id" : 50,
+  "nombreGenero" : "SKA"
+}, {
+  "id" : 51,
+  "nombreGenero" : "SOUL"
+}, {
+  "id" : 52,
+  "nombreGenero" : "SOUNDTRACK"
+}, {
+  "id" : 53,
+  "nombreGenero" : "STONER"
+}, {
+  "id" : 54,
+  "nombreGenero" : "SYNTHPOP"
+}, {
+  "id" : 55,
+  "nombreGenero" : "SYNTHWAVE"
+}, {
+  "id" : 56,
+  "nombreGenero" : "SWING"
+}, {
+  "id" : 57,
+  "nombreGenero" : "TRANCE"
+}, {
+  "id" : 58,
+  "nombreGenero" : "TECHNO"
+}, {
+  "id" : 59,
+  "nombreGenero" : "TRIP-HOP"
+}, {
+  "id" : 60,
+  "nombreGenero" : "VOCAL"
+}, {
+  "id" : 61,
+  "nombreGenero" : "TRAP"
+}, {
+  "id" : 62,
+  "nombreGenero" : "REGUETON"
+}, {
+  "id" : 63,
+  "nombreGenero" : "FLAMENCO"
+}, {
+  "id" : 64,
+  "nombreGenero" : "ZARZUELA"
+}, {
+  "id" : 65,
+  "nombreGenero" : "CHILL OUT"
+}, {
+  "id" : 66,
+  "nombreGenero" : "K-POP"
+}, {
+  "id" : 67,
+  "nombreGenero" : "GOSPEL"
+}, {
+  "id" : 68,
+  "nombreGenero" : "AFROBEAT"
+}, {
+  "id" : 69,
+  "nombreGenero" : "BLUEGRASS"
+}, {
+  "id" : 70,
+  "nombreGenero" : "BOSSA NOVA"
+}, {
+  "id" : 71,
+  "nombreGenero" : "RAGTIME"
+}, {
+  "id" : 72,
+  "nombreGenero" : "TANGO"
+}, {
+  "id" : 73,
+  "nombreGenero" : "ZYDECO"
+}, {
+  "id" : 74,
+  "nombreGenero" : "CUMBIA"
+}, {
+  "id" : 75,
+  "nombreGenero" : "BARCHATA"
+}, {
+  "id" : 76,
+  "nombreGenero" : "BHANGRA"
+}, {
+  "id" : 77,
+  "nombreGenero" : "CHIPTUNE"
+}, {
+  "id" : 78,
+  "nombreGenero" : "SALSA"
+}, {
+  "id" : 79,
+  "nombreGenero" : "EMO"
+}, {
+  "id" : 80,
+  "nombreGenero" : "SHOEGAZE"
+}, {
+  "id" : 81,
+  "nombreGenero" : "DANCE HALL"
+}, {
+  "id" : 82,
+  "nombreGenero" : "CAJUN MUSIC"
+}, {
+  "id" : 83,
+  "nombreGenero" : "RECOPILATORIO"
+} ]

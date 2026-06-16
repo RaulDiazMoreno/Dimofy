@@ -1,0 +1,2113 @@
+[ {
+  "genero" : {
+    "idGenero" : 2,
+    "nombreGenero" : "ALTERNATIVE"
+  },
+  "artista" : {
+    "idArtista" : 3208,
+    "nombre" : "THE CRIBS",
+    "anyoInicio" : "2001",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/The Cribs.webp",
+    "generos" : {
+      "idGenero" : 2,
+      "nombreGenero" : "ALTERNATIVE"
+    },
+    "resumenWikipedia" : "The Cribs es un grupo de Garage Rock formado por tres integrantes: los gemelos Gary y Ryan Jarman y su hermano menor Ross Jarman, provenientes de Wakefield, West Yorkshire, Inglaterra. Su exmiembro Johnny Marr (exmiembro de The Smiths) dejó la banda en enero de 2011.\r\n\r\nLa banda ha lanzado 6 álbumes, el primero autotitulado \"The Cribs\" en 2004 y el siguiente, \"The New Fellas\", en 2005. Los sencillos incluyen “You Were Always The One” (número 66 en el chart de sencillos de UK), “What About Me” (número 75), \"Another Number\", \"Hey Scenesters!\" (número 27), y \"Mirror Kissers\" (número 27). \"Martell\", el tercer sencillo del álbum \"The New Fellas\", fue lanzado el 22 de agosto de 2005 alcanzando el número 39. La banda nombró a su tercer álbum \"Men's Needs, Women's Needs, Whatever\", que fue grabado en Vancouver, BC, Canadá con Alex Kapranos del grupo Franz Ferdinand como productor. El álbum fue lanzado el 21 de mayo, precedido por el sencillo \"Men's Needs\", el 7 de mayo, alcanzando el número 17.\r\n\r\nEl grupo también hizo un extenso tour por Norteamérica con Death Cab for Cutie y Franz Ferdinand en el 2006. Además, su canción \"Hey Scenesters!\" fue listada por la revista NME en “Los 50 Grandes Himnos Indie de Todos los mejores Tiempos”, siendo una de las pocas bandas contemporáneas incluidas en esta lista."
+  },
+  "cover" : "/assets/Cover/TheCribs-SellingAVibe.webp",
+  "anyo" : "2026",
+  "titulo" : "Selling A Vibe"
+}, {
+  "genero" : {
+    "idGenero" : 30,
+    "nombreGenero" : "JAZZ"
+  },
+  "artista" : {
+    "idArtista" : 4161,
+    "nombre" : "Maya Delilah",
+    "anyoInicio" : "2020",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/Maya Delilah.webp",
+    "generos" : {
+      "idGenero" : 30,
+      "nombreGenero" : "JAZZ"
+    },
+    "resumenWikipedia" : "Maya Delilah (born 5 May 2000) is an English singer-songwriter and guitarist.[1] Maya Delilah has been signed to jazz record label Blue Note Records since 2022.\r\n\r\nBiography\r\nShe was born and raised in Islington, London.[2] When she was 15, she was a finalist in The Mayor of London's Gigs Big Busk, the UK's biggest annual street music competition.[3] She attended the BRIT School.[4] As of January 2023, she has over 300,000 monthly listeners on Spotify.\r\n\r\nHer style has been described as a \"unique blend of jazz, soul, and pop\", and she has listed \"Anderson .Paak, Tyler The Creator, John Mayer, [and] Derek Trucks\" as musical influences.[5]"
+  },
+  "cover" : "/assets/Cover/MayaDelilah-TheLongWayRound(Deluxe).webp",
+  "anyo" : "2026",
+  "titulo" : "The Long Way Round (Deluxe)"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 85,
+    "nombre" : "ALTER BRIDGE",
+    "anyoInicio" : "2004",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/ALTER BRIDGE.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "Alter Bridge es una banda estadounidense de hard rock y metal alternativo formada por Mark Tremonti, Brian Marshall y Scott Phillips (exmiembros de Creed), con Myles Kennedy (exvocalista y guitarrista de The Mayfield Four) en el 2004.\r\n\r\nAlter Bridge lanzó su álbum debut One Day Remains el 10 de agosto del mismo año, con su primer sencillo \"Open your Eyes\", al que siguieron \"Find The Real\" y \"Broken Wings\".\r\n\r\nBlackbird, su segundo álbum de estudio, salió a la venta el 9 de octubre de 2007. El primer sencillo de este álbum, Rise Today, salió a la venta el 30 de julio de 2007. El 2 de enero de 2008, \"Watch Over You \" fue nombrado el segundo sencillo de Blackbird.\r\n\r\nAB III fue su tercer álbum de estudio lanzado en 2010, recibido con buenas críticas por parte de los medios. A este le siguen Fortress estrenado en el 2013, The Last Hero en el 2016 y el sexto álbum de estudio Walk The Sky fue lanzado en octubre de 2019."
+  },
+  "cover" : "/assets/Cover/AlterBridge-AlterBridge.webp",
+  "anyo" : "2026",
+  "titulo" : "Alter Bridge"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-Today’sAnthems.webp",
+  "anyo" : "2026",
+  "titulo" : "Today’s Anthems"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-Soundsofthe80's.webp",
+  "anyo" : "2026",
+  "titulo" : "Sounds of the 80's"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 2509,
+    "nombre" : "POPPY",
+    "anyoInicio" : "1995",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/Poppy-EmptyHands.webp",
+  "anyo" : "2026",
+  "titulo" : "Empty Hands"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 2662,
+    "nombre" : "ROBBIE WILLIAMS",
+    "anyoInicio" : "1974",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/Robbie Williams.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Robert Peter Williams (Stoke-on-Trent, Inglaterra, 13 de febrero de 1974), más conocido como Robbie Williams, es un cantante de pop rock, compositor, actor y dirigente deportivo británico, actual presidente del Port Vale Football Club desde el 3 de febrero de 2024.[1]​\r\n\r\nEmpezó su carrera musical en el grupo Take That.[2]​ Tras su paso por este grupo, a principios y mediados de los años 1990, se forjó una carrera como solista, siendo «Angels», una balada, la canción que le dio su primer éxito.[3]​ Su primer álbum fue Life Thru A Lens. Su siguiente álbum, I've Been Expecting You, lanzado en octubre de 1998, contiene el tema \"No Regrets\", dedicado a sus antiguos compañeros de Take That. Al año siguiente lanza The Ego Has Landed en el mercado estadounidense y poco después grabó Sing When You're Winning, que contenía Rock DJ, éxito en varios países.\r\n\r\nEn 2001 divulgó el álbum Swing When You're Winning con las recreaciones de éxitos de Frank Sinatra, Dean Martin, Peter Lawford, Sammy Davis Jr incluido el éxito \"Something Stupid\" grabado a dúo con la australiana Nicole Kidman. Un año después grabó Escapology, su álbum más laureado y número 1 en varios países, que incluye unos de sus temas más conocidos «Feel» y «Come Undone». En 2003 Robbie Williams lanzó Live at Knebworth, grabado en directo donde batió dos Récord Guinness. En 2004, fue incluido en el Salón de la Fama de Música del Reino Unido después de haber sido votado como el artista más grande de la década de 1990.\r\n\r\nAl año siguiente reaparece a la escena musical con un recopilatorio, (Greatest Hits). En 2005 presenta Intensive Care, siendo su álbum de estudio más vendido con 7,5 millones de copias en todo el mundo. En 2006 lanza Rudebox. En noviembre de 2009 regresó, tras un largo parón, con Reality Killed The Video Star para volver a liderar en ventas en Europa. Un año después, en 2010, regresa durante un año a Take That, lo cual crea una gran expectación.\r\n\r\nLas ventas del artista en todo el mundo alcanzan los 80 millones de álbumes, lo que le sitúa entre los artistas más vendidos en todo el mundo,[4]​ y unos 15 millones de sencillos.[5]​ Cuenta con varios galardones, entre ellos 18 premios Brit, 2 Premios Grammy, 3 Ivor Novello, 5 MTV Europe Music Awards, 3 Récord Guiness, entre otros."
+  },
+  "cover" : "/assets/Cover/RobbieWilliams-BRITPOP.webp",
+  "anyo" : "2026",
+  "titulo" : "BRITPOP"
+}, {
+  "genero" : {
+    "idGenero" : 42,
+    "nombreGenero" : "PUNK"
+  },
+  "artista" : {
+    "idArtista" : 3214,
+    "nombre" : "THE DAMNED",
+    "anyoInicio" : "1976",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 42,
+      "nombreGenero" : "PUNK"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/TheDamned-NotLikeEverybodyElse.webp",
+  "anyo" : "2026",
+  "titulo" : "Not Like Everybody Else"
+}, {
+  "genero" : {
+    "idGenero" : 44,
+    "nombreGenero" : "R&B"
+  },
+  "artista" : {
+    "idArtista" : 159,
+    "nombre" : "ARI LENNOX",
+    "anyoInicio" : "2011",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/ARI LENNOX.webp",
+    "generos" : {
+      "idGenero" : 44,
+      "nombreGenero" : "R&B"
+    },
+    "resumenWikipedia" : "Courtney Shanade Salter (born March 26, 1991), known professionally as Ari Lennox, is an American R&B singer-songwriter from Washington, D.C. She signed with J. Cole's Dreamville Records, an imprint of Interscope Records as the former label's first female artist in 2015. She started gaining recognition after the release of her second extended play (EP) and major label debut, Pho (2016). That same year, she made an uncredited guest appearance on Cole's song \"Change\". Her first full-length album, Shea Butter Baby (2019), was met with critical praise and commercial response.\r\n\r\nLennox also performed on the Dreamville compilation albums Revenge of the Dreamers II (2015) and Revenge of the Dreamers III (2019), the latter of which debuted atop the Billboard 200 chart and was nominated for Best Rap Album at the 62nd Annual Grammy Awards.[1] Her 2021 single, \"Pressure\", marked her first entry on the Billboard Hot 100 and preceded her second album, Age/Sex/Location (2022), while her guest appearance on Summer Walker's song, \"Unloyal\", peaked within the chart's top 50 that same year."
+  },
+  "cover" : "/assets/Cover/AriLennox-Vacancy.webp",
+  "anyo" : "2026",
+  "titulo" : "Vacancy"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 4168,
+    "nombre" : "The Morning Stars",
+    "anyoInicio" : "2004",
+    "paises" : {
+      "idpais" : 39,
+      "nombre" : "Canada",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Canada.png"
+    },
+    "foto" : "/assets/Artistas/The Morning Stars.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "The Morning Stars is the rock band from Hamilton, Canada. It was formed by two brothers: Mars (Vocals/Guitar) and Michael Ivic (Vocals/Bass) in 2004. They are also authors of their lyrics. The third member is Donn Dixon (Drums). They recorded two albums: You Can't Change The World (2007) and Radiation (2009). They were influenced by: Einstein, Brubeck,The Velvet Underground, Tennis, Polanski, Kubrick, Picasso, Red Wine, Mother Nature"
+  },
+  "cover" : "/assets/Cover/TheMorningStars-AHymnWithoutASound.webp",
+  "anyo" : "2026",
+  "titulo" : "A Hymn Without A Sound"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1968,
+    "nombre" : "MADISON BEER",
+    "anyoInicio" : "1999",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/MadisonBeer-locket.webp",
+  "anyo" : "2026",
+  "titulo" : "locket"
+}, {
+  "genero" : {
+    "idGenero" : 42,
+    "nombreGenero" : "PUNK"
+  },
+  "artista" : {
+    "idArtista" : 4169,
+    "nombre" : "Private Wives",
+    "anyoInicio" : "2020",
+    "paises" : {
+      "idpais" : 15,
+      "nombre" : "Australia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Australia.png"
+    },
+    "foto" : "/assets/Artistas/Private Wives.webp",
+    "generos" : {
+      "idGenero" : 42,
+      "nombreGenero" : "PUNK"
+    },
+    "resumenWikipedia" : "Private Wives are an all girl punk trio, forming just before the constraints of lockdown in sunny Wollongong. Hard and angry riffs, screaming group vocals and haunting words that makes you want to get down and dirty. With their goal to be a voice for young women like themselves, Private Wives don’t leave out any important info. Born into Wollongong’s punk scene post Rad Bar, Private Wives have been keeping busy, playing with the likes of grunge legends Tumbleweed, Tasmanian icons A Swayze and the Ghosts, hitting the stage for King St Carnival with Australian exports C.O.F.F.I.N., getting rotation on radio stations like FBi Radio, 2ser, 2RRR and more around the country, and recently signing with local record label Farmer & the Owl. "
+  },
+  "cover" : "/assets/Cover/PrivateWives-ThreeOfSwords.webp",
+  "anyo" : "2026",
+  "titulo" : "Three Of Swords"
+}, {
+  "genero" : {
+    "idGenero" : 51,
+    "nombreGenero" : "SOUL"
+  },
+  "artista" : {
+    "idArtista" : 4170,
+    "nombre" : "Camper",
+    "anyoInicio" : "2020",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/ALVAH HEIDENREICH.webp",
+    "generos" : {
+      "idGenero" : 51,
+      "nombreGenero" : "SOUL"
+    },
+    "resumenWikipedia" : "Sin Información"
+  },
+  "cover" : "/assets/Cover/Camper-Campilation.webp",
+  "anyo" : "2026",
+  "titulo" : "Campilation"
+}, {
+  "genero" : {
+    "idGenero" : 44,
+    "nombreGenero" : "R&B"
+  },
+  "artista" : {
+    "idArtista" : 4171,
+    "nombre" : "Nija",
+    "anyoInicio" : "2017",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Nija.webp",
+    "generos" : {
+      "idGenero" : 44,
+      "nombreGenero" : "R&B"
+    },
+    "resumenWikipedia" : "Nija Aisha-Alayja Charles[1] (born October 20, 1997), also known by her stage names Nija or Amnija, is an American singer, songwriter, and record producer.[2] Charles began her career in 2017, and has since been a credited songwriter for The Carters (\"Heard About Us\" and \"LoveHappy\"), Lady Gaga (\"Rain on Me\"), Cardi B (\"I Do\" and \"Ring\"), and Chris Brown (\"No Guidance\"). She is signed to Capitol Records and Universal Music Publishing Group.[3]\r\n\r\nShe was nominated for the inaugural Grammy Award for Songwriter of the Year at the 65th Annual Grammy Awards for her work on releases by Beyoncé, Summer Walker, City Girls, Lil Durk, Anitta, Meek Mill, Megan Thee Stallion and Kehlani.[4]"
+  },
+  "cover" : "/assets/Cover/Nija-WhatIDidn'tSay.webp",
+  "anyo" : "2026",
+  "titulo" : "What I Didn't Say"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1970,
+    "nombre" : "MADONNA",
+    "anyoInicio" : "1958",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/madonna.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Madonna Louise Ciccone (Bay City, Míchigan, 16 de agosto de 1958), conocida simplemente como Madonna, es una cantante, compositora, bailarina, actriz e icono estadounidense. Ha sido elogiada por los críticos por sus producciones musicales y puestas en escena, otorgándole el título de la «Reina del Pop». Como icono popular prominente que abarca los siglos XX y XXI, ha sido objeto central de numerosas obras académicas, literarias y artísticas, así como de una subdisciplina académica denominada Madonna studies.\r\n\r\nCriada en Míchigan, se trasladó en 1978 a la ciudad de Nueva York para realizar una carrera de danza contemporánea. Después de participar en dos grupos musicales, Breakfast Club y Emmy, en 1982 firmó un contrato discográfico con Sire Records y lanzó su álbum debut Madonna al año siguiente. Siguió publicando una serie de álbumes en los que encontró una inmensa popularidad, superó los límites de contenido de las letras de sus canciones y explotó las imágenes en sus vídeos musicales, que a lo largo de su carrera se han convertido en piezas de arte. Muchos de sus sencillos alcanzaron el número uno en los principales mercados musicales mundiales; sus mayores éxitos incluyen temas como «Like a Virgin», «Material Girl», «Papa Don't Preach», «La isla bonita», «Like a Prayer», «Express Yourself», «Vogue», «Take a Bow», «Frozen», «Music», «Hung Up» y «4 Minutes»."
+  },
+  "cover" : "/assets/Cover/Madonna-IRise(Remixes).webp",
+  "anyo" : "2026",
+  "titulo" : "I Rise (Remixes)"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 4173,
+    "nombre" : "Jordi",
+    "anyoInicio" : "2020",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Jordi.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Sin Información"
+  },
+  "cover" : "/assets/Cover/Jordi-Jordi.webp",
+  "anyo" : "2026",
+  "titulo" : "Jordi"
+}, {
+  "genero" : {
+    "idGenero" : 9,
+    "nombreGenero" : "COUNTRY"
+  },
+  "artista" : {
+    "idArtista" : 4175,
+    "nombre" : "Nate Smith",
+    "anyoInicio" : "2018",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Nate Smith.webp",
+    "generos" : {
+      "idGenero" : 9,
+      "nombreGenero" : "COUNTRY"
+    },
+    "resumenWikipedia" : "Nate Smith es un cantante, músico y compositor de música country estadounidense contratado por Sony Music Nashville. Después de que su canción \"Wildfire\" se volviera viral en TikTok en 2020, firmó un contrato con Sony/ATV. Ganó popularidad en las redes sociales antes de conseguir su contrato discográfico con un sello importante. Anteriormente había firmado con Word Records."
+  },
+  "cover" : "/assets/Cover/NateSmith-Live-Action(Deluxe).webp",
+  "anyo" : "2026",
+  "titulo" : "Live-Action (Deluxe)"
+}, {
+  "genero" : {
+    "idGenero" : 44,
+    "nombreGenero" : "R&B"
+  },
+  "artista" : {
+    "idArtista" : 4176,
+    "nombre" : "Xania Monet",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Xania Monet.webp",
+    "generos" : {
+      "idGenero" : 44,
+      "nombreGenero" : "R&B"
+    },
+    "resumenWikipedia" : "Poco tiempo atrás, la escena artística parecía estar a salvo de los avances de la automatización, porque las máquinas adquirían habilidades para tareas repetitivas —por ejemplo, levantar cajas—, aunque aún eran torpes para la creatividad. Con el boom de la Inteligencia Artificial Generativa, el paraguas que resguardó a los artistas humanos comenzó a tener filtraciones.\r\n\r\nXania Monet es una de esas goteras. Ella es la intérprete de How Was I Supposed to Know, una canción que llegó a ocupar el primer puesto en el ranking de ventas digitales. Además, acumula miles de seguidores en las redes sociales y se consolida como una de las nuevas estrellas del mundo artístico. Algo un detalle clave acerca de esta figura: no es una cantante humana, sino que fue creada con IA, tanto su imagen como su música."
+  },
+  "cover" : "/assets/Cover/XaniaMonet-TheThingsIDidn'tSay.webp",
+  "anyo" : "2026",
+  "titulo" : "The Things I Didn't Say"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 2078,
+    "nombre" : "MEGADETH",
+    "anyoInicio" : "1983",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/Megadeth-Megadeth.webp",
+  "anyo" : "2026",
+  "titulo" : "Megadeth"
+}, {
+  "genero" : {
+    "idGenero" : 27,
+    "nombreGenero" : "HIP-HOP"
+  },
+  "artista" : {
+    "idArtista" : 4180,
+    "nombre" : "Qveen Herby",
+    "anyoInicio" : "2010",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Qveen Herby.webp",
+    "generos" : {
+      "idGenero" : 27,
+      "nombreGenero" : "HIP-HOP"
+    },
+    "resumenWikipedia" : "Amy Renee Noonan Heidemann, conocida por su nombre artístico Qveen Herby, es una rapera, cantante y compositora estadounidense. Ganó fama por primera vez como parte del dúo musical Karmin. Tras la pausa del dúo en 2017, comenzó el proyecto en solitario como Qveen Herby, que incorporó R&B y Hip Hop influencias. Lanzó su primer EP en solitario, EP 1 en el 2 de junio de 2017. Lanzó su álbum debut, A Woman, el 21 de mayo de 2021."
+  },
+  "cover" : "/assets/Cover/QveenHerby-IsleOfQveen.webp",
+  "anyo" : "2026",
+  "titulo" : "Isle Of Qveen"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 2270,
+    "nombre" : "NICK JONAS",
+    "anyoInicio" : "1992",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Nick Jonas.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Nicholas Jerry Jonas (Dallas, 16 de septiembre de 1992), conocido como Nick Jonas, es un cantante, músico, actor, productor y director musical estadounidense, miembro de la banda Jonas Brothers."
+  },
+  "cover" : "/assets/Cover/NickJonas-SundayBest.webp",
+  "anyo" : "2026",
+  "titulo" : "Sunday Best"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 546,
+    "nombre" : "CHARLI XCX",
+    "anyoInicio" : "1992",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/Charli XCX.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Charlotte Emma Aitchison (Cambridge, Inglaterra; 2 de agosto de 1992), conocida por su nombre artístico Charli xcx, es una cantante y compositora británica.[2]​[3]​\r\n\r\nNacida en Cambridge y criada en Start Hill, Essex, Charli comenzó a publicar sus primeras canciones en Myspace en 2008,[4]​ lo que la llevó a ser descubierta por un productor, quien la invitó a actuar en eventos y fiestas, por lo que en 2010 firmó un contrato discográfico con Asylum Records, lanzando así una serie de sencillos y mixtapes durante 2011 y 2012.[5]​[6]​\r\n\r\nEn 2013, Charli saltó a la fama debido a su colaboración con Icona Pop en la canción I Love It, la cual escribió y se convirtió en un éxito internacional. Su primer álbum de estudio, True Romance,[7]​ fue lanzado ese mismo año con gran éxito por parte de la crítica, si bien no cumplió con las expectativas comerciales. En 2014 contribuyó en la canción Fancy de la rapera australiana Iggy Azalea que terminó ese año como uno de los sencillos más vendidos en todo el mundo y fue nominada a dos Premios Grammy. El mismo año, recibió su primer éxito como solista con el sencillo Boom Clap,[8]​ el cual entró en el Billboard Hot 100.[9]​ Su segundo álbum de estudio, Sucker,[10]​ fue lanzado a finales de ese mismo año y contó con el sencillo anteriormente mencionado y los sencillos Break the Rules, Famous, Need Ur Luv y Doing It; este último en colaboración con la cantante británica Rita Ora."
+  },
+  "cover" : "/assets/Cover/Charlixcx-WutheringHeights.webp",
+  "anyo" : "2026",
+  "titulo" : "Wuthering Heights"
+}, {
+  "genero" : {
+    "idGenero" : 42,
+    "nombreGenero" : "PUNK"
+  },
+  "artista" : {
+    "idArtista" : 4193,
+    "nombre" : "Joyce Manor",
+    "anyoInicio" : "2008",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Joyce Manor.webp",
+    "generos" : {
+      "idGenero" : 42,
+      "nombreGenero" : "PUNK"
+    },
+    "resumenWikipedia" : "Joyce Manor es una banda estadounidense de punk fundada en 2008 en Torance. Está integrada por el vocalista y guitarrista Barry Johnson, el guitarrista Chase Knobbe, y el bajista y corista Matt Ebert. La banda ha tenido varios bateristas diferentes. La banda ha lanzado seis álbumes de estudio, cada uno típicamente de corta duración. El personal de Consequence clasificó a la banda en el número 25 en su lista de \"Las 100 mejores bandas de pop punk\" en 2019. La banda debe su nombre a un edificio de apartamentos por el que Johnson solía pasar. El álbum debut de la banda fue lanzado en 2011, presentando su popular canción \"Constant Headache\". La banda fue contratada por primera vez por el sello discográfico 6131 Records."
+  },
+  "cover" : "/assets/Cover/JoyceManor-IUsedtoGotoThisBar.webp",
+  "anyo" : "2026",
+  "titulo" : "I Used to Go to This Bar"
+}, {
+  "genero" : {
+    "idGenero" : 27,
+    "nombreGenero" : "HIP-HOP"
+  },
+  "artista" : {
+    "idArtista" : 3122,
+    "nombre" : "TERRACE MARTIN",
+    "anyoInicio" : "2004",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Terrace Martin.webp",
+    "generos" : {
+      "idGenero" : 27,
+      "nombreGenero" : "HIP-HOP"
+    },
+    "resumenWikipedia" : "Terrace Jamahl Martin (born December 28, 1978) is an American musician, rapper, singer, and record producer. He is perhaps best known for producing records for several prominent artists in the music industry, including Kendrick Lamar, Snoop Dogg, the Game, Busta Rhymes, Stevie Wonder, Charlie Wilson, Raphael Saadiq and YG, among others. Martin is a multi-instrumentalist whose music production embodies funk, jazz, classical and soul. Martin released his sixth studio album, Velvet Portraits, on his label, Sounds of Crenshaw Records, through Ropeadope Records.[1]"
+  },
+  "cover" : "/assets/Cover/TerraceMartin-Passion.webp",
+  "anyo" : "2026",
+  "titulo" : "Passion"
+}, {
+  "genero" : {
+    "idGenero" : 44,
+    "nombreGenero" : "R&B"
+  },
+  "artista" : {
+    "idArtista" : 4253,
+    "nombre" : "Meg Mac",
+    "anyoInicio" : "2013",
+    "paises" : {
+      "idpais" : 15,
+      "nombre" : "Australia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Australia.png"
+    },
+    "foto" : "/assets/Artistas/Meg Mac.webp",
+    "generos" : {
+      "idGenero" : 44,
+      "nombreGenero" : "R&B"
+    },
+    "resumenWikipedia" : "Megan Sullivan McInerney, conocida por su nombre artístico Meg Mac, es una cantautora australiana. En 2014, firmó a nivel local con littleBIGMAN Records, y con 300 Entertainment en los Estados Unidos."
+  },
+  "cover" : "/assets/Cover/MegMac-It'sMyParty.webp",
+  "anyo" : "2026",
+  "titulo" : "It's My Party"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 3621,
+    "nombre" : "U2",
+    "anyoInicio" : "1976",
+    "paises" : {
+      "idpais" : 105,
+      "nombre" : "Irlanda",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Irlanda.png"
+    },
+    "foto" : "/assets/Artistas/U2.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "U2 es una banda de rock originaria de Dublín (Irlanda) formada en 1976 por Bono (voz), The Edge, Adam Clayton (bajo), y Larry Mullen Jr. (batería). El sonido inicial de U2 tenía sus raíces en el post-punk, pero posteriormente fueron incorporando a su música elementos de otros géneros: \"Su cancionero es extenso y está repleto de variaciones: desde el rock más clásico hasta el pop más redondo, pasando por el coqueteo con la electrónica o los homenajes al góspel\". A lo largo de la búsqueda musical de la banda, han mantenido un sonido construido a base de instrumentales melódicos, destacados por la textura musical de The Edge y la voz expresiva de Bono, a las que se suma una base característica integrada por la batería de Mullen y el bajo de Clayton. Sus letras, a menudo ordenadas con imágenes espirituales, se centran en temas personales y temática de justicia social y paz."
+  },
+  "cover" : "/assets/Cover/U2-DaysOfAshEP.webp",
+  "anyo" : "2026",
+  "titulo" : "Days Of Ash EP"
+}, {
+  "genero" : {
+    "idGenero" : 44,
+    "nombreGenero" : "R&B"
+  },
+  "artista" : {
+    "idArtista" : 4250,
+    "nombre" : "Choker",
+    "anyoInicio" : "2017",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Choker.webp",
+    "generos" : {
+      "idGenero" : 44,
+      "nombreGenero" : "R&B"
+    },
+    "resumenWikipedia" : "Christopher Lloyd (born December 16, 1995),[1] known professionally as Choker, is an American singer-songwriter, rapper and record producer. Known for his eclecticism, his coded lyricism and his falsetto laced vocals. Choker has gained acclaim for blending genres and subgenres of R&B, rap, soul and psychedelic rock, and wide comparisons to Frank Ocean because of his musical style. His stage name stems from the energy and mystique surrounding old metal acts. In 2017, Choker was listed by Complex as one of the year's best new artists"
+  },
+  "cover" : "/assets/Cover/Choker-HeavenAin'tSold.webp",
+  "anyo" : "2026",
+  "titulo" : "Heaven Ain't Sold"
+}, {
+  "genero" : {
+    "idGenero" : 49,
+    "nombreGenero" : "SINGER SONGWRITTER"
+  },
+  "artista" : {
+    "idArtista" : 4251,
+    "nombre" : "KADEEM.",
+    "anyoInicio" : "2026",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/ALVAH HEIDENREICH.webp",
+    "generos" : {
+      "idGenero" : 49,
+      "nombreGenero" : "SINGER SONGWRITTER"
+    },
+    "resumenWikipedia" : "Sin información"
+  },
+  "cover" : "/assets/Cover/KADEEM.-Highs+Lows.webp",
+  "anyo" : "2026",
+  "titulo" : "Highs + Lows"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 4254,
+    "nombre" : "Leigh-Anne",
+    "anyoInicio" : "2011",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/Leigh-Anne.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Leigh-Anne Pinnock es una cantante, empresaria, modelo, actriz, bailarina y compositora británica, integrante del grupo Little Mix. Junto al grupo, Leigh-Anne ha vendido alrededor de 70 millones de álbumes y sencillos convirtiéndolas en uno de los grupos femeninos con más ventas de la historia."
+  },
+  "cover" : "/assets/Cover/Leigh-Anne-MyEgoToldMeTo.webp",
+  "anyo" : "2026",
+  "titulo" : "My Ego Told Me To"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 2148,
+    "nombre" : "MIMI WEBB",
+    "anyoInicio" : "2000",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/Mimi Webb.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Amelia Anne \"Mimi\" Webb (born 23 July 2000) is an English singer and songwriter. In October 2021, she released her debut EP, Seven Shades of Heartbreak, which peaked at number nine on the UK Albums Chart, and included the singles \"Good Without\", \"Dumb Love\" and \"24/5\", which all placed on the UK singles chart. Webb released her debut studio album, Amelia, in March 2023, which spawned the successful singles \"House on Fire\", \"Ghost of You\" and \"Red Flags\". In September 2025, she released her second studio album Confessions."
+  },
+  "cover" : "/assets/Cover/MimiWebb-ConfessionsAnUnexpectedTurnofEvents.webp",
+  "anyo" : "2026",
+  "titulo" : "Confessions An Unexpected Turn of Events"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 4252,
+    "nombre" : "Leaf",
+    "anyoInicio" : "2026",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/ALVAH HEIDENREICH.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Sin información"
+  },
+  "cover" : "/assets/Cover/Leaf-InYourDreams.webp",
+  "anyo" : "2026",
+  "titulo" : "In Your Dreams"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1308,
+    "nombre" : "HILARY DUFF",
+    "anyoInicio" : "1987",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Hilary Duff.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Hilary Erhard Duff (Houston, Texas, 28 de septiembre de 1987) es una cantante, compositora, actriz, empresaria y escritora estadounidense.\r\n\r\nComenzó su carrera desde muy temprana edad, participando en producciones de teatro locales y anuncios de televisión. En 1997 recibió su primer papel cinematográfico, donde interpretó el papel principal en la película Casper y la mágica Wendy. También apareció en la película True Women (1997), antes de llegar a la fama en el papel protagonista de la comedia adolescente de Disney Channel Lizzie McGuire.[1]​ Establecida como una ídolo adolescente, Duff volvió a interpretar ese papel en The Lizzie McGuire Movie (2003) y se aventuró en el cine con sus primeras películas, Agent Cody Banks (2003), Cheaper by the Dozen (2003), A Cinderella Story (2004) y Cheaper By the Dozen 2 (2005), siendo uno de los mayores éxitos comerciales de su carrera."
+  },
+  "cover" : "/assets/Cover/HilaryDuff-luck...orsomething.webp",
+  "anyo" : "2026",
+  "titulo" : "luck... or something"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-RadioRock.webp",
+  "anyo" : "2026",
+  "titulo" : "Radio Rock"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-DiscoSoul.webp",
+  "anyo" : "2026",
+  "titulo" : "Disco Soul"
+}, {
+  "genero" : {
+    "idGenero" : 2,
+    "nombreGenero" : "ALTERNATIVE"
+  },
+  "artista" : {
+    "idArtista" : 4316,
+    "nombre" : "Gorillaz",
+    "anyoInicio" : "1998",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/Gorillaz.webp",
+    "generos" : {
+      "idGenero" : 2,
+      "nombreGenero" : "ALTERNATIVE"
+    },
+    "resumenWikipedia" : "Gorillaz es una banda virtual británica creada en 1998 por Damon Albarn y Jamie Hewlett. La banda está compuesta por cuatro miembros ficticios: 2-D, Noodle, Murdoc Niccals y Russel Hobbs. La mayoría de sus canciones junto con todo su universo ficticio, se presentan a través de vídeos musicales animados, de animación tradicional y animación por computadora, entrevistas y pequeños cortos animados. En la realidad, Albarn es el único miembro permanente de la banda. El productor y ejecutivo Remi Kabaka Jr. empezaría a colaborar con el grupo en 2016 después de proveer por varios años la voz de Russel Hobbs y sería nombrado miembro oficial junto a Albarn y Hewlett en 2019 en el documental de Gorillaz, Gorillaz: Reject False Icons."
+  },
+  "cover" : "/assets/Cover/Gorillaz-TheMountain(DeluxeEdition).webp",
+  "anyo" : "2026",
+  "titulo" : "The Mountain (Deluxe Edition)"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 2157,
+    "nombre" : "MITSKI",
+    "anyoInicio" : "1990",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/Mitski-Nothing'sAbouttoHappentoMe.webp",
+  "anyo" : "2026",
+  "titulo" : "Nothing's About to Happen to Me"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 4317,
+    "nombre" : "Customs",
+    "anyoInicio" : "2008",
+    "paises" : {
+      "idpais" : 22,
+      "nombre" : "Belgica",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Belgica.png"
+    },
+    "foto" : "/assets/Artistas/Customs.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "Customs es una banda de rock belga de la zona de Lovaina[1] fundada en 2008 y que cuenta con un repertorio en inglés. Su primer single, Rex, estuvo en el Ultratip 30 durante 5 semanas y entró en el Ultratop 50 el 11 de julio de 2009, permaneciendo en las listas durante once semanas con una pausa. La canción alcanzó el número 1 en De Afrekening, la lista alternativa de éxitos de la emisora Studio Brussel. [2] En septiembre de 2009 se lanzó su segundo single, Justine. El primer álbum, Enter the Characters, se publicó el 26 de octubre de 2009. "
+  },
+  "cover" : "/assets/Cover/Customs-LoveIsTheFuture.webp",
+  "anyo" : "2026",
+  "titulo" : "Love Is The Future"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1268,
+    "nombre" : "HARRY STYLES",
+    "anyoInicio" : "1994",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/HARRY STYLES.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Harry Edward Styles (Holmes Chapel, Cheshire; 1 de febrero de 1994) es un cantante, compositor y actor británico. Inició su carrera como cantante en 2010 como integrante de la boy band One Direction, con la que participó en el programa The X Factor y quedó en tercer lugar.[1]​ Pese a no ganar, la agrupación firmó un contrato discográfico con el sello Syco, con el que publicaron los álbumes Up All Night (2011), Take Me Home (2012), Midnight Memories (2013), Four (2014) y Made in the A.M. (2015), los cuales alcanzaron la primera posición en las listas de los más vendidos en numerosos países, entre estos los Estados Unidos y el Reino Unido, además de registrar altas ventas."
+  },
+  "cover" : "/assets/Cover/HarryStyles-KissAllTheTime.Disco,Occasionally..webp",
+  "anyo" : "2026",
+  "titulo" : "Kiss All The Time. Disco, Occasionally."
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 345,
+    "nombre" : "BLACK SWAN",
+    "anyoInicio" : "9999",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/BLACK SWAN.webp",
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : "Black Swan es un supuesto supergrupo fundado en 2019 y firmado con el sello Frontiers Music. Está formado por tres cuartas partes de músicos estadounidenses, y el cantante Robin McAuley es de Irlanda."
+  },
+  "cover" : "/assets/Cover/BlackSwan-Paralyzed.webp",
+  "anyo" : "2026",
+  "titulo" : "Paralyzed"
+}, {
+  "genero" : {
+    "idGenero" : 2,
+    "nombreGenero" : "ALTERNATIVE"
+  },
+  "artista" : {
+    "idArtista" : 4318,
+    "nombre" : "Pacific Avenue",
+    "anyoInicio" : "2017",
+    "paises" : {
+      "idpais" : 15,
+      "nombre" : "Australia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Australia.png"
+    },
+    "foto" : "/assets/Artistas/Pacific Avenue.webp",
+    "generos" : {
+      "idGenero" : 2,
+      "nombreGenero" : "ALTERNATIVE"
+    },
+    "resumenWikipedia" : "Pacific Avenue es un grupo australiano de rock alternativo formado en 2017 y formado por Harry O'Brien en voz y guitarra, Ben Fryer en la guitarra solista, Jack Kay en el bajo y voz, y Dom Littrich en la batería. [1][2] Han teloneado a grupos como San Cisco, The Belligerents y British India[2] y lanzaron su álbum debut en mayo de 2023."
+  },
+  "cover" : "/assets/Cover/PacificAvenue-LovesickSentimental.webp",
+  "anyo" : "2026",
+  "titulo" : "Lovesick Sentimental"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 3924,
+    "nombre" : "Cold War Kids",
+    "anyoInicio" : "null",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Cold War Kids.webp",
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : "Cold War Kids es una banda estadounidense de música indie rock, originarios de Long Beach, California. Los integrantes de la banda son Nathan Willett, Dann Gallucci (guitarra principal, percusión, melódica, Matt Maust, Joe Plummer y Matthew Schwartz. Jonnie Russell y Matt Aveiro salieron de la banda."
+  },
+  "cover" : "/assets/Cover/ColdWarKids-PushMyLuckAllIEverNeed.webp",
+  "anyo" : "2026",
+  "titulo" : "Push My Luck / All I Ever Need"
+}, {
+  "genero" : {
+    "idGenero" : 51,
+    "nombreGenero" : "SOUL"
+  },
+  "artista" : {
+    "idArtista" : 4319,
+    "nombre" : "Micah Dailey-White",
+    "anyoInicio" : "2026",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Micah Dailey-White.webp",
+    "generos" : {
+      "idGenero" : 51,
+      "nombreGenero" : "SOUL"
+    },
+    "resumenWikipedia" : "Micah, well-known for his comedy TikToks, seems to have a very promising beginning in music after his first self-named album “Micah.” His production is seemingly inspired by 90s soul/jazz songs with some similarities to artists like d4vd and Joji. It seems most of his songs address some sort relationship problems he might’ve had in the past, and all that with a great vibe to accompany it."
+  },
+  "cover" : "/assets/Cover/MicahDailey-White-MANIA.webp",
+  "anyo" : "2026",
+  "titulo" : "MANIA"
+}, {
+  "genero" : {
+    "idGenero" : 49,
+    "nombreGenero" : "SINGER SONGWRITTER"
+  },
+  "artista" : {
+    "idArtista" : 4320,
+    "nombre" : "Luke Temple",
+    "anyoInicio" : "2006",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Luke Temple.webp",
+    "generos" : {
+      "idGenero" : 49,
+      "nombreGenero" : "SINGER SONGWRITTER"
+    },
+    "resumenWikipedia" : "Luke Temple, también conocido bajo el alias Art Feynman, es un cantautor estadounidense. Graba bajo su propio nombre y con la banda neoyorquina Here We Go Magic.\r\n\r\nTemple nació en Salem, Massachusetts. Tras pasar un tiempo en el norte de California, estudió pintura en el Museo de Bellas Artes de Boston. [1] Tras luchar por ganarse la vida como artista visual, incluyendo pintar murales en apartamentos de lujo en Nueva York, Temple se dedicó a la composición y grabación. [1][2] Tras grabar él mismo un EP de cuatro canciones en una grabadora de cuatro pistas, Temple firmó con Mill Pond Records de Seattle. [1] Posteriormente grabó dos álbumes completos con Mill Pond, Hold a Match for a Gasoline World (2005) y Snow Beast (2007), antes de firmar con el sello Secretly Canadian en 2010 para Good Mood Fool. [3] El 11 de noviembre de 2016, Temple publicó A Hand Through the Cellar Door.\r\n\r\nLos estilos vocales de Temple son conocidos por su uso del falsete, y han sido comparados con Paul Simon, Jeff Buckley y Nick Drake. [4]\r\n\r\nSu canción \"Make Right With You\" apareció en un episodio de Grey's Anatomy, la temporada 3 en \"Where the Boys Are\".\r\n\r\nTemple también comenzó a publicar música bajo el alias Art Feynman en 2017, comenzando con Blast Off Through the Wicker, publicado en el sello Western Vinyl. "
+  },
+  "cover" : "/assets/Cover/LukeTemple-HungryAnimal.webp",
+  "anyo" : "2026",
+  "titulo" : "Hungry Animal"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 4321,
+    "nombre" : "IT'sALIE",
+    "anyoInicio" : "2020",
+    "paises" : {
+      "idpais" : 128,
+      "nombre" : "Italia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Italia.png"
+    },
+    "foto" : "/assets/Artistas/IT'sALIE.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "Sin información"
+  },
+  "cover" : "/assets/Cover/IT'sALIE-WildGames.webp",
+  "anyo" : "2026",
+  "titulo" : "Wild Games"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 4327,
+    "nombre" : "Voxtrot",
+    "anyoInicio" : "2003",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Voxtrot.webp",
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : "Voxtrot es una banda estadounidense de indie pop formada en Austin, Texas, en 2003. Sus primeras grabaciones se publicaron en 2003, y su EP debut, Raised by Wolves, fue publicado en 2005 con gran reconocimiento de la crítica, atrayendo la atención de blogueros musicales así como de grandes publicaciones como Pitchfork y Spin. [3][4] La banda ganó popularidad en internet durante el auge de la blogósfera musical en línea temprana, especialmente entre blogs MP3, lo que les llevó a ser considerados un acto definitorio de la era del blog rock. [5]\r\n\r\nLa banda lanzó dos EPs adicionales en 2006, Mothers, Sisters, Daughters & Wives y Your Biggest Fan, antes de lanzar su álbum debut homónimo en 2007. Tras lanzar su primer álbum, el grupo continuó actuando en directo y publicó varios singles antes de anunciar su inminente disolución en abril de 2010. La banda realizó una breve gira por Estados Unidos antes de su disolución, que terminó en Nueva York el 26 de junio de 2010. [6]\r\n\r\nEl 6 de mayo de 2022, el grupo anunció que emprendería una gira de reunión durante la última parte del año"
+  },
+  "cover" : "/assets/Cover/Voxtrot-DreamersInExile.webp",
+  "anyo" : "2026",
+  "titulo" : "Dreamers In Exile"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 4329,
+    "nombre" : "Steve Emm",
+    "anyoInicio" : "2021",
+    "paises" : {
+      "idpais" : 128,
+      "nombre" : "Italia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Italia.png"
+    },
+    "foto" : "/assets/Artistas/Steve Emm.webp",
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : "Steve Emm ha sido apasionado por la música desde la infancia. A los 14 años empezó a tocar la batería y a estudiar música, y a los 16 ya había formado su primera banda, asumiendo el doble papel de batería y compositor principal. Más tarde se unió a la banda de hair metal/glam Tabby Cats, actuando extensamente en el circuito underground italiano en directo y compartiendo escenario con artistas reconocidos como Crashdïet, Nasty Idols, Crazy Lixx, Gemini Five, Hungry Hearts y Peppermint Creeps. Tras el final del capítulo de los Tabby Cats, Steve se unió al trío de hard rock Three Times Better, antes de fundar la banda punk Visione Inversa, con la que lanzó tres álbumes, permaneciendo activo hasta 2022. Desde 2021, Steve Emm se ha dedicado por completo a su proyecto de estudio en solitario, en el que se encarga de todos los aspectos del proceso creativo, desde la grabación hasta la producción. Hasta la fecha, ha publicado cuatro álbumes de estudio, todos publicados por Steelheart Records. Paralelamente a su carrera en solitario, Steve también ha escrito canciones para artistas de renombre internacional como Revolution Saints, L.A. Guns, Sunstorm y Mecca."
+  },
+  "cover" : "/assets/Cover/SteveEmm-PrivateAffairs.webp",
+  "anyo" : "2026",
+  "titulo" : "Private Affairs"
+}, {
+  "genero" : {
+    "idGenero" : 9,
+    "nombreGenero" : "COUNTRY"
+  },
+  "artista" : {
+    "idArtista" : 3401,
+    "nombre" : "THE SHEEPDOGS",
+    "anyoInicio" : "2006",
+    "paises" : {
+      "idpais" : 39,
+      "nombre" : "Canada",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Canada.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 9,
+      "nombreGenero" : "COUNTRY"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/TheSheepdogs-KeepOutoftheStorm.webp",
+  "anyo" : "2026",
+  "titulo" : "Keep Out of the Storm"
+}, {
+  "genero" : {
+    "idGenero" : 9,
+    "nombreGenero" : "COUNTRY"
+  },
+  "artista" : {
+    "idArtista" : 4330,
+    "nombre" : "Red Leather",
+    "anyoInicio" : "2022",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Red Leather.webp",
+    "generos" : {
+      "idGenero" : 9,
+      "nombreGenero" : "COUNTRY"
+    },
+    "resumenWikipedia" : "Red Leather es un cantautor de country y rock de Reno, Nevada. [1] Toca la guitarra y canta. Su primer sencillo, titulado \"The Only Time It Rains In Hollywood\", se lanzó en 2022,[2][3] y varios otros sencillos siguieron. Su álbum debut, titulado Reno, se publicó el 17 de noviembre de 2023. Su segundo álbum, llamado Tahoe, se publicó el 27 de febrero de 2026.\r\n\r\nEs una persona muy reservada, nunca revela su rostro, nombre legal ni edad. Es un adicto en recuperación,[1][4] adicto a varias drogas (incluido el alcohol), especialmente a la cocaína. [4][1] En octubre de 2023 se informó que llevaba 20 meses sobrio. [1] Actualmente reside en Los Ángeles."
+  },
+  "cover" : "/assets/Cover/RedLeather-TAHOE.webp",
+  "anyo" : "2026",
+  "titulo" : "TAHOE"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 3240,
+    "nombre" : "THE ENEMY",
+    "anyoInicio" : "2006",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Artistas/The Enemy.webp",
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : "The Enemy (conocidos como The Enemy UK en Estados Unidos) son una banda inglesa de indie rock formada en Coventry en 2006. El álbum debut de la banda, We'll Live and Die in These Towns (2007), llegó directamente al número uno en la lista de álbumes del Reino Unido tras su lanzamiento. Su segundo álbum, Music for the People (2008), alcanzó el número dos en la lista de álbumes del Reino Unido. Streets in the Sky, su tercer álbum de estudio, se publicó el 21 de mayo de 2012 y también fue su tercer álbum que llegó al top 10 en el Reino Unido. Su cuarto álbum de estudio, It's Automatic, se publicó el 9 de octubre de 2015. Tras disolverse en 2016, la banda se reunió en 2022 para dos conciertos de reunión en su ciudad natal, Coventry, y una gira por el Reino Unido."
+  },
+  "cover" : "/assets/Cover/TheEnemy-SocialDisguises.webp",
+  "anyo" : "2026",
+  "titulo" : "Social Disguises"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 48,
+    "nombre" : "ALESSIA CARA",
+    "anyoInicio" : "1996",
+    "paises" : {
+      "idpais" : 39,
+      "nombre" : "Canada",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Canada.png"
+    },
+    "foto" : "/assets/Artistas/ALESSIA CARA.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Alessia Caracciolo (Brampton, Ontario; 11 de julio de 1996), más conocida como Alessia Cara, es una cantante, compositora y actriz canadiense-italiana.[2]​ Después de grabar algunas versiones acústicas, firmó con Def Jam Recordings y lanzó su sencillo debut «Here» el 13 de noviembre de 2015, que alcanzó el número 19 en la lista de los Canadian Hot 100 y fue un éxito inesperado en Estados Unidos, logrando el número 5 en el Billboard Hot 100.[3]​ Antes de su trabajo con EP Records y Def Jam, Cara era conocida por cantar versiones acústicas en YouTube.[4]​\r\n\r\nEl álbum debut de Cara, Know-It-All (2015), alcanzó el número 8 en el Canadian Albums Chart y el número 9 en el Billboard 200 en Estados Unidos. El tercer sencillo del álbum, «Scars to Your Beautiful», logró el número 8 en la lista Billboard Hot 100 en 2016. En 2017 colaboró con el productor Zedd para crear el sencillo «Stay», y con el rapero Logic en «1-800-273-8255».\r\n\r\nRecibió su primer Grammy en 2018, en la categoría por Mejor Artista Nuevo. En este mismo año colabora con el cantante Eros Ramazzotti en el tema «Vale para siempre» (Vale per sempre), incluido en el álbum Hay vida del músico italiano. El 30 de noviembre del mismo año, lanza su segundo álbum, The Pains of Growing, el cual tuvo dos sencillos: «Pains of Growing» y «Not Today».\r\n\r\nEn 2019, lanza su segundo EP, titulado This Summer, promocionado por los sencillos «Ready», «Rooting for You», «Okay Okay» y «October»."
+  },
+  "cover" : "/assets/Cover/AlessiaCara-LoveorLackThereof.webp",
+  "anyo" : "2026",
+  "titulo" : "Love or Lack Thereof"
+}, {
+  "genero" : {
+    "idGenero" : 30,
+    "nombreGenero" : "JAZZ"
+  },
+  "artista" : {
+    "idArtista" : 4332,
+    "nombre" : "Boney James",
+    "anyoInicio" : "1975",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Boney James.webp",
+    "generos" : {
+      "idGenero" : 30,
+      "nombreGenero" : "JAZZ"
+    },
+    "resumenWikipedia" : "Boney James (nacido James Oppenheim el 1 de septiembre de 1961) es un saxofonista, artista discográfico, compositor y productor discográfico estadounidense.\r\n\r\nHa sido nominado cuatro veces a los premios Grammy (Mejor Álbum Instrumental Pop, 2001, 2004, 2014 y Mejor Interpretación de R&B Tradicional, 2009) y ganador del Soul Train Award (Mejor Álbum de Jazz 1998). También ha recibido tres nominaciones a los premios NAACP Image al Mejor Álbum de Jazz. [1] James ha vendido más de cuatro millones de álbumes,[2] y ha acumulado cuatro discos certificados de oro por la RIAA. En 2009, la revista Billboard nombró a James como uno de los tres mejores artistas de jazz contemporáneo de la década de Billboard. En 2024, James se convirtió en el primer artista en alcanzar veinte sencillos #1 en la lista SJ de la revista Billboard"
+  },
+  "cover" : "/assets/Cover/BoneyJames-SaxintheAfternoon.webp",
+  "anyo" : "2026",
+  "titulo" : "Sax in the Afternoon"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 4331,
+    "nombre" : "BlackRain",
+    "anyoInicio" : "2003",
+    "paises" : {
+      "idpais" : 73,
+      "nombre" : "Francia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Francia.png"
+    },
+    "foto" : "/assets/Artistas/BlackRain.webp",
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : "Black Rain es una banda de sleaze rock y hard rock de origen francés fundada en el año 2003, con el lanzamiento de su primer EP titulado Twilight Rain and Darkness."
+  },
+  "cover" : "/assets/Cover/BlackRain-OrphansoftheLight.webp",
+  "anyo" : "2026",
+  "titulo" : "Orphans of the Light"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 464,
+    "nombre" : "BRUNO MARS",
+    "anyoInicio" : "1985",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Bruno Mars.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Peter Gene Hernandez[1]​ (Honolulú, 8 de octubre de 1985), más conocido por su nombre artístico Bruno Mars, es un cantante, compositor, productor musical y bailarín estadounidense de ascendencia puertorriqueña.\r\n\r\nComenzó a crear música desde una edad muy temprana y actuó en muchos escenarios de su pueblo natal a lo largo de su niñez, realizando imitaciones. Se graduó de la escuela secundaria y se mudó a Los Ángeles, donde continuó con su carrera musical.\r\n\r\nDespués de una temporada sin éxito con Motown Records, Mars firmó con Atlantic Records en 2009. Llegó a ser reconocido como artista en solitario después de prestar su voz y haber coescrito los coros para las canciones «Nothin' on You» de B.o.B, y «Billionaire» de Travie McCoy. También coescribió los éxitos internacionales «Right Round» de Flo Rida, «Wavin' Flag» de K'naan y «Fuck You!» de Cee Lo Green. El 4 de octubre de 2010 lanzó su álbum de estudio debut, Doo-Wops & Hooligans. Logró las mejores posiciones en el Billboard Hot 100 gracias a sus sencillos «Just the Way You Are» y «Grenade». Su segundo álbum fue Unorthodox Jukebox, con el que logró llegar al primer puesto de la misma lista con las canciones «Locked out of Heaven» y «When I Was Your Man». Vendió más de 170 millones de copias a nivel mundial, lo que lo hace uno de los artistas con más ventas. Siete de sus canciones se encuentran entre los sencillos más vendidos de la historia a nivel internacional."
+  },
+  "cover" : "/assets/Cover/BrunoMars-TheRomantic.webp",
+  "anyo" : "2026",
+  "titulo" : "The Romantic"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 549,
+    "nombre" : "CHARLIE PUTH",
+    "anyoInicio" : "2008",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Charlie Puth.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Charles Otto Puth (Rumson, Nueva Jersey; 2 de diciembre de 1991), conocido como Charlie Puth, es un cantante, compositor y productor musical estadounidense. Es conocido por producir e interpretar «See You Again» junto a Wiz Khalifa, en honor a la muerte de su actor favorito Paul Walker. Fue nominado 4 veces a los premios Grammys.\r\n\r\nEn 2016 lanzó los primeros sencillos de su álbum debut Nine Track Mind, Marvin Gaye en 2015 con la colaboración de Meghan Trainor que trepó al primer puesto en su país natal y en otros tres países, y las canciones One Call Away y Dangerously. También lanzó We Don't Talk Anymore con Selena Gomez.\r\n\r\nEn 2017 publicó su segundo álbum llamado Voicenotes, que incluiría sencillos como Attention que llegó el 26 de agosto de 2017 a la quinta posición del Billboard Hot 100, en la que permaneció 40 semanas, escrito, producido e interpretado por él mismo. El segundo sencillo del álbum se tituló How Long y se publicó el día 19 de octubre de 2017, este sencillo estuvo en el Hot 100 durante 24 semanas y alcanzó la posición n.º21."
+  },
+  "cover" : "/assets/Cover/CharliePuth-Whatever'sClever!.webp",
+  "anyo" : "2026",
+  "titulo" : "Whatever's Clever!"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 4333,
+    "nombre" : "Defaced",
+    "anyoInicio" : "2012",
+    "paises" : {
+      "idpais" : 227,
+      "nombre" : "Suiza",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Suiza.png"
+    },
+    "foto" : "/assets/Artistas/Defaced.webp",
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : "Defaced es una banda de Death Metal de cinco miembros de Berna, Suiza. Con un Death Metal demoledor con muchos blast beats, riffs rápidos y pesados y elementos atmosféricos de black metal"
+  },
+  "cover" : "/assets/Cover/Defaced-Icon.webp",
+  "anyo" : "2026",
+  "titulo" : "Icon"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-ClassicRockHits.webp",
+  "anyo" : "2026",
+  "titulo" : "Classic Rock Hits"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 4348,
+    "nombre" : "Incandescence",
+    "anyoInicio" : "2011",
+    "paises" : {
+      "idpais" : 39,
+      "nombre" : "Canada",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Canada.png"
+    },
+    "foto" : "/assets/Artistas/Incandescence.webp",
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : "Sin información"
+  },
+  "cover" : "/assets/Cover/Incandescence-HorsTemps.webp",
+  "anyo" : "2026",
+  "titulo" : "Hors Temps"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1896,
+    "nombre" : "LOREEN",
+    "anyoInicio" : "2004",
+    "paises" : {
+      "idpais" : 226,
+      "nombre" : "Suecia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Suecia.png"
+    },
+    "foto" : "/assets/Artistas/Loreen.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Lorine Zineb Nora Talhaoui[1]​ (Estocolmo, 16 de octubre de 1983), más conocida como Loreen, es una cantante, compositora y productora sueca de origen marroquí. Es la segunda persona (y única cantante femenina) en ganar el Festival de la Canción de Eurovisión en dos ocasiones: en 2012 con «Euphoria» y en 2023 con «Tattoo». Ambas canciones tuvieron gran éxito comercial en muchos países en sus respectivos años.\r\n\r\nEn 2005 publicó su primer sencillo, «The Snake», con la banda Rob'n'Raz y se convirtió en presentadora de televisión de TV4. Trabajó como productora musical y directora de varios programas suecos de telerrealidad y en 2011 lanzó el sencillo «My Heart Is Refusing Me», su primer éxito comercial en Suecia."
+  },
+  "cover" : "/assets/Cover/Loreen-WILDFIRE.webp",
+  "anyo" : "2026",
+  "titulo" : "WILDFIRE"
+}, {
+  "genero" : {
+    "idGenero" : 9,
+    "nombreGenero" : "COUNTRY"
+  },
+  "artista" : {
+    "idArtista" : 1942,
+    "nombre" : "LUKE COMBS",
+    "anyoInicio" : "1990",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Luke Combs.webp",
+    "generos" : {
+      "idGenero" : 9,
+      "nombreGenero" : "COUNTRY"
+    },
+    "resumenWikipedia" : "Luke Albert Combs (/koʊmz/; nacido el 2 de marzo de 1990) es un cantante estadounidense de country. Nació en Carolina del Norte y creció allí, actuando de niño. Tras dejar la universidad para dedicarse a la música, se mudó a Nashville y lanzó su EP debut, The Way She Rides, en 2014.\r\n\r\nEn 2017, Combs lanzó su álbum debut, This One's for You, que alcanzó el número cuatro en la lista Billboard 200. Su segundo álbum, What You See Is What You Get, se publicó en 2019 y encabezó las listas en varios territorios, convirtiéndose en el primero en lograrlo. Ha recibido tres nominaciones a los premios Grammy, dos premios musicales de iHeart Radio, cuatro premios de la Academia de Música Country y seis premios de la Country Music Association, incluyendo el premio Entertainer of the Year de 2021 y 2022, su máximo galardón."
+  },
+  "cover" : "/assets/Cover/LukeCombs-TheWayIAm.webp",
+  "anyo" : "2026",
+  "titulo" : "The Way I Am"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 3164,
+    "nombre" : "THE BLACK CROWES",
+    "anyoInicio" : "1989",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/The Black Crowes.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "The Black Crowes es una banda estadounidense de rock que recibe sus influencias de la música rock de las décadas de 1960 y 1970 y del blues de Estados Unidos."
+  },
+  "cover" : "/assets/Cover/TheBlackCrowes-APoundofFeathers.webp",
+  "anyo" : "2026",
+  "titulo" : "A Pound of Feathers"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 2361,
+    "nombre" : "ONEREPUBLIC",
+    "anyoInicio" : "2002",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/OneRepublic.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "OneRepublic es una banda estadounidense de pop rock[1]​ formada en 2002, en Colorado Springs, Colorado,[2]​ por el cantante Ryan Tedder y el guitarrista Zach Filkins. La banda alcanzó el éxito comercial en Myspace como un artista sin un sello discográfico que los respaldara.[3]​ A finales de 2003, después de que OneRepublic tocara en un espectáculo en el área de Los Ángeles, una serie de sellos discográficos se acercaron a ellos con interés, pero en última instancia, OneRepublic firmó con Velvet Hammer, una compañía de discos subsidiaria a Columbia Records. Hicieron su primer álbum con el productor Greg Wells durante el verano y otoño de 2005 en su estudio Rocket Carousel, en Culver City, California. El álbum fue originalmente programado para su lanzamiento el 6 de junio de 2006, pero el grupo fue descartado por Columbia dos meses antes, por lo que el álbum nunca se lanzó. El primer sencillo de ese álbum, Apologize, fue lanzado el 30 de abril de 2006 en Myspace, donde recibió cierto reconocimiento, convirtiéndose en su primer número uno en las listas de dicho sitio."
+  },
+  "cover" : "/assets/Cover/OneRepublic-DreamingOutLoud(DeluxeEdition).webp",
+  "anyo" : "2026",
+  "titulo" : "Dreaming Out Loud (Deluxe Edition)"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 4356,
+    "nombre" : "Slayyyter",
+    "anyoInicio" : "2018",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Slayyyter.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Catherine Grace Garner, conocida artísticamente como Slayyyter, es una cantante y compositora estadounidense de pop. Comenzó su carrera de forma independiente a través de SoundCloud. Su sencillo «Mine» llegó al puesto #38 en el ranking de pop de Apple Music. La canción se incluyó en su mixtape debut homónimo que se lanzó en 2019. Lanzó su álbum de estudio debut, Troubled Paradise, el 11 de junio de 2021 bajo FADER Records. El 22 de septiembre de 2023, lanzó su segundo álbum, STARFUCKER, bajo el mismo sello discográfico."
+  },
+  "cover" : "/assets/Cover/Slayyyter-WOR$TGIRLINAMERICA.webp",
+  "anyo" : "2026",
+  "titulo" : "WOR$T GIRL IN AMERICA"
+}, {
+  "genero" : {
+    "idGenero" : 2,
+    "nombreGenero" : "ALTERNATIVE"
+  },
+  "artista" : {
+    "idArtista" : 1068,
+    "nombre" : "FOO FIGHTERS",
+    "anyoInicio" : "1994",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/FOO FIGHTERS.webp",
+    "generos" : {
+      "idGenero" : 2,
+      "nombreGenero" : "ALTERNATIVE"
+    },
+    "resumenWikipedia" : "Foo Fighters es un grupo de rock alternativo estadounidense formado en la ciudad de Seattle en 1994 por el exbaterista de Nirvana, Dave Grohl.\r\n\r\nEl grupo debe su nombre a los ovnis y los diversos fenómenos aéreos que fueron reportados por los pilotos de los aviones aliados en la Segunda Guerra Mundial, que se conocen colectivamente como foo fighter. Antes del lanzamiento de su álbum debut en 1995, Grohl, como único miembro oficial, reclutó al bajista Nate Mendel y el baterista William Goldsmith, ambos anteriormente miembros de Sunny Day Real Estate, así como su compañero en las giras de Nirvana, Pat Smear como guitarrista para completar la alineación.\r\n\r\nLa banda comenzó con actuaciones en Portland, Oregón. Goldsmith renunció durante la grabación del segundo álbum del grupo, The Colour and the Shape (1997), cuando la mayoría de las partes de batería fueron regrabadas por el propio Grohl, hasta que luego se unió Taylor Hawkins como baterista. La partida de Smear siguió poco después."
+  },
+  "cover" : "/assets/Cover/FooFighters-YourFavoriteToy.webp",
+  "anyo" : "2026",
+  "titulo" : "Your Favorite Toy"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1499,
+    "nombre" : "JESSIE WARE",
+    "anyoInicio" : "1984",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/Jessie Ware.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Jessica \"Jessie\" Lois Ware (Londres, Inglaterra; 15 de octubre de 1984) es una cantante y compositora británica. Su álbum debut Devotion (2012) alcanzó el puesto número cinco en las listas británicas y produjo el sencillo «Wildest Moments». Su siguiente grabación Tough Love (2014) alcanzó el número nueve en el Reino Unido. Con su álbum, What's Your Pleasure? (2020), se consolidó como una de las artistas británicas de música disco más carismáticas y exitosas de la música actual.[1][2] Además, ha colaborado con otros artistas como: Nicki Minaj, Octavian, Joker y SBTRKT, en concierto y en sus grabaciones.[3]\r\n\r\nEn 2018, Ware junto a su madre Lennie, comenzaron a presentar el pódcast, Table Manners acerca de aspectos de su vida personal como la familia, comida o el arte, acogiendo a invitados. El pódcast está disponible en las principales plataformas de streaming"
+  },
+  "cover" : "/assets/Cover/JessieWare-Superbloom.webp",
+  "anyo" : "2026",
+  "titulo" : "Superbloom"
+}, {
+  "genero" : {
+    "idGenero" : 2,
+    "nombreGenero" : "ALTERNATIVE"
+  },
+  "artista" : {
+    "idArtista" : 1068,
+    "nombre" : "FOO FIGHTERS",
+    "anyoInicio" : "1994",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/FOO FIGHTERS.webp",
+    "generos" : {
+      "idGenero" : 2,
+      "nombreGenero" : "ALTERNATIVE"
+    },
+    "resumenWikipedia" : "Foo Fighters es un grupo de rock alternativo estadounidense formado en la ciudad de Seattle en 1994 por el exbaterista de Nirvana, Dave Grohl.\r\n\r\nEl grupo debe su nombre a los ovnis y los diversos fenómenos aéreos que fueron reportados por los pilotos de los aviones aliados en la Segunda Guerra Mundial, que se conocen colectivamente como foo fighter. Antes del lanzamiento de su álbum debut en 1995, Grohl, como único miembro oficial, reclutó al bajista Nate Mendel y el baterista William Goldsmith, ambos anteriormente miembros de Sunny Day Real Estate, así como su compañero en las giras de Nirvana, Pat Smear como guitarrista para completar la alineación.\r\n\r\nLa banda comenzó con actuaciones en Portland, Oregón. Goldsmith renunció durante la grabación del segundo álbum del grupo, The Colour and the Shape (1997), cuando la mayoría de las partes de batería fueron regrabadas por el propio Grohl, hasta que luego se unió Taylor Hawkins como baterista. La partida de Smear siguió poco después."
+  },
+  "cover" : "/assets/Cover/FooFighters-OfAllPeople.jpg",
+  "anyo" : "2026",
+  "titulo" : "Of All People"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 2080,
+    "nombre" : "MEGHAN TRAINOR",
+    "anyoInicio" : "1993",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/MeghanTrainor-ToyWithMe.jpg",
+  "anyo" : "2026",
+  "titulo" : "Toy With Me"
+}, {
+  "genero" : {
+    "idGenero" : 2,
+    "nombreGenero" : "ALTERNATIVE"
+  },
+  "artista" : {
+    "idArtista" : 1251,
+    "nombre" : "HALSEY",
+    "anyoInicio" : "1994",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/HALSEY.webp",
+    "generos" : {
+      "idGenero" : 2,
+      "nombreGenero" : "ALTERNATIVE"
+    },
+    "resumenWikipedia" : "Ashley Nicolette Frangipane (Edison, Nueva Jersey; 29 de septiembre de 1994), más conocida por su nombre artístico Halsey, es una cantante, compositora, activista, actriz y directora de videos estadounidense. Ha recibido varios premios, incluidos tres Billboard Music Awards, un Billboard Women in Music Award,[4] un American Music Award y hasta tres nominaciones a los premios Grammy. Fue incluida en la lista anual de la revista Time dentro de las 100 personas más influyentes del mundo en 2020.[5]\r\n\r\nHasta 2020, sus discos publicados han vendido más de un millón de copias y recibió más de seis mil millones de reproducciones en los Estados Unidos.[6][7] Además de la música, Halsey es una activista, ha estado involucrada en la concientización sobre la prevención del suicidio, la defensa de las víctimas de agresión sexual y las protestas por la justicia racial. Los tres compañeros de banda de Halsey aparecen en tres álbumes de estudio, excepto Manic y If I Can’t Have Love, I Want Power, ya que están ausentes en esos dos álbumes, siendo Halsey el único miembro consistente"
+  },
+  "cover" : "/assets/Cover/Halsey-TheGreatImpersonator(Deluxe).jpg",
+  "anyo" : "2026",
+  "titulo" : "The Great Impersonator (Deluxe)"
+}, {
+  "genero" : {
+    "idGenero" : 19,
+    "nombreGenero" : "ELECTRONIC"
+  },
+  "artista" : {
+    "idArtista" : 4365,
+    "nombre" : "Honey Dijon",
+    "anyoInicio" : "1990",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Honey Dijon.webp",
+    "generos" : {
+      "idGenero" : 19,
+      "nombreGenero" : "ELECTRONIC"
+    },
+    "resumenWikipedia" : "Honey Dijon es el nombre artístico de Honey Redmond, una DJ, productora, música, e icono de moda. Nació en Chicago y vive en Nueva York. Ha actuado en discotecas, ferias de arte, galerías y eventos de moda en todo el mundo. Renombrada por no adherirse a ningún género en particular, Honey Dijon es conocida por comisariar sets cross-género."
+  },
+  "cover" : "/assets/Cover/HoneyDijon-TheNightlife.jpg",
+  "anyo" : "2026",
+  "titulo" : "The Nightlife"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 1657,
+    "nombre" : "KATY PERRY",
+    "anyoInicio" : "1984",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/KatyPerry-ThinkingofTheOneThatGotAway.jpg",
+  "anyo" : "2026",
+  "titulo" : "Thinking of The One That Got Away"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 2081,
+    "nombre" : "MELANIE C",
+    "anyoInicio" : "1974",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : null,
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/MelanieC-Sweat.jpg",
+  "anyo" : "2026",
+  "titulo" : "Sweat"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 3836,
+    "nombre" : "The Black Keys",
+    "anyoInicio" : "2001",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/The Black Keys.webp",
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/TheBlackKeys-Peaches!.jpg",
+  "anyo" : "2026",
+  "titulo" : "Peaches!"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 4367,
+    "nombre" : "They Might Be Giants",
+    "anyoInicio" : "1982",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/They Might Be Giants.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "They Might Be Giants es una banda estadounidense de rock alternativo y música para niños formada en 1982 por John Flansburgh y John Linnell. En sus primeros años, Flansburgh y Linnell actuaban con frecuencia como dúo musical, junto a una caja de ritmos. A principios de la década de 1990, TMBG se amplió para incluir una banda de acompañamiento."
+  },
+  "cover" : "/assets/Cover/TheyMightBeGiants-TheWorldIstoDig.jpg",
+  "anyo" : "2026",
+  "titulo" : "The World Is to Dig"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 3557,
+    "nombre" : "TORI AMOS",
+    "anyoInicio" : "1963",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Tori Amos.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Myra Ellen Amos (Newton, 22 de agosto de 1963) más conocida por su nombre artístico Tori Amos (pronunciado /'tɔri 'eɪmoʊs/), es una cantautora y multiinstrumentista estadounidense.[3]\r\n\r\nOriginalmente Amos ejerció como la vocalista del efímero grupo de pop ochentero Y Kant Tori Read antes de comenzar con su pronta carrera solista en la década de 1990. Es considerada como una de las artistas femeninas vanguardistas de los 90', por sus canciones líricamente opacas, pero intensamente emocionales que cubren un gran abanico de temas que incluyen la sexualidad, el feminismo, la política y la religión.\r\n\r\nComo tal es reconocida por realizar improvisaciones, hacer comentarios excéntricos en entrevistas y conciertos, lo que le ha dado una reputación de persona altamente individualista, además de ser una de las pocas estrellas del rock alternativo que usan el piano como su instrumento principal.\r\n\r\nAlgunos de sus temas más conocidos son «Crucify», «Silent All These Years», «God», «Cornflake Girl», «Caught a Lite Sneeze», «Professional Widow», «Spark», «1000 Oceans», «Flavor» y «A Sorta Fairytale», los cuales comercialmente son sus más exitosos sencillos en los Estados Unidos hasta la fecha.[4] Amos ha vendido más de 12 millones de álbumes alrededor del mundo y ha estado nominada para numerosos premios, entre ellos los MTV VMA, ocho nominaciones al Grammy y ganadora de un Echo Awards en 2012."
+  },
+  "cover" : "/assets/Cover/ToriAmos-InTimesofDragons(EmbersEdition).webp",
+  "anyo" : "2026",
+  "titulo" : "In Times of Dragons (Embers Edition)"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 4368,
+    "nombre" : "The Covasettes",
+    "anyoInicio" : "2026",
+    "paises" : {
+      "idpais" : 80,
+      "nombre" : "Reino Unido",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
+    },
+    "foto" : "/assets/The Covasettes.webp",
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : "Sin información"
+  },
+  "cover" : "/assets/Cover/TheCovasettes-HoneymoonForever.jpg",
+  "anyo" : "2026",
+  "titulo" : "Honeymoon Forever"
+}, {
+  "genero" : {
+    "idGenero" : 29,
+    "nombreGenero" : "INDIE"
+  },
+  "artista" : {
+    "idArtista" : 4372,
+    "nombre" : "Broken Social Scene",
+    "anyoInicio" : "1999",
+    "paises" : {
+      "idpais" : 39,
+      "nombre" : "Canada",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Canada.png"
+    },
+    "foto" : "/assets/Broken Social Scene.webp",
+    "generos" : {
+      "idGenero" : 29,
+      "nombreGenero" : "INDIE"
+    },
+    "resumenWikipedia" : "Broken Social Scene es un colectivo/supergrupo canadiense de indie rock formado en 1999 en Toronto, Canadá que incluye un máximo de diecinueve miembros. La mayoría de sus miembros se desempeñan actualmente en otros grupos y proyectos solitarios, principalmente cerca de Toronto. El sonido del grupo se podría considerar una combinación de todos sus miembros y respectivos proyectos musicales, y en ocasiones se considera pop barroco. Se caracteriza por una gran cantidad de sonidos, orquestaciones que ofrecen grandes guitarras, cuernos, vientos y violines, estructuras inusuales de canciones, y un estilo de producción experimental de David Newfeld, quien produjo el segundo y tercer disco."
+  },
+  "cover" : "/assets/Cover/BrokenSocialScene-RememberTheHumans.jpg",
+  "anyo" : "2026",
+  "titulo" : "Remember The Humans"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 3557,
+    "nombre" : "TORI AMOS",
+    "anyoInicio" : "1963",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Tori Amos.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Myra Ellen Amos (Newton, 22 de agosto de 1963) más conocida por su nombre artístico Tori Amos (pronunciado /'tɔri 'eɪmoʊs/), es una cantautora y multiinstrumentista estadounidense.[3]\r\n\r\nOriginalmente Amos ejerció como la vocalista del efímero grupo de pop ochentero Y Kant Tori Read antes de comenzar con su pronta carrera solista en la década de 1990. Es considerada como una de las artistas femeninas vanguardistas de los 90', por sus canciones líricamente opacas, pero intensamente emocionales que cubren un gran abanico de temas que incluyen la sexualidad, el feminismo, la política y la religión.\r\n\r\nComo tal es reconocida por realizar improvisaciones, hacer comentarios excéntricos en entrevistas y conciertos, lo que le ha dado una reputación de persona altamente individualista, además de ser una de las pocas estrellas del rock alternativo que usan el piano como su instrumento principal.\r\n\r\nAlgunos de sus temas más conocidos son «Crucify», «Silent All These Years», «God», «Cornflake Girl», «Caught a Lite Sneeze», «Professional Widow», «Spark», «1000 Oceans», «Flavor» y «A Sorta Fairytale», los cuales comercialmente son sus más exitosos sencillos en los Estados Unidos hasta la fecha.[4] Amos ha vendido más de 12 millones de álbumes alrededor del mundo y ha estado nominada para numerosos premios, entre ellos los MTV VMA, ocho nominaciones al Grammy y ganadora de un Echo Awards en 2012."
+  },
+  "cover" : "/assets/Cover/ToriAmos-InTimesofDragons.webp",
+  "anyo" : "2026",
+  "titulo" : "In Times Of Dragons"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 4369,
+    "nombre" : "Ana Torroja",
+    "anyoInicio" : "1977",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Ana Torroja.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Ana Torroja Fungairiño, III marquesa de Torroja,es una cantante, cantautora y aristócrata española conocida por ser la vocalista de la banda de música de pop española Mecano, la que hubo formado con los hermanos José María y Nacho Cano."
+  },
+  "cover" : "/assets/Cover/AnaTorroja-SeHaAcabadoElShow.jpg",
+  "anyo" : "2026",
+  "titulo" : "Se Ha Acabado El Show"
+}, {
+  "genero" : {
+    "idGenero" : 27,
+    "nombreGenero" : "HIP-HOP"
+  },
+  "artista" : {
+    "idArtista" : 4370,
+    "nombre" : "Akon",
+    "anyoInicio" : "1996",
+    "paises" : {
+      "idpais" : 214,
+      "nombre" : "Senegal",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Senegal.png"
+    },
+    "foto" : "/assets/Akon.webp",
+    "generos" : {
+      "idGenero" : 27,
+      "nombreGenero" : "HIP-HOP"
+    },
+    "resumenWikipedia" : "Aliaune Damala Bouga Time Puru Nacka Lu Lu Lu Badara Akon Thiam, más conocido como Akon, es un cantante, rapero, compositor de canciones, productor discográfico, actor y empresario senegalés-estadounidense. Saltó a la fama en 2004 tras el lanzamiento de \"Locked Up\", el primer sencillo de su álbum debut Trouble (2004), seguido del segundo sencillo \"Lonely\"."
+  },
+  "cover" : "/assets/Cover/Akon-BEAUTIFULDAY.jpg",
+  "anyo" : "2026",
+  "titulo" : "BEAUTIFUL DAY"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 781,
+    "nombre" : "DEMI LOVATO",
+    "anyoInicio" : "2002",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/Demi Lovato.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Demetria Devonne Lovato (Albuquerque, Nuevo México; 20 de agosto de 1992), conocida como Demi Lovato, es una actriz, cantante y compositora estadounidense. Después de aparecer en la serie de televisión infantil Barney y sus amigos (2002-2004), Lovato saltó a la fama por interpretar a Mitchie Torres en la película musical para televisión de Disney Channel Camp Rock (2008) y su secuela Camp Rock 2: The Final Jam (2010). La banda sonora de la película anterior contenía «This Is Me», el sencillo debut de Lovato y el dúo con Joe Jonas, que alcanzó el puesto número nueve en el Billboard Hot 100 de Estados Unidos"
+  },
+  "cover" : "/assets/Cover/DemiLovato-It'sNotThatDeep(UnlessYouWantItToBe).jpg",
+  "anyo" : "2026",
+  "titulo" : "It's Not That Deep (Unless You Want It To Be)"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-WorldCupHits2026.webp",
+  "anyo" : "2026",
+  "titulo" : "World Cup Hits 2026"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-AllMetalForEveryone.webp",
+  "anyo" : "2026",
+  "titulo" : "All Metal For Everyone"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-80sHitList.webp",
+  "anyo" : "2026",
+  "titulo" : "80s Hit List"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-Rockofthe20thCentury.webp",
+  "anyo" : "2026",
+  "titulo" : "Rock of the 20th Century"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-100ClubHits-Summer2026.webp",
+  "anyo" : "2026",
+  "titulo" : "100 Club Hits - Summer 2026"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-ClassicRockAnthems.webp",
+  "anyo" : "2026",
+  "titulo" : "Classic Rock Anthems"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-NowThat'sWhatICallTimeless.webp",
+  "anyo" : "2026",
+  "titulo" : "Now That's What I Call Timeless"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-90sBestofbyuDiscover.webp",
+  "anyo" : "2026",
+  "titulo" : "90s Best of by uDiscover"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-GreatestRockSongsOfAllTime.webp",
+  "anyo" : "2026",
+  "titulo" : "Greatest Rock Songs Of All Time"
+} ]

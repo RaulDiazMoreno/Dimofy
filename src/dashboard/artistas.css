@@ -1,0 +1,95 @@
+/* ============================================
+   Artistas (estilo Spotify: avatar circular + texto)
+   ============================================ */
+
+.popular-artists-sec {
+  margin-top: 8px;
+}
+
+/* Fila horizontal */
+.popular-artists-row {
+  display: flex;
+  gap: clamp(18px, 2.2vw, 28px);
+  padding: 6px 2px 10px;
+  align-items: flex-start;
+}
+
+/* Grid (para la página de "Mostrar todo") */
+.popular-artists-grid {
+  display: grid;
+  gap: clamp(18px, 2.2vw, 28px);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  padding: 6px 2px 10px;
+}
+
+@media (max-width: 1200px) {
+  .popular-artists-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 980px) {
+  .popular-artists-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .popular-artists-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .popular-artists-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.popular-artist {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 6px 4px;
+  cursor: pointer;
+  min-width: 0;
+  text-align: left;
+
+  /* Evita que el área clicable se estire y ocupe huecos de la fila */
+  flex: 0 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.popular-artist:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--brand) 75%, white);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+.popular-artist-avatar {
+  width: clamp(96px, 10.5vw, 150px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0b0f14;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.50);
+}
+
+.popular-artist-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+.popular-artist-name {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.15;
+  max-width: clamp(96px, 10.5vw, 150px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.popular-artist-role {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
