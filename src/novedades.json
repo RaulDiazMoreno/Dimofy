@@ -1500,7 +1500,7 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/FOO FIGHTERS.webp",
+    "foto" : "/assets/Artistas/FOO FIGHTERS.webp",
     "generos" : {
       "idGenero" : 2,
       "nombreGenero" : "ALTERNATIVE"
@@ -1524,7 +1524,7 @@
       "nombre" : "Reino Unido",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
     },
-    "foto" : "/assets/Jessie Ware.webp",
+    "foto" : "/assets/Artistas/Jessie Ware.webp",
     "generos" : {
       "idGenero" : 41,
       "nombreGenero" : "POP"
@@ -1548,14 +1548,14 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/FOO FIGHTERS.webp",
+    "foto" : "/assets/Artistas/FOO FIGHTERS.webp",
     "generos" : {
       "idGenero" : 2,
       "nombreGenero" : "ALTERNATIVE"
     },
     "resumenWikipedia" : "Foo Fighters es un grupo de rock alternativo estadounidense formado en la ciudad de Seattle en 1994 por el exbaterista de Nirvana, Dave Grohl.\r\n\r\nEl grupo debe su nombre a los ovnis y los diversos fenómenos aéreos que fueron reportados por los pilotos de los aviones aliados en la Segunda Guerra Mundial, que se conocen colectivamente como foo fighter. Antes del lanzamiento de su álbum debut en 1995, Grohl, como único miembro oficial, reclutó al bajista Nate Mendel y el baterista William Goldsmith, ambos anteriormente miembros de Sunny Day Real Estate, así como su compañero en las giras de Nirvana, Pat Smear como guitarrista para completar la alineación.\r\n\r\nLa banda comenzó con actuaciones en Portland, Oregón. Goldsmith renunció durante la grabación del segundo álbum del grupo, The Colour and the Shape (1997), cuando la mayoría de las partes de batería fueron regrabadas por el propio Grohl, hasta que luego se unió Taylor Hawkins como baterista. La partida de Smear siguió poco después."
   },
-  "cover" : "/assets/Cover/FooFighters-OfAllPeople.jpg",
+  "cover" : "/assets/Cover/FooFighters-OfAllPeople.webp",
   "anyo" : "2026",
   "titulo" : "Of All People"
 }, {
@@ -1579,7 +1579,7 @@
     },
     "resumenWikipedia" : null
   },
-  "cover" : "/assets/Cover/MeghanTrainor-ToyWithMe.jpg",
+  "cover" : "/assets/Cover/MeghanTrainor-ToyWithMe.webp",
   "anyo" : "2026",
   "titulo" : "Toy With Me"
 }, {
@@ -1596,14 +1596,14 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/HALSEY.webp",
+    "foto" : "/assets/Artistas/HALSEY.webp",
     "generos" : {
       "idGenero" : 2,
       "nombreGenero" : "ALTERNATIVE"
     },
     "resumenWikipedia" : "Ashley Nicolette Frangipane (Edison, Nueva Jersey; 29 de septiembre de 1994), más conocida por su nombre artístico Halsey, es una cantante, compositora, activista, actriz y directora de videos estadounidense. Ha recibido varios premios, incluidos tres Billboard Music Awards, un Billboard Women in Music Award,[4] un American Music Award y hasta tres nominaciones a los premios Grammy. Fue incluida en la lista anual de la revista Time dentro de las 100 personas más influyentes del mundo en 2020.[5]\r\n\r\nHasta 2020, sus discos publicados han vendido más de un millón de copias y recibió más de seis mil millones de reproducciones en los Estados Unidos.[6][7] Además de la música, Halsey es una activista, ha estado involucrada en la concientización sobre la prevención del suicidio, la defensa de las víctimas de agresión sexual y las protestas por la justicia racial. Los tres compañeros de banda de Halsey aparecen en tres álbumes de estudio, excepto Manic y If I Can’t Have Love, I Want Power, ya que están ausentes en esos dos álbumes, siendo Halsey el único miembro consistente"
   },
-  "cover" : "/assets/Cover/Halsey-TheGreatImpersonator(Deluxe).jpg",
+  "cover" : "/assets/Cover/Halsey-TheGreatImpersonator(Deluxe).webp",
   "anyo" : "2026",
   "titulo" : "The Great Impersonator (Deluxe)"
 }, {
@@ -1620,14 +1620,14 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/Honey Dijon.webp",
+    "foto" : "/assets/Artistas/Honey Dijon.webp",
     "generos" : {
       "idGenero" : 19,
       "nombreGenero" : "ELECTRONIC"
     },
     "resumenWikipedia" : "Honey Dijon es el nombre artístico de Honey Redmond, una DJ, productora, música, e icono de moda. Nació en Chicago y vive en Nueva York. Ha actuado en discotecas, ferias de arte, galerías y eventos de moda en todo el mundo. Renombrada por no adherirse a ningún género en particular, Honey Dijon es conocida por comisariar sets cross-género."
   },
-  "cover" : "/assets/Cover/HoneyDijon-TheNightlife.jpg",
+  "cover" : "/assets/Cover/HoneyDijon-TheNightlife.webp",
   "anyo" : "2026",
   "titulo" : "The Nightlife"
 }, {
@@ -1651,7 +1651,7 @@
     },
     "resumenWikipedia" : null
   },
-  "cover" : "/assets/Cover/KatyPerry-ThinkingofTheOneThatGotAway.jpg",
+  "cover" : "/assets/Cover/KatyPerry-ThinkingofTheOneThatGotAway.webp",
   "anyo" : "2026",
   "titulo" : "Thinking of The One That Got Away"
 }, {
@@ -1675,7 +1675,7 @@
     },
     "resumenWikipedia" : null
   },
-  "cover" : "/assets/Cover/MelanieC-Sweat.jpg",
+  "cover" : "/assets/Cover/MelanieC-Sweat.webp",
   "anyo" : "2026",
   "titulo" : "Sweat"
 }, {
@@ -1699,7 +1699,7 @@
     },
     "resumenWikipedia" : null
   },
-  "cover" : "/assets/Cover/TheBlackKeys-Peaches!.jpg",
+  "cover" : "/assets/Cover/TheBlackKeys-Peaches!.webp",
   "anyo" : "2026",
   "titulo" : "Peaches!"
 }, {
@@ -1716,14 +1716,14 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/They Might Be Giants.webp",
+    "foto" : "/assets/Artistas/They Might Be Giants.webp",
     "generos" : {
       "idGenero" : 46,
       "nombreGenero" : "ROCK"
     },
     "resumenWikipedia" : "They Might Be Giants es una banda estadounidense de rock alternativo y música para niños formada en 1982 por John Flansburgh y John Linnell. En sus primeros años, Flansburgh y Linnell actuaban con frecuencia como dúo musical, junto a una caja de ritmos. A principios de la década de 1990, TMBG se amplió para incluir una banda de acompañamiento."
   },
-  "cover" : "/assets/Cover/TheyMightBeGiants-TheWorldIstoDig.jpg",
+  "cover" : "/assets/Cover/TheyMightBeGiants-TheWorldIstoDig.webp",
   "anyo" : "2026",
   "titulo" : "The World Is to Dig"
 }, {
@@ -1740,7 +1740,7 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/Tori Amos.webp",
+    "foto" : "/assets/Artistas/Tori Amos.webp",
     "generos" : {
       "idGenero" : 41,
       "nombreGenero" : "POP"
@@ -1764,14 +1764,14 @@
       "nombre" : "Reino Unido",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Reino Unido.png"
     },
-    "foto" : "/assets/The Covasettes.webp",
+    "foto" : "/assets/Artistas/The Covasettes.webp",
     "generos" : {
       "idGenero" : 29,
       "nombreGenero" : "INDIE"
     },
     "resumenWikipedia" : "Sin información"
   },
-  "cover" : "/assets/Cover/TheCovasettes-HoneymoonForever.jpg",
+  "cover" : "/assets/Cover/TheCovasettes-HoneymoonForever.webp",
   "anyo" : "2026",
   "titulo" : "Honeymoon Forever"
 }, {
@@ -1788,14 +1788,14 @@
       "nombre" : "Canada",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Canada.png"
     },
-    "foto" : "/assets/Broken Social Scene.webp",
+    "foto" : "/assets/Artistas/Broken Social Scene.webp",
     "generos" : {
       "idGenero" : 29,
       "nombreGenero" : "INDIE"
     },
     "resumenWikipedia" : "Broken Social Scene es un colectivo/supergrupo canadiense de indie rock formado en 1999 en Toronto, Canadá que incluye un máximo de diecinueve miembros. La mayoría de sus miembros se desempeñan actualmente en otros grupos y proyectos solitarios, principalmente cerca de Toronto. El sonido del grupo se podría considerar una combinación de todos sus miembros y respectivos proyectos musicales, y en ocasiones se considera pop barroco. Se caracteriza por una gran cantidad de sonidos, orquestaciones que ofrecen grandes guitarras, cuernos, vientos y violines, estructuras inusuales de canciones, y un estilo de producción experimental de David Newfeld, quien produjo el segundo y tercer disco."
   },
-  "cover" : "/assets/Cover/BrokenSocialScene-RememberTheHumans.jpg",
+  "cover" : "/assets/Cover/BrokenSocialScene-RememberTheHumans.webp",
   "anyo" : "2026",
   "titulo" : "Remember The Humans"
 }, {
@@ -1812,7 +1812,7 @@
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : "/assets/Tori Amos.webp",
+    "foto" : "/assets/Artistas/Tori Amos.webp",
     "generos" : {
       "idGenero" : 41,
       "nombreGenero" : "POP"
@@ -1836,14 +1836,14 @@
       "nombre" : "España",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
     },
-    "foto" : "/assets/Ana Torroja.webp",
+    "foto" : "/assets/Artistas/Ana Torroja.webp",
     "generos" : {
       "idGenero" : 41,
       "nombreGenero" : "POP"
     },
     "resumenWikipedia" : "Ana Torroja Fungairiño, III marquesa de Torroja,es una cantante, cantautora y aristócrata española conocida por ser la vocalista de la banda de música de pop española Mecano, la que hubo formado con los hermanos José María y Nacho Cano."
   },
-  "cover" : "/assets/Cover/AnaTorroja-SeHaAcabadoElShow.jpg",
+  "cover" : "/assets/Cover/AnaTorroja-SeHaAcabadoElShow.webp",
   "anyo" : "2026",
   "titulo" : "Se Ha Acabado El Show"
 }, {
@@ -1860,14 +1860,14 @@
       "nombre" : "Senegal",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Senegal.png"
     },
-    "foto" : "/assets/Akon.webp",
+    "foto" : "/assets/Artistas/Akon.webp",
     "generos" : {
       "idGenero" : 27,
       "nombreGenero" : "HIP-HOP"
     },
     "resumenWikipedia" : "Aliaune Damala Bouga Time Puru Nacka Lu Lu Lu Badara Akon Thiam, más conocido como Akon, es un cantante, rapero, compositor de canciones, productor discográfico, actor y empresario senegalés-estadounidense. Saltó a la fama en 2004 tras el lanzamiento de \"Locked Up\", el primer sencillo de su álbum debut Trouble (2004), seguido del segundo sencillo \"Lonely\"."
   },
-  "cover" : "/assets/Cover/Akon-BEAUTIFULDAY.jpg",
+  "cover" : "/assets/Cover/Akon-BEAUTIFULDAY.webp",
   "anyo" : "2026",
   "titulo" : "BEAUTIFUL DAY"
 }, {
@@ -1891,7 +1891,7 @@
     },
     "resumenWikipedia" : "Demetria Devonne Lovato (Albuquerque, Nuevo México; 20 de agosto de 1992), conocida como Demi Lovato, es una actriz, cantante y compositora estadounidense. Después de aparecer en la serie de televisión infantil Barney y sus amigos (2002-2004), Lovato saltó a la fama por interpretar a Mitchie Torres en la película musical para televisión de Disney Channel Camp Rock (2008) y su secuela Camp Rock 2: The Final Jam (2010). La banda sonora de la película anterior contenía «This Is Me», el sencillo debut de Lovato y el dúo con Joe Jonas, que alcanzó el puesto número nueve en el Billboard Hot 100 de Estados Unidos"
   },
-  "cover" : "/assets/Cover/DemiLovato-It'sNotThatDeep(UnlessYouWantItToBe).jpg",
+  "cover" : "/assets/Cover/DemiLovato-It'sNotThatDeep(UnlessYouWantItToBe).webp",
   "anyo" : "2026",
   "titulo" : "It's Not That Deep (Unless You Want It To Be)"
 }, {
@@ -2110,4 +2110,100 @@
   "cover" : "/assets/Cover/VariosArtistas-GreatestRockSongsOfAllTime.webp",
   "anyo" : "2026",
   "titulo" : "Greatest Rock Songs Of All Time"
+}, {
+  "genero" : {
+    "idGenero" : 42,
+    "nombreGenero" : "PUNK"
+  },
+  "artista" : {
+    "idArtista" : 1219,
+    "nombre" : "GREEN DAY",
+    "anyoInicio" : "1989",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/GREEN DAY.webp",
+    "generos" : {
+      "idGenero" : 42,
+      "nombreGenero" : "PUNK"
+    },
+    "resumenWikipedia" : "Green Day es una banda estadounidense de punk rock integrada por Billie Joe Armstrong (guitarra y voz), Mike Dirnt (bajo y coros) y Tré Cool (batería y coros). El grupo originario de Berkeley,[5][6] California, se gestó prematuramente en 1986 bajo el nombre de Sweet Children, con el baterista John Kiffmeyer (más conocido como Al Sobrante). En 1989 se cambiaron al nombre actual ya que el anterior (Sweet Children) se confundía con el de una banda local de esa época (Sweet Baby) y poco después del lanzamiento de su primer álbum de estudio (39/Smooth), Tré Cool reemplazó a Al Sobrante.[1]\r\n\r\nEs uno de muchos grupos distintos que nacieron en el club 924 Gilman Street, sitio que frecuentaban bandas de punk rock locales. Sus primeras publicaciones se realizaron por medio del sello discográfico independiente Lookout!,[7] gracias a las exitosas ventas de sus primeros trabajos discográficos, se obtuvo una importante cantidad de admiradores. Algunos años después, en 1994 el conjunto firmó con Reprise Records, con este sello lanzaron el aclamado Dookie.[8] Con este nuevo álbum el grupo musical llevó el sonido de finales de la década de 1970 a la nueva generación, además, el álbum se convirtió en un éxito internacional y lleva vendidas más de treinta millones de copias en todo el mundo."
+  },
+  "cover" : "/assets/Cover/GreenDay-Essentials(2026).webp",
+  "anyo" : "2026",
+  "titulo" : "Essentials (2026)"
+}, {
+  "genero" : {
+    "idGenero" : 46,
+    "nombreGenero" : "ROCK"
+  },
+  "artista" : {
+    "idArtista" : 3621,
+    "nombre" : "U2",
+    "anyoInicio" : "1976",
+    "paises" : {
+      "idpais" : 105,
+      "nombre" : "Irlanda",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Irlanda.png"
+    },
+    "foto" : "/assets/Artistas/U2.webp",
+    "generos" : {
+      "idGenero" : 46,
+      "nombreGenero" : "ROCK"
+    },
+    "resumenWikipedia" : "U2 es una banda de rock originaria de Dublín (Irlanda) formada en 1976 por Bono (voz), The Edge, Adam Clayton (bajo), y Larry Mullen Jr. (batería). El sonido inicial de U2 tenía sus raíces en el post-punk, pero posteriormente fueron incorporando a su música elementos de otros géneros: \"Su cancionero es extenso y está repleto de variaciones: desde el rock más clásico hasta el pop más redondo, pasando por el coqueteo con la electrónica o los homenajes al góspel\". A lo largo de la búsqueda musical de la banda, han mantenido un sonido construido a base de instrumentales melódicos, destacados por la textura musical de The Edge y la voz expresiva de Bono, a las que se suma una base característica integrada por la batería de Mullen y el bajo de Clayton. Sus letras, a menudo ordenadas con imágenes espirituales, se centran en temas personales y temática de justicia social y paz."
+  },
+  "cover" : "/assets/Cover/U2-Essentials(2026).webp",
+  "anyo" : "2026",
+  "titulo" : "Essentials (2026)"
+}, {
+  "genero" : {
+    "idGenero" : 41,
+    "nombreGenero" : "POP"
+  },
+  "artista" : {
+    "idArtista" : 3802,
+    "nombre" : "ZARA LARSSON",
+    "anyoInicio" : "1997",
+    "paises" : {
+      "idpais" : 226,
+      "nombre" : "Suecia",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\Suecia.png"
+    },
+    "foto" : "/assets/Artistas/Zara Larsson.webp",
+    "generos" : {
+      "idGenero" : 41,
+      "nombreGenero" : "POP"
+    },
+    "resumenWikipedia" : "Zara Maria Larsson (Solna, Estocolmo; 16 de diciembre de 1997) es una cantante y compositora sueca. Alcanzó la fama en su país natal luego de ganar a los 10 años el concurso de talentos Talang (versión sueca de Got Talent) en 2008. Cuatro años después, en 2012, firmó con el sello discográfico TEN Music Group y posteriormente publicó su primer EP Introducing, en enero de 2013.\r\n\r\nSu primera canción original fue «Uncover», que fue publicada en 2013 y se convirtió en un éxito en las listas de sencillos de los países escandinavos como Suecia, Dinamarca y Noruega, logrando excelentes ventas, al igual que su álbum debut 1, lanzado un año más tarde.[1]​Su primer sencillo recibió la certificación de disco de platino por parte de Universal Music Sweden. En julio de 2013, Introducing recibió la certificación de triple disco de platino en su país. Previamente, en abril de 2013, Larsson firmó con Epic Records para distribuir su música en Estados Unidos. Es así como Zara logró reconocimiento internacional en 2015, cuando publicó «Lush Life» y «Never Forget You», que ingresaron entre los diez primeros puestos en la mayoría de las listas de éxitos de Europa, Oceanía y Norteamérica."
+  },
+  "cover" : "/assets/Cover/ZaraLarsson-Essentials(2026).webp",
+  "anyo" : "2026",
+  "titulo" : "Essentials (2026)"
+}, {
+  "genero" : {
+    "idGenero" : 35,
+    "nombreGenero" : "METAL"
+  },
+  "artista" : {
+    "idArtista" : 3809,
+    "nombre" : "ZZ TOP",
+    "anyoInicio" : "1969",
+    "paises" : {
+      "idpais" : 57,
+      "nombre" : "ESTADOS UNIDOS",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
+    },
+    "foto" : "/assets/Artistas/ZZTop.webp",
+    "generos" : {
+      "idGenero" : 35,
+      "nombreGenero" : "METAL"
+    },
+    "resumenWikipedia" : "ZZ Top es una banda estadounidense de blues rock y hard rock formada en 1969 en Houston, Texas. Este power trio lo conforman Billy Gibbons en la guitarra y la voz, Dusty Hill en el bajo, los teclados y la voz, y Frank Beard en la batería. Tienen el mérito de ser uno de los pocos grupos de rock que todavía conservaba sus miembros originales después de cincuenta años (hasta la muerte de Hill en el 2021), y además de haber mantenido un número casi similar de años al mismo mánager y productor, Bill Ham. Popularmente son conocidos gracias a su particular estilo, principalmente de Gibbons y Hill, quienes siempre son retratados llevando gafas de sol, ropa parecida o en ocasiones idénticas y larguísimas barbas.\r\n\r\nIniciaron su carrera musical en la década de los setenta con un sonido marcado en el blues rock y el rock sureño, aunque manteniendo el característico hard rock. Sin embargo, alcanzaron la fama comercial en los años ochenta gracias a sus discos Eliminator de 1983 y Afterburner de 1985, con un estilo más cercano al rock electrónico y con la inclusión del uso de sintetizadores. En los años noventa retornaron en gran medida a su estilo setentero, pero sin perder del todo el uso de los teclados. Esto provocó en parte el alejamiento de sus discos en las listas de popularidad, pero recuperaron a muchos de sus primeros seguidores. En 2012 la agrupación publicó su décimo quinto disco de estudio La Futura, su primer trabajo en cerca de diez años que los posicionó nuevamente en las listas musicales de todo el mundo."
+  },
+  "cover" : "/assets/Cover/ZZTop-Essentials(2026).webp",
+  "anyo" : "2026",
+  "titulo" : "Essentials (2026)"
 } ]

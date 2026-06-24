@@ -4848,16 +4848,13 @@
   "nombre" : "K-TRAP"
 }, {
   "id" : 1625,
-  "nombre" : "K.D. LANG"
+  "nombre" : "KD Lang"
 }, {
   "id" : 1626,
   "nombre" : "KA$HDAMI"
 }, {
   "id" : 1627,
   "nombre" : "KACEY MUSGRAVES"
-}, {
-  "id" : 1628,
-  "nombre" : "KADAVAR"
 }, {
   "id" : 1629,
   "nombre" : "KAIROS"
@@ -13192,4 +13189,16 @@
 }, {
   "id" : 4445,
   "nombre" : "Jimmy Somerville"
+}, {
+  "id" : 4446,
+  "nombre" : "Sam Fender"
+}, {
+  "id" : 4447,
+  "nombre" : "Kadavar"
+}, {
+  "id" : 4448,
+  "nombre" : "Anni B Sweet"
+}, {
+  "id" : 4449,
+  "nombre" : "Ilegales"
 } ]

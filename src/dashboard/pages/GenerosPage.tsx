@@ -64,7 +64,7 @@ export default function GenerosPage() {
         {genreList.map((g) => {
           const key = (g.genero ?? "").toString().trim().toUpperCase();
           const iconFile = GENRE_ICON_MAP[key] ?? GENRE_ICON_MAP.DEFAULT;
-          const src = `/icons/genres/${iconFile}`;
+          const src = `/assets/icons/genres/${iconFile}`;
 
           return (
             <button

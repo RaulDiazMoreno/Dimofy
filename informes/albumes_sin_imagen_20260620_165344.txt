@@ -1,0 +1,37 @@
+INFORME DE ÁLBUMES SIN IMAGEN
+Fecha: 2026-06-20T16:53:45.782369800
+Carpeta revisada: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover
+==================================================
+
+ID Album: 6115
+Título: Glastonbury Live 2016 
+Artista: Varios Artistas
+Cover en BD: C:/Users/Rauld/Downloads/React/dimofy/public/assets/Cover/Varios Artistas - Glastonbury Live 2016.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Varios Artistas - Glastonbury Live 2016.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 6158
+Título: Heart - WDVE Pittsburg FM Broadcast July 1978 Part Two.
+Artista: HEART
+Cover en BD: C:/Users/Rauld/Downloads/React/dimofy/public/assets/Cover/Heart - Heart - WDVE Pittsburg FM Broadcast.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Heart - Heart - WDVE Pittsburg FM Broadcast.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 6909
+Título: In Times of Dragons (Embers Edition)
+Artista: TORI AMOS
+Cover en BD: C:/Users/Rauld/Downloads/React/dimofy/public/assets/Cover/Tori Amos - In Times of Dragons (Embers Edition).webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Tori Amos - In Times of Dragons (Embers Edition).webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+ID Album: 7004
+Título: Tell the Story
+Artista: JOY DIVISION
+Cover en BD: C:/Users/Rauld/Downloads/React/dimofy/public/assets/Cover/Joy Division - Tell The Story.webp
+Archivo esperado: C:\Users\Rauld\Downloads\React\dimofy\public\assets\Cover\Joy Division - Tell The Story.webp
+Motivo: No existe el archivo físico en la carpeta Cover
+--------------------------------------------------
+
+==================================================
+Total álbumes revisados: 7194
+Total álbumes sin imagen: 4

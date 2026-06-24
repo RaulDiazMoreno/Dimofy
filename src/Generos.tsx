@@ -112,7 +112,7 @@ export default function Generos() {
 
         const key = (genero.nombreGenero ?? "").trim().toUpperCase();
         const iconFile = GENRE_ICON_MAP[key] ?? GENRE_ICON_MAP.DEFAULT;
-        const iconPath = `/icons/genres/${iconFile}`;
+        const iconPath = `/assets/icons/genres/${iconFile}`;
         const iconoPorDefecto = `/icons/genres/${GENRE_ICON_MAP.DEFAULT}`;
 
 
