@@ -1,4 +1,4 @@
-  import React, { useState } from 'react';
+  import React, { useEffect, useMemo, useState } from 'react';
   import {
     Typography,
     CircularProgress,
@@ -24,9 +24,10 @@
   import AlbumIcon from '@mui/icons-material/Album';
   import { FaArrowLeft } from 'react-icons/fa';
   import { useUser } from './UserContext';
-  import { useNavigate, Link } from 'react-router-dom';
+  import { useNavigate, useSearchParams, Link } from 'react-router-dom';
   import PaginationControls from './PaginationControls';
   import generosData from './generos.json';
+  import { DEFAULT_ALBUM_IMAGE, getAlbumImage, getAlbumThumbnail, imageFallback, imageThumbnailFallback } from './utils/imagePaths';
 
   interface Album {
     idAlbum: number;
@@ -43,14 +44,36 @@
   }
 
   const Albums: React.FC = () => {
-    const [filters, setFilters] = useState({ genero: '', artista: '', anyoInicio: '', anyoFin: '', titulo: '' });
+    const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
+    useUser();
+
+    const initialFilters = useMemo(
+      () => ({
+        genero: searchParams.get('genero') ?? '',
+        artista: searchParams.get('artista') ?? '',
+        anyoInicio: searchParams.get('anyoInicio') ?? '',
+        anyoFin: searchParams.get('anyoFin') ?? '',
+        titulo: searchParams.get('titulo') ?? '',
+      }),
+      []
+    );
+
+    const [filters, setFilters] = useState(initialFilters);
+    const [appliedFilters, setAppliedFilters] = useState(initialFilters);
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [albums, setAlbums] = useState<Album[]>([]);
-    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(0);
+    const [totalElements, setTotalElements] = useState(0);
+    const [currentPage, setCurrentPage] = useState(() => {
+      const page = Number(searchParams.get('page'));
+      return Number.isFinite(page) && page > 0 ? page : 1;
+    });
+    const [hasSearched, setHasSearched] = useState(
+      searchParams.get('buscar') === '1'
+    );
     const [loading, setLoading] = useState(false);
     const [errorMsg, setErrorMsg] = useState('');
-    const navigate = useNavigate();
-    useUser();
 
     const isSmall = useMediaQuery('(max-width:600px)');
     const albumsPerPage = isSmall ? 6 : 12;
@@ -78,47 +101,138 @@
       setErrors(prev => ({ ...prev, [name!]: '' }));
     };
 
-    const handleBuscar = async () => {
-      const errs = validate();
-      if (Object.keys(errs).length > 0) {
-        setErrors(errs);
-        return;
-      }
+    const buscarAlbums = async (
+      searchFilters: typeof filters,
+      page: number
+    ) => {
       setLoading(true);
       setErrorMsg('');
+
       try {
         const userData = localStorage.getItem('user');
         if (!userData) throw new Error('Usuario no autenticado');
+
         const { token } = JSON.parse(userData);
-        const params = new URLSearchParams(filters).toString();
-        const response = await fetch(`http://localhost:8080/app/albums/buscar?${params}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            ...(token && { Authorization: `Bearer ${token}` })
+
+        const params = new URLSearchParams();
+        if (searchFilters.genero) params.set('genero', searchFilters.genero);
+        if (searchFilters.artista) params.set('artista', searchFilters.artista);
+        if (searchFilters.anyoInicio) params.set('anyoInicio', searchFilters.anyoInicio);
+        if (searchFilters.anyoFin) params.set('anyoFin', searchFilters.anyoFin);
+        if (searchFilters.titulo) params.set('titulo', searchFilters.titulo);
+        params.set('page', String(Math.max(0, page - 1)));
+        params.set('size', String(albumsPerPage));
+
+        const response = await fetch(
+          `http://localhost:8080/app/albums/buscar/paginado?${params.toString()}`,
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              ...(token && { Authorization: `Bearer ${token}` })
+            }
           }
-        });
-        if (!response.ok) throw new Error(`Error ${response.status}: ${response.statusText}`);
+        );
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+
         const data = await response.json();
-        setAlbums(data);
-        setCurrentPage(1);
+        const content = Array.isArray(data?.content) ? data.content : [];
+
+        setAlbums(content);
+        setTotalPages(Number(data?.totalPages ?? 0));
+        setTotalElements(Number(data?.totalElements ?? content.length));
+        setAppliedFilters(searchFilters);
+        setHasSearched(true);
       } catch (error: unknown) {
-        setErrorMsg(error instanceof Error ? error.message : 'Error al buscar álbumes');
+        setErrorMsg(
+          error instanceof Error ? error.message : 'Error al buscar álbumes'
+        );
         setAlbums([]);
+        setTotalPages(0);
+        setTotalElements(0);
       } finally {
         setLoading(false);
       }
     };
 
-    const handleLimpiar = () => {
-      setFilters({ genero: '', artista: '', anyoInicio: '', anyoFin: '', titulo: '' });
-      setErrors({});
+    const handleBuscar = async () => {
+      const errs = validate();
+
+      if (Object.keys(errs).length > 0) {
+        setErrors(errs);
+        return;
+      }
+
+      setAppliedFilters(filters);
+      setCurrentPage(1);
+      setHasSearched(true);
     };
 
-    const indexOfLastAlbum = currentPage * albumsPerPage;
-    const indexOfFirstAlbum = indexOfLastAlbum - albumsPerPage;
-    const currentAlbums = albums.slice(indexOfFirstAlbum, indexOfLastAlbum);
-    const totalPages = Math.ceil(albums.length / albumsPerPage);
+    const handleLimpiar = () => {
+      const emptyFilters = {
+        genero: '',
+        artista: '',
+        anyoInicio: '',
+        anyoFin: '',
+        titulo: '',
+      };
+
+      setFilters(emptyFilters);
+      setAppliedFilters(emptyFilters);
+      setErrors({});
+      setAlbums([]);
+      setTotalPages(0);
+      setTotalElements(0);
+      setCurrentPage(1);
+      setHasSearched(false);
+      setSearchParams({}, { replace: true });
+    };
+
+
+    useEffect(() => {
+      if (!hasSearched) return;
+      void buscarAlbums(appliedFilters, currentPage);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentPage, albumsPerPage, appliedFilters, hasSearched]);
+
+    useEffect(() => {
+      if (!hasSearched) {
+        return;
+      }
+
+      const params = new URLSearchParams();
+      params.set('page', String(currentPage));
+      params.set('buscar', '1');
+
+      Object.entries(appliedFilters).forEach(([key, value]) => {
+        if (value) {
+          params.set(key, value);
+        }
+      });
+
+      setSearchParams(params, { replace: true });
+    }, [currentPage, appliedFilters, hasSearched, setSearchParams]);
+
+
+    const currentAlbums = albums;
+
+    const albumsReturnTo = useMemo(() => {
+      const params = new URLSearchParams();
+
+      params.set('page', String(currentPage));
+      params.set('buscar', '1');
+
+      Object.entries(appliedFilters).forEach(([key, value]) => {
+        if (value) {
+          params.set(key, value);
+        }
+      });
+
+      return `/albums?${params.toString()}`;
+    }, [currentPage, appliedFilters]);
 
     const darkPageTheme = createTheme({
   palette: {
@@ -308,13 +422,17 @@
           {!loading && albums.length > 0 && (
             <Box sx={{ mt: 2 }}>
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 800 }}>
-                Resultados ({albums.length})
+                Resultados ({totalElements})
               </Typography>
 
               <Grid container spacing={2}>
-                {currentAlbums.map((album) => (
+                {currentAlbums.map((album, index) => (
                   <Grid item xs={12} sm={6} md={3} key={album.idAlbum}>
-                    <Link to={`/albums/${album.idAlbum}`} style={{ textDecoration: 'none' }}>
+                    <Link
+                      to={`/albums/${album.idAlbum}`}
+                      state={{ returnTo: albumsReturnTo }}
+                      style={{ textDecoration: 'none' }}
+                    >
                       <Card
                         sx={{
                           borderRadius: 2,
@@ -332,29 +450,14 @@
                         <Box sx={{ width: '100%', aspectRatio: '1 / 1', overflow: 'hidden' }}>
                           <CardMedia
                             component="img"
-                            loading="lazy"
-                            image={
-                              album.cover
-                                ? `/assets/Cover/${album.cover
-                                    .split('\\')
-                                    .pop()
-                                    ?.split('/')
-                                    .pop()
-                                    ?.replace(/\.(jpg|png)$/, '.webp')}`
-                                : '/assets/Cover/default.webp'
-                            }
-                            srcSet={
-                              album.cover
-                                ? `/assets/Cover/${album.cover.replace(
-                                    /\.(jpg|png)$/,
-                                    '.webp'
-                                  )} 1x, /assets/Cover/${album.cover.replace(
-                                    /\.(jpg|png)$/,
-                                    '@2x.webp'
-                                  )} 2x`
-                                : '/assets/Cover/default.webp'
-                            }
+                            loading={currentPage === 1 && index < 4 ? "eager" : "lazy"}
+                            decoding="async"
+                            fetchPriority={currentPage === 1 && index < 4 ? "high" : "low"}
+                            image={getAlbumThumbnail(album.cover)}
                             alt={album.titulo}
+                            onError={(e: React.SyntheticEvent<HTMLImageElement>) =>
+                              imageThumbnailFallback(e, getAlbumImage(album.cover), DEFAULT_ALBUM_IMAGE)
+                            }
                             sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           />
                         </Box>

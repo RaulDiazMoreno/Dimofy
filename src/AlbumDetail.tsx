@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import {
   Paper,
   Typography,
@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { FaArrowLeft } from "react-icons/fa";
 import CancionesTabla from "./CancionesTabla";
+import { DEFAULT_ALBUM_IMAGE, getAlbumImage, imageFallback } from "./utils/imagePaths";
 
 interface Cancion {
   id: number;
@@ -33,29 +34,18 @@ interface Album {
   canciones: Cancion[];
 }
 
-const normalizeFileName = (value?: string) => {
-  if (!value) return "";
-  const fileName = value.split("\\").pop()?.split("/").pop() ?? "";
-  return fileName.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-};
-
-const buildAlbumImage = (cover?: string, size: "thumb" | "full" = "full") => {
-  const fileName = normalizeFileName(cover);
-  if (!fileName) return "/assets/Cover/default.webp";
-
-  return size === "thumb"
-    ? `/assets/Cover/thumbs/${fileName}`
-    : `/assets/Cover/${fileName}`;
-};
-
 const AlbumDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const returnTo =
+    (location.state as { returnTo?: string } | null)?.returnTo ?? null;
 
   const [album, setAlbum] = useState<Album | null>(null);
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
-  const [coverSrc, setCoverSrc] = useState("/assets/Cover/default.webp");
+  const [coverSrc, setCoverSrc] = useState(DEFAULT_ALBUM_IMAGE);
 
   useEffect(() => {
     const fetchAlbum = async () => {
@@ -78,7 +68,7 @@ const AlbumDetail: React.FC = () => {
 
         const data = await response.json();
         setAlbum(data);
-        setCoverSrc(buildAlbumImage(data?.cover, "full"));
+        setCoverSrc(getAlbumImage(data?.cover));
       } catch (error: unknown) {
         setErrorMsg(
           error instanceof Error ? error.message : "Error al cargar el álbum"
@@ -170,13 +160,8 @@ const AlbumDetail: React.FC = () => {
                   decoding="async"
                   fetchPriority="high"
                   onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-                    const current = e.currentTarget;
-                    if (current.dataset.fallback === "full-tried") {
-                      current.src = "/assets/Cover/default.webp";
-                      return;
-                    }
-                    current.dataset.fallback = "full-tried";
-                    setCoverSrc("/assets/Cover/default.webp");
+                    imageFallback(e, DEFAULT_ALBUM_IMAGE);
+                    setCoverSrc(DEFAULT_ALBUM_IMAGE);
                   }}
                   sx={{
                     width: "100%",
@@ -292,7 +277,7 @@ const AlbumDetail: React.FC = () => {
 
                   <Tooltip title="Volver">
                     <IconButton
-                      onClick={() => navigate(-1)}
+                      onClick={() => (returnTo ? navigate(returnTo) : navigate("/albums"))}
                       size="small"
                       sx={{
                         flexShrink: 0,

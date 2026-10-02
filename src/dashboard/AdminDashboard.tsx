@@ -4,12 +4,15 @@ import "./admin-dashboard.css"; // 👈 nuevo css
 
 import AdminStatsTable from "./sections/AdminStatsTable";
 import { useAdminStats } from "./hooks/useAdminStats";
+import { useAdminCharts } from "./hooks/useAdminCharts";
+import AdminCharts from "./sections/AdminCharts";
 
 export default function AdminDashboard() {
   const storageUser = JSON.parse(localStorage.getItem("user") || "{}");
   const token = storageUser?.token;
 
   const { stats, loading } = useAdminStats(token, true);
+  const charts = useAdminCharts(token);
 
   if (loading) {
     return (
@@ -38,6 +41,8 @@ export default function AdminDashboard() {
         <div className="admin-card">
           <AdminStatsTable stats={stats} />
         </div>
+
+        <AdminCharts albums={charts.albums} countries={charts.countries} genres={charts.genres} />
 
       </section>
 

@@ -36,11 +36,7 @@ export function tryImageCandidates(
 
   if (nextIdx < candidates.length) {
     img.setAttribute("data-src-idx", String(nextIdx));
-    // cache-busting opcional por si el navegador cacheó un 404
-    const nextSrc = candidates[nextIdx];
-    const withNoCache =
-      nextSrc.indexOf("?") === -1 ? `${nextSrc}?v=${Date.now()}` : nextSrc;
-    img.src = withNoCache;
+    img.src = candidates[nextIdx];
   } else {
     img.src = placeholder;
   }

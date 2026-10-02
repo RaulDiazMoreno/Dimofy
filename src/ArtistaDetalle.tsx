@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
-import { useParams, useNavigate, Link as RouterLink } from "react-router-dom";
+import { useParams, useNavigate, useSearchParams, Link as RouterLink } from "react-router-dom";
 import {
   Typography,
   CircularProgress,
@@ -17,6 +17,8 @@ import {
   Tooltip,
 } from "@mui/material";
 import { FaArrowLeft } from "react-icons/fa";
+import PaginationControls from "./PaginationControls";
+import { DEFAULT_ALBUM_IMAGE, DEFAULT_ARTIST_IMAGE, getAlbumImage, getAlbumThumbnail, getArtistImage, imageFallback, imageThumbnailFallback } from "./utils/imagePaths";
 
 interface Album {
   idAlbum: number;
@@ -35,36 +37,23 @@ interface Artista {
   resumenWikipedia: string;
 }
 
-const normalizeFileName = (value?: string) => {
-  if (!value) return "";
-  const fileName = value.split("\\").pop()?.split("/").pop() ?? "";
-  return fileName.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-};
-
-const buildArtistImage = (foto?: string, size: "thumb" | "full" = "full") => {
-  const fileName = normalizeFileName(foto);
-  if (!fileName) return "/assets/Artistas/default.webp";
-  return size === "thumb"
-    ? `/assets/Artistas/thumbs/${fileName}`
-    : `/assets/Artistas/${fileName}`;
-};
-
-const buildAlbumImage = (cover?: string, size: "thumb" | "full" = "thumb") => {
-  const fileName = normalizeFileName(cover);
-  if (!fileName) return "/assets/Cover/default.webp";
-  return size === "thumb"
-    ? `/assets/Cover/thumbs/${fileName}`
-    : `/assets/Cover/${fileName}`;
-};
+const ALBUMS_PER_PAGE = 12;
 
 const ArtistaDetalle: React.FC = () => {
   const { idArtista } = useParams();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const artistListReturnTo =
+    searchParams.get("returnTo") || "/artistas";
 
   const [artista, setArtista] = useState<Artista | null>(null);
   const [albums, setAlbums] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
-  const [artistImgSrc, setArtistImgSrc] = useState("/assets/Artistas/default.webp");
+  const [artistImgSrc, setArtistImgSrc] = useState(DEFAULT_ARTIST_IMAGE);
+  const [currentAlbumPage, setCurrentAlbumPage] = useState(() => {
+    const pageParam = Number(searchParams.get("page"));
+    return Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1;
+  });
 
   const fetchArtistaData = useCallback(async () => {
     try {
@@ -85,7 +74,7 @@ const ArtistaDetalle: React.FC = () => {
       if (!resArtista.ok) throw new Error("Artista no encontrado");
       const artistaData = await resArtista.json();
       setArtista(artistaData);
-      setArtistImgSrc(buildArtistImage(artistaData?.foto, "full"));
+      setArtistImgSrc(getArtistImage(artistaData?.foto));
 
       const resAlbums = await fetch(`http://localhost:8080/app/albums/artista/${idArtista}`, {
         headers: {
@@ -101,7 +90,7 @@ const ArtistaDetalle: React.FC = () => {
       console.error("Error al cargar datos del artista:", error);
       setArtista(null);
       setAlbums([]);
-      setArtistImgSrc("/assets/Artistas/default.webp");
+      setArtistImgSrc(DEFAULT_ARTIST_IMAGE);
     } finally {
       setLoading(false);
     }
@@ -114,7 +103,7 @@ const ArtistaDetalle: React.FC = () => {
   useEffect(() => {
     if (!artista?.foto) return;
     const img = new Image();
-    img.src = buildArtistImage(artista.foto, "full");
+    img.src = getArtistImage(artista.foto);
   }, [artista]);
 
   const resumen = useMemo(() => {
@@ -123,6 +112,47 @@ const ArtistaDetalle: React.FC = () => {
     }
     return artista.resumenWikipedia;
   }, [artista]);
+
+  const totalAlbumPages = useMemo(
+    () => Math.max(1, Math.ceil(albums.length / ALBUMS_PER_PAGE)),
+    [albums.length]
+  );
+
+  const paginatedAlbums = useMemo(() => {
+    const start = (currentAlbumPage - 1) * ALBUMS_PER_PAGE;
+    return albums.slice(start, start + ALBUMS_PER_PAGE);
+  }, [albums, currentAlbumPage]);
+
+  useEffect(() => {
+    const pageParam = Number(searchParams.get("page"));
+    setCurrentAlbumPage(
+      Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1
+    );
+  }, [idArtista, searchParams]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    const currentParam = params.get("page");
+    const nextParam = String(currentAlbumPage);
+
+    if (currentParam !== nextParam) {
+      params.set("page", nextParam);
+      setSearchParams(params, { replace: true });
+    }
+  }, [currentAlbumPage, searchParams, setSearchParams]);
+
+  useEffect(() => {
+    // No corregimos la página mientras se están cargando los álbumes.
+    // Durante la carga albums = [] y totalAlbumPages vale temporalmente 1,
+    // lo que antes provocaba que ?page=3, ?page=4, etc. se resetearan a 1.
+    if (loading) {
+      return;
+    }
+
+    if (currentAlbumPage > totalAlbumPages) {
+      setCurrentAlbumPage(totalAlbumPages);
+    }
+  }, [loading, currentAlbumPage, totalAlbumPages]);
 
   if (loading) {
     return (
@@ -144,7 +174,7 @@ const ArtistaDetalle: React.FC = () => {
         <Typography variant="h5">No se encontró el artista.</Typography>
         <Button
           variant="contained"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate(artistListReturnTo)}
           sx={{ mt: 3, borderRadius: "999px" }}
         >
           Volver
@@ -158,7 +188,7 @@ const ArtistaDetalle: React.FC = () => {
       sx={{
         minHeight: "100vh",
         background:
-          "linear-gradient(180deg, #0f172a 0%, #111827 52%, #f7f9fc 52%, #f7f9fc 100%)",
+          "linear-gradient(180deg, #0f172a 0%, #111827 100%)",
         pb: 6,
       }}
     >
@@ -198,13 +228,8 @@ const ArtistaDetalle: React.FC = () => {
                   decoding="async"
                   fetchPriority="high"
                   onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-                    const current = e.currentTarget;
-                    if (current.dataset.fallback === "full-tried") {
-                      current.src = "/assets/Artistas/default.webp";
-                      return;
-                    }
-                    current.dataset.fallback = "full-tried";
-                    setArtistImgSrc("/assets/Artistas/default.webp");
+                    imageFallback(e, DEFAULT_ARTIST_IMAGE);
+                    setArtistImgSrc(DEFAULT_ARTIST_IMAGE);
                   }}
                   sx={{
                     width: "100%",
@@ -294,7 +319,7 @@ const ArtistaDetalle: React.FC = () => {
 
                   <Tooltip title="Volver">
                     <IconButton
-                      onClick={() => navigate(-1)}
+                      onClick={() => navigate(artistListReturnTo)}
                       size="small"
                       sx={{
                         flexShrink: 0,
@@ -384,19 +409,19 @@ const ArtistaDetalle: React.FC = () => {
 
         <Box
             sx={{
-              mt: 5,
-              backgroundColor: "#f7f9fc",
+              mt: 2,
+              backgroundColor: "transparent",
               borderRadius: "24px",
               px: { xs: 2, md: 3 },
-              py: { xs: 3, md: 4 },
+              py: { xs: 2, md: 2.5 },
             }}
           >
             <Typography
               variant="h4"
               sx={{
                 fontWeight: 800,
-                color: "#0f172a",
-                mb: 3,
+                color: "#ffffff",
+                mb: 2.5,
               }}
             >
               Álbumes
@@ -418,10 +443,15 @@ const ArtistaDetalle: React.FC = () => {
             </Paper>
           ) : (
             <Grid container spacing={3}>
-              {albums.map((album, index) => (
+              {paginatedAlbums.map((album, index) => (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={album.idAlbum}>
                   <RouterLink
                     to={`/albums/${album.idAlbum}`}
+                    state={{
+                      returnTo: `/artistas/${idArtista}?page=${currentAlbumPage}&returnTo=${encodeURIComponent(
+                        artistListReturnTo
+                      )}`,
+                    }}
                     style={{ textDecoration: "none" }}
                   >
                     <Card
@@ -451,19 +481,12 @@ const ArtistaDetalle: React.FC = () => {
                       >
                         <CardMedia
                           component="img"
-                          image={buildAlbumImage(album.cover, "thumb")}
+                          image={getAlbumThumbnail(album.cover)}
                           alt={album.titulo}
-                          loading={index < 4 ? "eager" : "lazy"}
+                          loading={currentAlbumPage === 1 && index < 4 ? "eager" : "lazy"}
                           decoding="async"
-                          onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-                            const current = e.currentTarget;
-                            if (current.dataset.fallback === "full-tried") {
-                              current.src = "/assets/Cover/default.webp";
-                              return;
-                            }
-                            current.dataset.fallback = "full-tried";
-                            current.src = buildAlbumImage(album.cover, "full");
-                          }}
+                          fetchPriority={currentAlbumPage === 1 && index < 4 ? "high" : "low"}
+                          onError={(e: React.SyntheticEvent<HTMLImageElement>) => imageThumbnailFallback(e, getAlbumImage(album.cover), DEFAULT_ALBUM_IMAGE)}
                           sx={{
                             width: "100%",
                             height: "100%",
@@ -506,6 +529,36 @@ const ArtistaDetalle: React.FC = () => {
                 </Grid>
               ))}
             </Grid>
+          )}
+
+          {albums.length > ALBUMS_PER_PAGE && (
+            <Box
+              sx={{
+                mt: 2.5,
+                pb: 1,
+                "& .MuiTypography-root": {
+                  color: "#ffffff",
+                  fontWeight: 600,
+                },
+                "& .MuiButton-root": {
+                  color: "#ffffff",
+                  borderColor: "rgba(255,255,255,0.45)",
+                  fontWeight: 600,
+                  "&:hover": {
+                    backgroundColor: "rgba(255,255,255,0.08)",
+                  },
+                  "&.Mui-disabled": {
+                    color: "rgba(255,255,255,0.35)",
+                  },
+                },
+              }}
+            >
+              <PaginationControls
+                currentPage={currentAlbumPage}
+                totalPages={totalAlbumPages}
+                setCurrentPage={setCurrentAlbumPage}
+              />
+            </Box>
           )}
         </Box>
       </Container>

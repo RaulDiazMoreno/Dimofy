@@ -10,7 +10,8 @@ import {
   BackendAlbumLike,
   WrappedBackendItem,
 } from "./types";
-import { buildArtistSources } from "./utils/images";
+import { ARTIST_PLACEHOLDER } from "./utils/images";
+import { getArtistImage } from "../utils/imagePaths";
 
 /* ============================================================================
    Type guards y helpers tipados (sin any)
@@ -153,11 +154,10 @@ export default function DashboardData({ userName }: { userName: string }) {
 
   const artistasUI: ArtistaUI[] = dedupeBy(baseArtistas, (a) => norm(a.artista))
     .slice(0, MAX_ARTISTAS)
-    .map((a) => {
-      const candidates = buildArtistSources(a.artista); // genera rutas candidatas (webp/jpg/jpeg/png + variantes)
-      const first = candidates[0] || null;
-      return { artista: a.artista, imagen: first };
-    });
+    .map((a) => ({
+      artista: a.artista,
+      imagen: getArtistImage(a.fotoArtista || `${a.artista}.webp`),
+    }));
 
   // ---------- Listas (sin cambios) ----------
   const listasUI: AlbumItem[] = (listas || []).map((l) => ({

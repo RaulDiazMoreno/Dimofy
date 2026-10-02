@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Typography,
   CircularProgress,
@@ -23,11 +23,12 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { FaArrowLeft } from "react-icons/fa";
 import { useUser } from "./UserContext";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import PaginationControls from "./PaginationControls";
 import generosData from "./generos.json";
 import paisesData from "./Paises.json";
 import "./canciones-dark.css";
+import { DEFAULT_ARTIST_IMAGE, getArtistImage, getArtistThumbnail, imageThumbnailFallback } from "./utils/imagePaths";
 
 interface Artista {
   idArtista: number;
@@ -50,34 +51,34 @@ interface Pais {
   bandera: string;
 }
 
-const normalizeFileName = (value?: string) => {
-  if (!value) return "";
-  const fileName = value.split("\\").pop()?.split("/").pop() ?? "";
-  return fileName.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-};
-
-const buildArtistImage = (foto?: string, size: "thumb" | "full" = "thumb") => {
-  const fileName = normalizeFileName(foto);
-  if (!fileName) return "/assets/Artistas/default.webp";
-  return size === "thumb"
-    ? `/assets/Artistas/thumbs/${fileName}`
-    : `/assets/Artistas/${fileName}`;
-};
-
 const Artistas: React.FC = () => {
-  const [filters, setFilters] = useState({
-    nombre: "",
-    genero: "",
-    anyoInicio: "",
-    pais: "",
-  });
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  useUser();
+
+  const initialFilters = useMemo(
+    () => ({
+      nombre: searchParams.get("nombre") ?? "",
+      genero: searchParams.get("genero") ?? "",
+      anyoInicio: searchParams.get("anyoInicio") ?? "",
+      pais: searchParams.get("pais") ?? "",
+    }),
+    []
+  );
+
+  const [filters, setFilters] = useState(initialFilters);
+  const [appliedFilters, setAppliedFilters] = useState(initialFilters);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [artistas, setArtistas] = useState<Artista[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(() => {
+    const page = Number(searchParams.get("page"));
+    return Number.isFinite(page) && page > 0 ? page : 1;
+  });
+  const [hasSearched, setHasSearched] = useState(
+    searchParams.get("buscar") === "1"
+  );
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const navigate = useNavigate();
-  useUser();
 
   const isSmall = useMediaQuery("(max-width:600px)");
   const artistasPerPage = isSmall ? 6 : 12;
@@ -105,13 +106,10 @@ const Artistas: React.FC = () => {
     setErrors((prev) => ({ ...prev, [name!]: "" }));
   };
 
-  const handleBuscar = async () => {
-    const errs = validate();
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs);
-      return;
-    }
-
+  const buscarArtistas = async (
+    searchFilters: typeof filters,
+    resetPage: boolean
+  ) => {
     setLoading(true);
     setErrorMsg("");
 
@@ -121,41 +119,114 @@ const Artistas: React.FC = () => {
 
       const { token } = JSON.parse(userData);
       const params = new URLSearchParams(
-        Object.entries(filters).reduce<Record<string, string>>((acc, [k, v]) => {
-          if (v) acc[k] = v;
-          return acc;
-        }, {})
+        Object.entries(searchFilters).reduce<Record<string, string>>(
+          (acc, [k, v]) => {
+            if (v) acc[k] = v;
+            return acc;
+          },
+          {}
+        )
       ).toString();
 
-      const response = await fetch(`http://localhost:8080/app/artistas/buscar?${params}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          ...(token && { Authorization: `Bearer ${token}` }),
-        },
-      });
+      const response = await fetch(
+        `http://localhost:8080/app/artistas/buscar?${params}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            ...(token && { Authorization: `Bearer ${token}` }),
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Error ${response.status}: ${response.statusText}`);
       }
 
       const data = await response.json();
+
       setArtistas(Array.isArray(data) ? data : []);
-      setCurrentPage(1);
+      setAppliedFilters(searchFilters);
+      setHasSearched(true);
+
+      if (resetPage) {
+        setCurrentPage(1);
+      }
     } catch (error: unknown) {
-      setErrorMsg(error instanceof Error ? error.message : "Error al buscar artistas");
+      setErrorMsg(
+        error instanceof Error ? error.message : "Error al buscar artistas"
+      );
       setArtistas([]);
     } finally {
       setLoading(false);
     }
   };
 
+  const handleBuscar = async () => {
+    const errs = validate();
+
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+
+    await buscarArtistas(filters, true);
+  };
+
   const handleLimpiar = () => {
-    setFilters({ nombre: "", genero: "", anyoInicio: "", pais: "" });
+    const emptyFilters = {
+      nombre: "",
+      genero: "",
+      anyoInicio: "",
+      pais: "",
+    };
+
+    setFilters(emptyFilters);
+    setAppliedFilters(emptyFilters);
     setErrors({});
     setArtistas([]);
     setCurrentPage(1);
+    setHasSearched(false);
+    setSearchParams({}, { replace: true });
   };
+
+  // Al volver desde ArtistaDetalle reconstruimos automáticamente
+  // la búsqueda que estaba activa, sin resetear la página.
+  useEffect(() => {
+    if (searchParams.get("buscar") !== "1") {
+      return;
+    }
+
+    void buscarArtistas(initialFilters, false);
+    // Solo debe ejecutarse al montar el listado.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Guardamos página y filtros aplicados en la URL.
+  useEffect(() => {
+    if (!hasSearched) {
+      return;
+    }
+
+    const params = new URLSearchParams();
+
+    params.set("page", String(currentPage));
+    params.set("buscar", "1");
+
+    Object.entries(appliedFilters).forEach(([key, value]) => {
+      if (value) {
+        params.set(key, value);
+      }
+    });
+
+    setSearchParams(params, { replace: true });
+  }, [
+    currentPage,
+    appliedFilters,
+    hasSearched,
+    setSearchParams,
+  ]);
+
 
   const currentArtistas = useMemo(() => {
     const indexOfLastArtista = currentPage * artistasPerPage;
@@ -164,6 +235,22 @@ const Artistas: React.FC = () => {
   }, [artistas, currentPage, artistasPerPage]);
 
   const totalPages = Math.ceil(artistas.length / artistasPerPage);
+
+  const artistListReturnTo = useMemo(() => {
+    const params = new URLSearchParams();
+
+    params.set("page", String(currentPage));
+    params.set("buscar", "1");
+
+    Object.entries(appliedFilters).forEach(([key, value]) => {
+      if (value) {
+        params.set(key, value);
+      }
+    });
+
+    return `/artistas?${params.toString()}`;
+  }, [currentPage, appliedFilters]);
+
 
   const darkPageTheme = createTheme({
     palette: {
@@ -413,7 +500,9 @@ const Artistas: React.FC = () => {
                   {currentArtistas.map((artista, index) => (
                     <Grid item xs={12} sm={6} md={3} key={artista.idArtista}>
                       <Link
-                        to={`/artistas/${artista.idArtista}`}
+                        to={`/artistas/${artista.idArtista}?page=1&returnTo=${encodeURIComponent(
+                          artistListReturnTo
+                        )}`}
                         style={{ textDecoration: "none" }}
                       >
                         <Card
@@ -440,19 +529,12 @@ const Artistas: React.FC = () => {
                           >
                             <CardMedia
                               component="img"
-                              loading={index < 4 ? "eager" : "lazy"}
+                              loading={currentPage === 1 && index < 4 ? "eager" : "lazy"}
                               decoding="async"
-                              image={buildArtistImage(artista.foto, "thumb")}
+                              fetchPriority={currentPage === 1 && index < 4 ? "high" : "low"}
+                              image={getArtistThumbnail(artista.foto)}
                               alt={artista.nombre}
-                              onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-                                const current = e.currentTarget;
-                                if (current.dataset.fallback === "full-tried") {
-                                  current.src = "/assets/Artistas/default.webp";
-                                  return;
-                                }
-                                current.dataset.fallback = "full-tried";
-                                current.src = buildArtistImage(artista.foto, "full");
-                              }}
+                              onError={(e: React.SyntheticEvent<HTMLImageElement>) => imageThumbnailFallback(e, getArtistImage(artista.foto), DEFAULT_ARTIST_IMAGE)}
                               sx={{
                                 width: "100%",
                                 height: "100%",

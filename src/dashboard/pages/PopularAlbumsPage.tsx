@@ -1,14 +1,16 @@
 // src/dashboard/pages/PopularAlbumsPage.tsx
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { useDashboard } from "../hooks/useDashboardData";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import "../common.css";
 import "../popularAlbums.css";
 import { fetchJson } from "../utils/fetcher";
 import { ALBUM_PLACEHOLDER } from "../utils/images";
 import { BackendAlbumLike } from "../types";
 import LazyImage from "../components/LazyImage";
+import PaginationControls from "../../PaginationControls";
+import { getAlbumImage, getAlbumThumbnail } from "../../utils/imagePaths";
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
@@ -29,7 +31,7 @@ type PageResp<T> = {
   last: boolean;
 };
 
-const PAGE_SIZE = 48;
+const ALBUMS_PER_PAGE = 12;
 
 type Props = {
   userName?: string;
@@ -80,56 +82,12 @@ function resolveUserName(propUserName?: string): string {
   );
 }
 
-function extractFileName(value?: string) {
-  const raw = (value ?? "").trim();
-  if (!raw) return "";
-
-  const noQuery = raw.split("?")[0].split("#")[0];
-  const fileName = noQuery.split("\\").pop()?.split("/").pop() ?? "";
-
-  return fileName.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-}
-
-function isRemoteUrl(value?: string) {
-  return /^https?:\/\//i.test((value ?? "").trim());
-}
-
-function buildAlbumImage(value?: string, size: "thumb" | "full" = "thumb") {
-  const raw = (value ?? "").trim();
-  if (!raw) return ALBUM_PLACEHOLDER;
-
-  if (isRemoteUrl(raw)) return raw;
-
-  const fileName = extractFileName(raw);
-  if (!fileName) return ALBUM_PLACEHOLDER;
-
-  return size === "thumb"
-    ? `/assets/Cover/thumbs/${fileName}`
-    : `/assets/Cover/${fileName}`;
-}
-
-function buildAlbumCandidates(value?: string) {
-  const raw = (value ?? "").trim();
-  if (!raw) return [ALBUM_PLACEHOLDER];
-
-  if (isRemoteUrl(raw)) {
-    return [raw, ALBUM_PLACEHOLDER];
-  }
-
-  const fileName = extractFileName(raw);
-  if (!fileName) return [ALBUM_PLACEHOLDER];
-
-  return [
-    `/assets/Cover/thumbs/${fileName}`,
-    `/assets/Cover/${fileName}`,
-    ALBUM_PLACEHOLDER,
-  ];
-}
-
 export default function PopularAlbumsPage({ userName }: Props) {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const generoId = (searchParams.get("genero") || "").trim();
+  const letraFromUrl = (searchParams.get("letra") || "").trim().toUpperCase();
   const origen = (searchParams.get("origen") || "").trim().toLowerCase();
   const backTo = origen === "generos" ? "/generos" : "/home";
 
@@ -144,39 +102,126 @@ export default function PopularAlbumsPage({ userName }: Props) {
   const resolvedUserName = resolveUserName(userName);
   const base = "http://localhost:8080";
 
-  const { data, loading } = useDashboard(resolvedUserName, token);
+  const novedadesQuery = useQuery({
+    queryKey: ["all-novedades", resolvedUserName],
+    enabled: Boolean(!generoId && resolvedUserName),
+    queryFn: ({ signal }) =>
+      fetchJson(
+        `${base}/app/dashboard/recomendaciones/novedades?userName=${encodeURIComponent(
+          resolvedUserName
+        )}&all=true`,
+        token,
+        signal
+      ) as Promise<any>,
+    staleTime: 60_000,
+  });
 
-  const genreInfinite = useInfiniteQuery({
-    queryKey: ["albums-by-genre-paged", generoId, PAGE_SIZE],
+  const novedades = useMemo(() => {
+    const raw = novedadesQuery.data as any;
+    const source = Array.isArray(raw)
+      ? raw
+      : Array.isArray(raw?.content)
+      ? raw.content
+      : Array.isArray(raw?.novedades)
+      ? raw.novedades
+      : [];
+
+    return source.map((n: any) => ({
+      idAlbum:
+        n?.idAlbum ??
+        n?.id ??
+        n?.albumId ??
+        n?.id_album ??
+        n?.album?.idAlbum ??
+        n?.album?.id ??
+        null,
+      titulo: n?.titulo ?? n?.title ?? "",
+      artista: n?.artista ?? n?.artist ?? "",
+      cover: n?.cover ?? n?.caratula ?? n?.portada ?? n?.imagen ?? "",
+      genero: n?.genero ?? n?.genre ?? "",
+    }));
+  }, [novedadesQuery.data]);
+
+  const [currentGenrePage, setCurrentGenrePage] = useState(() => {
+    const pageFromUrl = Number(searchParams.get("page"));
+    return Number.isFinite(pageFromUrl) && pageFromUrl > 0 ? pageFromUrl : 1;
+  });
+
+  const initialsQuery = useQuery({
+    queryKey: ["artist-initials-by-genre", generoId],
     enabled: Boolean(generoId),
-    initialPageParam: 0,
-    queryFn: ({ pageParam, signal }) =>
+    queryFn: ({ signal }) =>
+      fetchJson(
+        `${base}/app/albums/genero/${encodeURIComponent(generoId)}/iniciales-artistas`,
+        token,
+        signal
+      ) as Promise<string[]>,
+    staleTime: 5 * 60_000,
+  });
+
+  const artistInitials = useMemo(() => {
+    const raw = Array.isArray(initialsQuery.data) ? initialsQuery.data : [];
+    return raw
+      .map((value) => String(value ?? "").trim().toUpperCase())
+      .filter(Boolean);
+  }, [initialsQuery.data]);
+
+  const selectedInitial =
+    letraFromUrl && artistInitials.includes(letraFromUrl)
+      ? letraFromUrl
+      : artistInitials[0] || "";
+
+  useEffect(() => {
+    if (!generoId || !artistInitials.length) return;
+
+    const params = new URLSearchParams(searchParams);
+    const urlLetter = (params.get("letra") || "").trim().toUpperCase();
+    if (!artistInitials.includes(urlLetter)) {
+      params.set("letra", artistInitials[0]);
+      params.set("page", "1");
+      setCurrentGenrePage(1);
+      setSearchParams(params, { replace: true });
+    }
+  }, [generoId, artistInitials.join("|")]);
+
+  useEffect(() => {
+    if (!generoId) return;
+    const pageFromUrl = Number(searchParams.get("page"));
+    const normalizedPage =
+      Number.isFinite(pageFromUrl) && pageFromUrl > 0 ? pageFromUrl : 1;
+    setCurrentGenrePage(normalizedPage);
+  }, [generoId, letraFromUrl]);
+
+  useEffect(() => {
+    if (!generoId || !selectedInitial) return;
+    const params = new URLSearchParams(searchParams);
+    params.set("letra", selectedInitial);
+    params.set("page", String(currentGenrePage));
+    setSearchParams(params, { replace: true });
+  }, [currentGenrePage, generoId, selectedInitial]);
+
+  const genreQuery = useQuery({
+    queryKey: ["albums-by-genre-initial-paged", generoId, selectedInitial, currentGenrePage, ALBUMS_PER_PAGE],
+    enabled: Boolean(generoId && selectedInitial),
+    queryFn: ({ signal }) =>
       fetchJson(
         `${base}/app/albums/genero/${encodeURIComponent(
           generoId
-        )}?page=${pageParam}&size=${PAGE_SIZE}`,
+        )}/inicial/${encodeURIComponent(selectedInitial)}?page=${currentGenrePage - 1}&size=${ALBUMS_PER_PAGE}`,
         token,
         signal
       ) as Promise<PageResp<BackendAlbumLike>>,
     staleTime: 60_000,
-    getNextPageParam: (lastPage) => {
-      const current = lastPage?.number ?? 0;
-      const total = lastPage?.totalPages ?? 0;
-      const next = current + 1;
-      return next < total ? next : undefined;
-    },
   });
 
   const genreAlbums = useMemo(() => {
-    const pages = genreInfinite.data?.pages ?? [];
-    return pages
-      .flatMap((page) => (Array.isArray(page?.content) ? page.content : []))
-      .filter(isBackendAlbumLike);
-  }, [genreInfinite.data]);
+    const content = genreQuery.data?.content;
+    return (Array.isArray(content) ? content : []).filter(isBackendAlbumLike);
+  }, [genreQuery.data]);
 
   const items = (generoId
     ? (genreAlbums as any)
-    : ((data?.novedades ?? []) as any[])) as Array<{
+    : (novedades as any[])) as Array<{
     idAlbum?: number | string;
     id?: number | string;
     albumId?: number | string;
@@ -186,22 +231,32 @@ export default function PopularAlbumsPage({ userName }: Props) {
     genero?: string;
   }>;
 
-  const effectiveLoading = generoId ? genreInfinite.isLoading : loading;
-  const effectiveError = generoId ? genreInfinite.isError : false;
+  const effectiveLoading = generoId
+    ? initialsQuery.isLoading || (Boolean(selectedInitial) && genreQuery.isLoading)
+    : novedadesQuery.isLoading;
+  const effectiveError = generoId
+    ? initialsQuery.isError || genreQuery.isError
+    : novedadesQuery.isError;
   const generoNombre = generoId ? (items?.[0] as any)?.genero || "" : "";
 
-  const [visible, setVisible] = useState(48);
+  const [currentPopularPage, setCurrentPopularPage] = useState(1);
 
   useEffect(() => {
-    setVisible(48);
+    setCurrentPopularPage(1);
   }, [generoId]);
 
-  const shownItems = generoId ? items : items.slice(0, visible);
+  const totalPopularPages = !generoId
+    ? Math.max(1, Math.ceil(items.length / ALBUMS_PER_PAGE))
+    : 1;
 
-  const firstPage = generoId ? genreInfinite.data?.pages?.[0] : undefined;
-  const totalPages = generoId ? firstPage?.totalPages ?? 0 : 0;
-  const currentLoadedPages = generoId ? genreInfinite.data?.pages?.length ?? 0 : 0;
-  const canLoadMoreGenre = generoId ? currentLoadedPages < totalPages : false;
+  const shownItems = useMemo(() => {
+    if (generoId) return items;
+
+    const start = (currentPopularPage - 1) * ALBUMS_PER_PAGE;
+    return items.slice(start, start + ALBUMS_PER_PAGE);
+  }, [generoId, items, currentPopularPage]);
+
+  const totalGenrePages = generoId ? Math.max(1, genreQuery.data?.totalPages ?? 1) : 1;
 
   if (effectiveLoading) return <div className="dash-loading" />;
 
@@ -220,8 +275,32 @@ export default function PopularAlbumsPage({ userName }: Props) {
         </Link>
       </div>
 
+      {generoId && artistInitials.length > 0 && (
+        <nav className="artist-initial-menu" aria-label="Filtrar álbumes por inicial del artista">
+          {artistInitials.map((letter) => (
+            <button
+              key={letter}
+              type="button"
+              className={`artist-initial-button${selectedInitial === letter ? " active" : ""}`}
+              onClick={() => {
+                const params = new URLSearchParams(searchParams);
+                params.set("letra", letter);
+                params.set("page", "1");
+                setCurrentGenrePage(1);
+                setSearchParams(params);
+              }}
+              aria-current={selectedInitial === letter ? "page" : undefined}
+            >
+              {letter}
+            </button>
+          ))}
+        </nav>
+      )}
+
       {effectiveError ? (
-        <p style={{ color: "#cbd5e1" }}>Error cargando álbumes del género.</p>
+        <p style={{ color: "#cbd5e1" }}>
+          {generoId ? "Error cargando álbumes del género." : "Error cargando novedades."}
+        </p>
       ) : !resolvedUserName ? (
         <p style={{ color: "#cbd5e1" }}>
           No se ha podido identificar el usuario. Vuelve a iniciar sesión.
@@ -232,84 +311,137 @@ export default function PopularAlbumsPage({ userName }: Props) {
         </p>
       ) : (
         <>
-          <div className="popular-albums-grid popular-albums-grid--all">
+          <Grid container spacing={3}>
             {shownItems.map((n, i) => {
               const albumId = resolveAlbumId(n);
-              const candidates = buildAlbumCandidates(n.cover);
+              const imageSrc = getAlbumThumbnail(n.cover);
+              const originalImageSrc = getAlbumImage(n.cover);
 
               return (
-                <button
-                  key={`${albumId ?? n.titulo ?? "album"}-${i}`}
-                  className="popular-album"
-                  type="button"
-                  disabled={albumId == null}
-                  onClick={() => {
-                    if (albumId || albumId === 0) {
-                      navigate(`/albums/${encodeURIComponent(String(albumId))}`);
-                    }
-                  }}
-                  aria-label={n.titulo ? `Ver álbum: ${n.titulo}` : "Ver álbum"}
-                >
-                  <div className="popular-album-coverWrap">
-                    <LazyImage
-                      src={encodeURI(buildAlbumImage(n.cover, "thumb"))}
-                      placeholderSrc={ALBUM_PLACEHOLDER}
-                      alt={n.titulo || "cover"}
-                      className="popular-album-cover"
-                      eager={i < 8}
-                      fetchPriority={i < 8 ? "high" : "auto"}
-                      onError={(e) => {
-                        const img = e.currentTarget as HTMLImageElement;
-                        const currentIdx = Number(img.dataset.srcIdx || "0");
-                        const nextIdx = currentIdx + 1;
+                <Grid item xs={12} sm={6} md={4} lg={3} key={`${albumId ?? n.titulo ?? "album"}-${i}`}>
+                  <Card
+                    onClick={() => {
+                      if (albumId || albumId === 0) {
+                        navigate(`/albums/${encodeURIComponent(String(albumId))}`, {
+                          state: {
+                            returnTo: `${location.pathname}${location.search}`,
+                          },
+                        });
+                      }
+                    }}
+                    sx={{
+                      height: "100%",
+                      borderRadius: "22px",
+                      overflow: "hidden",
+                      background: "#ffffff",
+                      color: "#0f172a",
+                      border: "1px solid #e5e7eb",
+                      boxShadow: "0 10px 30px rgba(15,23,42,0.08)",
+                      transition: "transform 0.22s ease, box-shadow 0.22s ease",
+                      cursor: albumId != null ? "pointer" : "default",
+                      "&:hover": {
+                        transform: albumId != null ? "translateY(-6px)" : "none",
+                        boxShadow:
+                          albumId != null
+                            ? "0 18px 40px rgba(15,23,42,0.14)"
+                            : "0 10px 30px rgba(15,23,42,0.08)",
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        position: "relative",
+                        width: "100%",
+                        aspectRatio: "1 / 1",
+                        overflow: "hidden",
+                        background: "#e5e7eb",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
 
-                        if (nextIdx < candidates.length) {
-                          img.dataset.srcIdx = String(nextIdx);
-                          img.src = encodeURI(candidates[nextIdx]);
-                        } else {
-                          img.src = ALBUM_PLACEHOLDER;
-                        }
+                        // LazyImage no admite style ni sx.
+                        // Aplicamos el estilo directamente al <img> que genera internamente.
+                        "& img": {
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "contain",
+                          objectPosition: "center",
+                          display: "block",
+                        },
                       }}
-                    />
-                  </div>
+                    >
+                      <LazyImage
+                        src={encodeURI(imageSrc)}
+                        placeholderSrc={ALBUM_PLACEHOLDER}
+                        alt={n.titulo || "Álbum"}
+                        eager={currentPopularPage === 1 && i < 4}
+                        fetchPriority={currentPopularPage === 1 && i < 4 ? "high" : "low"}
+                        onError={(e) => {
+                          const img = e.currentTarget;
+                          if (img.dataset.originalFallback !== "true") {
+                            img.dataset.originalFallback = "true";
+                            img.src = encodeURI(originalImageSrc);
+                            return;
+                          }
+                          if (!img.src.endsWith(ALBUM_PLACEHOLDER)) img.src = ALBUM_PLACEHOLDER;
+                        }}
+                      />
+                    </Box>
 
-                  <div className="popular-album-title" title={n.titulo}>
-                    {n.titulo || ""}
-                  </div>
-                  <div className="popular-album-artist" title={n.artista}>
-                    {n.artista || ""}
-                  </div>
-                </button>
+                    <CardContent sx={{ p: 2 }}>
+                      <Typography
+                        variant="subtitle1"
+                        title={n.titulo}
+                        sx={{
+                          fontWeight: 700,
+                          color: "#0f172a",
+                          lineHeight: 1.35,
+                          minHeight: 44,
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}
+                      >
+                        {n.titulo || "Título desconocido"}
+                      </Typography>
+
+                      <Typography
+                        variant="body2"
+                        title={n.artista}
+                        sx={{
+                          color: "#64748b",
+                          mt: 1,
+                          fontWeight: 500,
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                        }}
+                      >
+                        {n.artista || "Artista desconocido"}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
               );
             })}
-          </div>
+          </Grid>
 
           {generoId ? (
-            <div style={{ display: "flex", justifyContent: "center", marginTop: 18 }}>
-              {canLoadMoreGenre ? (
-                <button
-                  type="button"
-                  className="sec-more"
-                  onClick={() => genreInfinite.fetchNextPage()}
-                  disabled={genreInfinite.isFetchingNextPage}
-                >
-                  {genreInfinite.isFetchingNextPage ? "Cargando..." : "Cargar más"}
-                </button>
-              ) : (
-                <span style={{ opacity: 0.75 }}>No hay más álbumes</span>
-              )}
-            </div>
+            totalGenrePages > 1 && (
+              <PaginationControls
+                currentPage={currentGenrePage}
+                totalPages={totalGenrePages}
+                setCurrentPage={setCurrentGenrePage}
+              />
+            )
           ) : (
-            items.length > visible && (
-              <div style={{ display: "flex", justifyContent: "center", marginTop: 18 }}>
-                <button
-                  type="button"
-                  className="sec-more"
-                  onClick={() => setVisible((v) => v + 48)}
-                >
-                  Cargar más
-                </button>
-              </div>
+            totalPopularPages > 1 && (
+              <PaginationControls
+                currentPage={currentPopularPage}
+                totalPages={totalPopularPages}
+                setCurrentPage={setCurrentPopularPage}
+              />
             )
           )}
         </>
@@ -317,3 +449,4 @@ export default function PopularAlbumsPage({ userName }: Props) {
     </main>
   );
 }
+

@@ -9,6 +9,7 @@ export interface BackendAlbumLike {
   genero: string;
   artista: string;
   cover?: string;
+  fotoArtista?: string;
   anyo?: string;
   titulo?: string;
 }

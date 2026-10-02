@@ -1,183 +1,116 @@
-import { useParams, useNavigate, Link as RouterLink } from "react-router-dom";
+import { useParams, useNavigate, Link as RouterLink, useLocation } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import {
-  Box,
-  Grid,
-  Typography,
-  Card,
-  CardContent,
-  CardMedia,
-  Button,
-  Pagination,
-} from "@mui/material";
+import { Box, Grid, Typography, Card, CardContent, Button } from "@mui/material";
 import { FaArrowLeft } from "react-icons/fa";
+import PaginationControls from "./PaginationControls";
+import LazyImage from "./dashboard/components/LazyImage";
+import { DEFAULT_ALBUM_IMAGE, getAlbumImage } from "./utils/imagePaths";
 
 interface Album {
   idAlbum: number;
   titulo: string;
-  artista: string;
-  genero: string;
-  anyo: string;
-  cover: string;
+  artista?: string;
+  genero?: string;
+  anyo?: string;
+  cover?: string;
 }
 
-const normalizeFileName = (value?: string) => {
-  if (!value) return "";
-  const fileName = value.split("\\").pop()?.split("/").pop() ?? "";
-  return fileName.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-};
-
-const buildAlbumImage = (cover?: string, size: "thumb" | "full" = "thumb") => {
-  const fileName = normalizeFileName(cover);
-  if (!fileName) return "/assets/Cover/default.webp";
-  return size === "thumb"
-    ? `/assets/Cover/thumbs/${fileName}`
-    : `/assets/Cover/${fileName}`;
-};
+const ALBUMS_PER_PAGE = 12;
 
 const AlbumsPorGenero = () => {
   const { idGenero } = useParams();
   const navigate = useNavigate();
-
+  const location = useLocation();
   const [albums, setAlbums] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [nombreGenero, setNombreGenero] = useState("");
 
-  const albumsPerPage = 6;
-
   useEffect(() => {
+    let cancelled = false;
     const fetchAlbums = async () => {
+      setLoading(true);
       try {
         const userData = localStorage.getItem("user");
         if (!userData) return;
-
         const { token } = JSON.parse(userData);
-
         const response = await fetch(`http://localhost:8080/app/albums/genero/${idGenero}`, {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         });
-
-        if (!response.ok) {
-          throw new Error("No se pudieron cargar los álbumes");
-        }
-
+        if (!response.ok) throw new Error("No se pudieron cargar los álbumes");
         const raw = await response.json();
-        const data: Album[] = Array.isArray(raw) ? raw : raw.items ?? [];
-
+        const data: Album[] = Array.isArray(raw)
+          ? raw
+          : Array.isArray(raw.content)
+            ? raw.content
+            : Array.isArray(raw.items)
+              ? raw.items
+              : [];
+        if (cancelled) return;
         setAlbums(data);
-
-        const generoFromArray = data[0]?.genero ?? "";
-        const generoFromObject = !Array.isArray(raw) ? raw.genero ?? "" : "";
-        setNombreGenero(generoFromObject || generoFromArray);
+        setNombreGenero((!Array.isArray(raw) ? raw.genero : "") || data[0]?.genero || "");
       } catch (error) {
         console.error("Error al cargar álbumes:", error);
-        setAlbums([]);
+        if (!cancelled) setAlbums([]);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
-
     setCurrentPage(1);
-    setLoading(true);
-    fetchAlbums();
+    void fetchAlbums();
+    return () => { cancelled = true; };
   }, [idGenero]);
 
-  const totalPages = Math.ceil(albums.length / albumsPerPage);
-
+  const totalPages = Math.max(1, Math.ceil(albums.length / ALBUMS_PER_PAGE));
   const currentAlbums = useMemo(() => {
-    return albums.slice((currentPage - 1) * albumsPerPage, currentPage * albumsPerPage);
+    const start = (currentPage - 1) * ALBUMS_PER_PAGE;
+    return albums.slice(start, start + ALBUMS_PER_PAGE);
   }, [albums, currentPage]);
 
   return (
-    <Box sx={{ padding: "2rem" }}>
-      {!loading && albums.length > 0 && (
-        <Box sx={{ marginTop: "2rem" }}>
-          <Typography variant="h5" gutterBottom>
-            Álbumes de {nombreGenero} ({albums.length})
+    <Box sx={{ minHeight: "100vh", background: "#050505", p: { xs: 2, md: 4 } }}>
+      <Box sx={{ maxWidth: 1400, mx: "auto" }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
+          <Typography variant="h4" sx={{ color: "#fff", fontWeight: 800 }}>
+            Álbumes de {nombreGenero || "género"}{!loading ? ` (${albums.length})` : ""}
           </Typography>
+          <Button variant="contained" color="warning" onClick={() => navigate("/generos")} startIcon={<FaArrowLeft />}>
+            Volver
+          </Button>
+        </Box>
 
+        {!loading && currentAlbums.length > 0 && (
           <Grid container spacing={3}>
-            {currentAlbums.map((album, idx) => (
-              <Grid item xs={12} sm={6} md={4} key={album.idAlbum}>
-                <RouterLink to={`/albums/${album.idAlbum}`} style={{ textDecoration: "none" }}>
-                  <Card
-                    sx={{
-                      backgroundColor: "#121212",
-                      color: "#fff",
-                      borderRadius: 2,
-                      transition: "transform 0.3s",
-                      "&:hover": {
-                        transform: "scale(1.03)",
-                        boxShadow: 6,
-                      },
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        position: "relative",
-                        width: "100%",
-                        aspectRatio: "1 / 1",
-                        overflow: "hidden",
-                        backgroundColor: "#0f0f0f",
-                      }}
-                    >
-                      <CardMedia
-                        component="img"
-                        image={buildAlbumImage(album.cover, "thumb")}
+            {currentAlbums.map((album, index) => (
+              <Grid item xs={12} sm={6} md={4} lg={3} key={album.idAlbum}>
+                <RouterLink
+                  to={`/albums/${album.idAlbum}`}
+                  state={{ returnTo: `${location.pathname}${location.search}` }}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Card sx={{
+                    height: "100%", borderRadius: "22px", overflow: "hidden", background: "#fff",
+                    color: "#0f172a", border: "1px solid #e5e7eb",
+                    boxShadow: "0 10px 30px rgba(15,23,42,.08)",
+                    transition: "transform .22s ease, box-shadow .22s ease",
+                    "&:hover": { transform: "translateY(-6px)", boxShadow: "0 18px 40px rgba(15,23,42,.14)" },
+                  }}>
+                    <Box sx={{ width: "100%", aspectRatio: "1 / 1", overflow: "hidden", background: "#e5e7eb", "& img": { width: "100%", height: "100%", objectFit: "cover", display: "block" } }}>
+                      <LazyImage
+                        src={getAlbumImage(album.cover || "")}
                         alt={album.titulo}
-                        loading={currentPage === 1 && idx < 3 ? "eager" : "lazy"}
-                        decoding="async"
-                        onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-                          const current = e.currentTarget;
-                          if (current.dataset.fallback === "full-tried") {
-                            current.src = "/assets/Cover/default.webp";
-                            return;
-                          }
-                          current.dataset.fallback = "full-tried";
-                          current.src = buildAlbumImage(album.cover, "full");
-                        }}
-                        sx={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          display: "block",
-                        }}
+                        eager={currentPage === 1 && index < 4}
+                        fetchPriority={currentPage === 1 && index < 4 ? "high" : "low"}
+                        rootMargin="120px"
+                        onError={(e) => { if (!e.currentTarget.src.endsWith(DEFAULT_ALBUM_IMAGE)) e.currentTarget.src = DEFAULT_ALBUM_IMAGE; }}
                       />
                     </Box>
-
-                    <CardContent sx={{ pb: 2 }}>
-                      <Typography
-                        variant="subtitle1"
-                        title={album.titulo}
-                        sx={{
-                          fontWeight: 600,
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          minHeight: "3.2em",
-                          lineHeight: 1.6,
-                        }}
-                      >
+                    <CardContent sx={{ p: 2 }}>
+                      <Typography variant="subtitle1" sx={{ fontWeight: 700, color: "#0f172a", lineHeight: 1.35, minHeight: 44, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
                         {album.titulo}
                       </Typography>
-
-                      <Typography
-                        variant="body2"
-                        noWrap
-                        title={album.artista}
-                        sx={{ color: "rgba(255,255,255,0.7)" }}
-                      >
-                        {album.artista}
-                      </Typography>
-
-                      <Typography variant="caption" sx={{ display: "block", mt: 0.5 }}>
-                        Año: {album.anyo}
+                      <Typography variant="body2" sx={{ color: "#64748b", mt: 1, fontWeight: 500 }}>
+                        Año: {album.anyo || "-"}
                       </Typography>
                     </CardContent>
                   </Card>
@@ -185,42 +118,18 @@ const AlbumsPorGenero = () => {
               </Grid>
             ))}
           </Grid>
+        )}
 
-          {totalPages > 1 && (
-            <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-              <Pagination
-                count={totalPages}
-                page={currentPage}
-                onChange={(_, value) => setCurrentPage(value)}
-                color="primary"
-              />
-            </Box>
-          )}
-        </Box>
-      )}
+        {!loading && albums.length === 0 && <Typography sx={{ color: "#cbd5e1", textAlign: "center", mt: 5 }}>No se encontraron álbumes para este género.</Typography>}
 
-      {!loading && albums.length === 0 && (
-        <Typography variant="body1" color="textSecondary" align="center" sx={{ mt: 4 }}>
-          No se encontraron álbumes para este género.
-        </Typography>
-      )}
-
-      <Box sx={{ display: "flex", justifyContent: "flex-end", marginTop: "3rem" }}>
-        <Button
-          variant="contained"
-          color="warning"
-          onClick={() => navigate("/generos")}
-          startIcon={<FaArrowLeft />}
-          aria-label="Volver al inicio"
-        >
-          Volver
-        </Button>
+        {!loading && totalPages > 1 && (
+          <Box sx={{ mt: 3, pb: 1, "& .MuiTypography-root": { color: "#fff", fontWeight: 600 }, "& .MuiButton-root": { color: "#fff", borderColor: "rgba(255,255,255,.45)", fontWeight: 600 } }}>
+            <PaginationControls currentPage={currentPage} totalPages={totalPages} setCurrentPage={setCurrentPage} />
+          </Box>
+        )}
       </Box>
     </Box>
   );
 };
 
 export default AlbumsPorGenero;
-
-
-

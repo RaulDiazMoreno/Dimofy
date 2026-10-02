@@ -15,7 +15,8 @@ const BASE = "http://localhost:8080";
 
 export async function goToArtistaDetalleByNombre(
   navigate: NavigateFunction,
-  nombre: string
+  nombre: string,
+  returnTo: string = "/artistas"
 ): Promise<void> {
   const q = (nombre ?? "").trim();
   if (!q) return;
@@ -46,5 +47,5 @@ export async function goToArtistaDetalleByNombre(
     throw new Error(`No se pudo resolver idArtista para: ${q}`);
   }
 
-  navigate(`/artistas/${idArtista}`);
+  navigate(`/artistas/${idArtista}?returnTo=${encodeURIComponent(returnTo)}`);
 }

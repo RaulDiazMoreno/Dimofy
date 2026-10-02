@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Button, Form, Image, Col, Row, Container } from 'react-bootstrap';
 import { FaSave, FaArrowLeft, FaEdit } from 'react-icons/fa';
 import GenerosTable from './GenerosTable';
@@ -36,6 +36,8 @@ const EditarAlbum: React.FC = () => {
   const [generoSeleccionado, setGeneroSeleccionado] = useState<Genero | null>(null);
   const [artistaSeleccionado, setArtistaSeleccionado] = useState<Artista | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const returnTo = location.state?.returnTo || '/admin/albumsA';
 
   useEffect(() => {
     const fetchAlbum = async () => {
@@ -188,7 +190,7 @@ useEffect(() => {
     });
     if (response.ok) {
       toast.success("¡Álbum modificado correctamente!");
-      navigate('/admin/albumsA');
+      navigate(returnTo);
       return
     } else {
       toast.error("¡Error al actualizar el álbum!");
@@ -204,7 +206,7 @@ useEffect(() => {
 
 
   const handleVolver = () => {
-    navigate('/admin/albumsA');
+    navigate(returnTo);
   };
 
   if (!album) return <p>Cargando...</p>;

@@ -101,3 +101,83 @@ button.popular-album:focus-visible {
   .popular-albums-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .popular-albums-grid--all { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+
+/* Menú alfabético para los álbumes de Tus Géneros.
+   Solo se muestran iniciales que realmente existen en el género. */
+.artist-initial-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 26px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+}
+
+.artist-initial-button {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 11px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 10px;
+  background: rgba(255,255,255,.07);
+  color: #f8fafc;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .16s ease, background .16s ease, border-color .16s ease;
+}
+
+.artist-initial-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.14);
+}
+
+.artist-initial-button.active {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+/* Botonera alfabética compacta: una sola fila horizontal. */
+.artist-initial-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: safe center;
+  gap: 5px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 6px;
+  margin: 6px 0 22px;
+  border-radius: 12px;
+  scrollbar-width: thin;
+}
+
+.artist-initial-button {
+  flex: 0 0 30px;
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .artist-initial-menu { gap: 4px; }
+  .artist-initial-button {
+    flex-basis: 28px;
+    min-width: 28px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+  }
+}

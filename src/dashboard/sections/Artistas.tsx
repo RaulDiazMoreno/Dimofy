@@ -1,10 +1,7 @@
 import "../artistas.css";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  buildArtistSources,
-  tryArtistSources,
-  ARTIST_PLACEHOLDER,
-} from "../utils/images";
+import { ARTIST_PLACEHOLDER } from "../utils/images";
+import LazyImage from "../components/LazyImage";
 import { goToArtistaDetalleByNombre } from "../utils/goToArtistaDetalle";
 
 type ArtistItem = {
@@ -19,11 +16,11 @@ export default function ArtistsSection({ items }: { items: ArtistItem[] }) {
 
   const goToArtistaDetalle = async (name: string) => {
     try {
-      await goToArtistaDetalleByNombre(navigate, name);
+      await goToArtistaDetalleByNombre(navigate, name, "/home");
     } catch (e) {
       console.error(e);
       // Fallback a la ruta antigua (por si el endpoint de búsqueda falla)
-      navigate(`/artista/${encodeURIComponent(name)}`);
+      navigate("/home");
     }
   };
 
@@ -38,9 +35,8 @@ export default function ArtistsSection({ items }: { items: ArtistItem[] }) {
       </div>
 
       <div className="popular-artists-row scroll-x">
-        {items.slice(0, 6).map((a) => {
-          const candidates = buildArtistSources(a.artista);
-          const first = candidates[0] ?? ARTIST_PLACEHOLDER;
+        {items.slice(0, 6).map((a, index) => {
+          const src = a.imagen || ARTIST_PLACEHOLDER;
 
           return (
             <button
@@ -51,15 +47,16 @@ export default function ArtistsSection({ items }: { items: ArtistItem[] }) {
               aria-label={`Ver discografía de ${a.artista}`}
             >
               <div className="popular-artist-avatar">
-                <img
-                  src={first}
-                  data-src-idx="0"
+                <LazyImage
+                  src={src}
                   className="popular-artist-img"
                   alt={a.artista}
-                  loading="lazy"
-                  onError={(e) =>
-                    tryArtistSources(e, candidates, ARTIST_PLACEHOLDER)
-                  }
+                  eager={index < 3}
+                  fetchPriority={index < 3 ? "high" : "auto"}
+                  onError={(e) => {
+                    if (e.currentTarget.src.endsWith(ARTIST_PLACEHOLDER)) return;
+                    e.currentTarget.src = ARTIST_PLACEHOLDER;
+                  }}
                 />
               </div>
 

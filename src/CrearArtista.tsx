@@ -167,7 +167,7 @@ const CrearArtista = () => {
         <Row className="mb-4">
           <Col md={6}>
             <Form.Group>
-              <Form.Label>Seleccionar Carátula</Form.Label>
+              <Form.Label>Seleccionar Imagen</Form.Label>
               <Form.Control type="file" accept="image/*" onChange={handleCaratulaChange} />
             </Form.Group>
           </Col>

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 import {
   Paper,
   Typography,
@@ -34,6 +34,8 @@ const AlbumDetail: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+  const returnTo = (location.state as { returnTo?: string } | null)?.returnTo;
 
   const coverFileName = useMemo(() => {
     const raw = album?.cover;
@@ -130,7 +132,13 @@ const AlbumDetail: React.FC = () => {
             variant="contained"
             color="warning"
             size="small"
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              if (returnTo) {
+                navigate(returnTo);
+              } else {
+                navigate(-1);
+              }
+            }}
             style={{
               minWidth: "auto",
               padding: "6px 12px",

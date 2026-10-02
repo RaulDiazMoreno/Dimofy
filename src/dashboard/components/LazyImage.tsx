@@ -33,7 +33,7 @@ export default function LazyImage({
 }: Props) {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [resolvedSrc, setResolvedSrc] = useState<string>(
-    eager ? src : placeholderSrc || ""
+    eager ? src : ""
   );
 
   // Si cambia el src (p.ej. al paginar), actualizamos el placeholder.
@@ -42,7 +42,7 @@ export default function LazyImage({
       setResolvedSrc(src);
       return;
     }
-    setResolvedSrc(placeholderSrc || "");
+    setResolvedSrc("");
   }, [src, eager, placeholderSrc]);
 
   useEffect(() => {
@@ -80,12 +80,12 @@ export default function LazyImage({
   return (
     <img
       ref={imgRef}
-      src={resolvedSrc}
+      src={resolvedSrc || undefined}
       alt={alt}
       className={className}
       decoding="async"
       loading={eager ? "eager" : "lazy"}
-      fetchPriority={fetchPriority as any}
+      fetchPriority={(eager ? fetchPriority : (fetchPriority === "high" ? "auto" : fetchPriority)) as any}
       onError={onError}
     />
   );

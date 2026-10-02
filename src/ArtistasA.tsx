@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Modal, Form, Spinner } from 'react-bootstrap';
 import { FaArrowLeft, FaBrush, FaPlus, FaSearch } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import generosData from './generos.json';
@@ -30,20 +30,25 @@ interface Genero {
 }
 
 const ArtistasA: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [artistas, setArtistas] = useState<Artistas[]>([]);
-  const [generoFiltro, setGeneroFiltro] = useState('');
+  const [generoFiltro, setGeneroFiltro] = useState(() => searchParams.get('genero') || '');
   const [filteredArtistas, setFilteredArtistas] = useState<Artistas[]>([]);
-  const [artistaFiltro, setArtistaFiltro] = useState('');
-  const [anyoFiltro, setAnyoFiltro] = useState('');
-  const [paisFiltro, setPaisFiltro] = useState('');
+  const [artistaFiltro, setArtistaFiltro] = useState(() => searchParams.get('artista') || '');
+  const [anyoFiltro, setAnyoFiltro] = useState(() => searchParams.get('anyo') || '');
+  const [paisFiltro, setPaisFiltro] = useState(() => searchParams.get('pais') || '');
   const [showConfirm, setShowConfirm] = useState(false);
   const [ArtistaSeleccionada, setArtistaSeleccionada] = useState<Artistas | null>(null);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(() => {
+    const pagina = Number(searchParams.get('page'));
+    return Number.isNaN(pagina) || pagina < 0 ? 0 : pagina;
+  });
   const [loading, setLoading] = useState(false);
+  const [hasSearched, setHasSearched] = useState(() => searchParams.get('buscar') === '1');
   const rowsPerPage = 10;
   const navigate = useNavigate();
 
-  const buscarArtista = async () => {
+  const buscarArtista = async (resetPage = true) => {
     const queryParams = new URLSearchParams();
 
     if (artistaFiltro) queryParams.append('nombre', artistaFiltro);
@@ -69,7 +74,7 @@ const ArtistasA: React.FC = () => {
         const data = await response.json();
         console.log("Respuesta del backend:", data);
 
-        if (Array.isArray(data) && data.length > 0) {
+        if (Array.isArray(data)) {
           const artistaFormateadas = data.map((c: any) => ({
             idArtista: c.idArtista,
             nombre: c.nombre,
@@ -85,7 +90,10 @@ const ArtistasA: React.FC = () => {
 
           setArtistas(artistaFormateadas);
           setFilteredArtistas(artistaFormateadas);
-          setPage(0);
+          setHasSearched(true);
+          if (resetPage) {
+            setPage(0);
+          }
         } else {
           toast.error("La respuesta del servidor no contiene artistas válidos.");
         }
@@ -100,10 +108,54 @@ const ArtistasA: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const params = new URLSearchParams();
+
+    if (page > 0) params.set('page', page.toString());
+    if (artistaFiltro.trim()) params.set('artista', artistaFiltro);
+    if (anyoFiltro.trim()) params.set('anyo', anyoFiltro);
+    if (paisFiltro.trim()) params.set('pais', paisFiltro);
+    if (generoFiltro.trim()) params.set('genero', generoFiltro);
+    if (hasSearched) params.set('buscar', '1');
+
+    setSearchParams(params, { replace: true });
+  }, [page, artistaFiltro, anyoFiltro, paisFiltro, generoFiltro, hasSearched, setSearchParams]);
+
+  useEffect(() => {
+    if (searchParams.get('buscar') === '1') {
+      buscarArtista(false);
+    }
+    // Solo restauramos la búsqueda al montar el listado.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const totalPages = Math.ceil(filteredArtistas.length / rowsPerPage);
+
+    if (totalPages > 0 && page >= totalPages) {
+      setPage(totalPages - 1);
+    }
+  }, [filteredArtistas.length, page]);
+
+  const buildReturnTo = () => {
+    const params = new URLSearchParams();
+
+    if (page > 0) params.set('page', page.toString());
+    if (artistaFiltro.trim()) params.set('artista', artistaFiltro);
+    if (anyoFiltro.trim()) params.set('anyo', anyoFiltro);
+    if (paisFiltro.trim()) params.set('pais', paisFiltro);
+    if (generoFiltro.trim()) params.set('genero', generoFiltro);
+    if (hasSearched) params.set('buscar', '1');
+
+    return `/admin/artistasA${params.toString() ? `?${params.toString()}` : ''}`;
+  };
+
   const handleCrear = () => navigate('/admin/ArtistasA/crear');
   const handleVolver = () => navigate('/home');
-  const handleEditar = (id: number) => navigate(`/admin/ArtistasA/editar/${id}`);
-  const handleConsultar = (id: number) => navigate(`/admin/ArtistasA/consultar/${id}`);
+  const handleEditar = (id: number) =>
+    navigate(`/admin/ArtistasA/editar/${id}`, { state: { returnTo: buildReturnTo() } });
+  const handleConsultar = (id: number) =>
+    navigate(`/admin/ArtistasA/consultar/${id}`, { state: { returnTo: buildReturnTo() } });
 
   const handleDelete = (id: number) => {
     const seleccionada = artistas.find(c => c.idArtista === id);
@@ -127,7 +179,9 @@ const ArtistasA: React.FC = () => {
       });
 
       if (response.ok) {
-        setArtistas(artistas.filter(c => c.idArtista !== ArtistaSeleccionada.idArtista));
+        const idBorrado = ArtistaSeleccionada.idArtista;
+        setArtistas((prev) => prev.filter(c => c.idArtista !== idBorrado));
+        setFilteredArtistas((prev) => prev.filter(c => c.idArtista !== idBorrado));
         toast.success("¡Artista borrado!");
       } else {
         toast.error("¡Error al borrar el artista!");
@@ -146,6 +200,10 @@ const ArtistasA: React.FC = () => {
     setAnyoFiltro('');
     setPaisFiltro('');
     setGeneroFiltro('');
+    setPage(0);
+    setHasSearched(false);
+    setArtistas([]);
+    setFilteredArtistas([]);
   };
 
   
@@ -200,6 +258,7 @@ const paisOptions = paisData.map((p: Pais) => ({
           
           <Select
             options={paisOptions}
+            value={paisOptions.find((option) => option.value === paisFiltro) || null}
             onChange={(selected) => setPaisFiltro(selected?.value || '')}
             placeholder="Filtrar por país"
           />
@@ -219,7 +278,7 @@ const paisOptions = paisData.map((p: Pais) => ({
           />
         </div>
         <div className="col-md-3 text-end">
-          <Button variant="primary" onClick={buscarArtista} aria-label="Buscar artistas">
+          <Button variant="primary" onClick={() => buscarArtista(true)} aria-label="Buscar artistas">
             <FaSearch className="me-2" />
             Buscar
           </Button>

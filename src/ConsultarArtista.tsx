@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Button, Form, Image, Col, Row, Container,InputGroup } from 'react-bootstrap';
 import { FaArrowLeft, FaEye} from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
@@ -32,6 +32,8 @@ const ConsultarArtista: React.FC = () => {
   const [artista, setArtista] = useState<Artista | null>(null);
   const [previewCaratula] = useState<string | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const returnTo = location.state?.returnTo || '/admin/artistasA';
 
   useEffect(() => {
     const fetchArtista = async () => {
@@ -58,7 +60,7 @@ const ConsultarArtista: React.FC = () => {
 
 
   const handleVolver = () => {
-    navigate('/admin/artistasA');
+    navigate(returnTo);
   };
 
 const obtenerNombreArchivo = (ruta: string | undefined | null): string => {

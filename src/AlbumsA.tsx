@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { FaArrowLeft,FaBomb,FaPlus, FaUpload } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import AlbumsTable from './AlbumsTable';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,11 +21,15 @@ interface Albums {
 const AlbumsA: React.FC = () => {
   const [albums, setAlbums] = useState<Albums[]>([]);
   const [filteredAlbums, setFilteredAlbums] = useState<Albums[]>([]);
-  const [tituloFiltro, setTituloFiltro] = useState('');
-  const [artistaFiltro, setArtistaFiltro] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [tituloFiltro, setTituloFiltro] = useState(() => searchParams.get('titulo') || '');
+  const [artistaFiltro, setArtistaFiltro] = useState(() => searchParams.get('artista') || '');
   const [showConfirm, setShowConfirm] = useState(false);
   const [albumSeleccionado, setAlbumSeleccionado] = useState<Albums | null>(null);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(() => {
+    const pageParam = Number(searchParams.get('page'));
+    return Number.isNaN(pageParam) || pageParam < 0 ? 0 : pageParam;
+  });
   const rowsPerPage = 10;
   const navigate = useNavigate();
   const [showMassDeleteConfirm, setShowMassDeleteConfirm] = useState(false);
@@ -74,15 +78,48 @@ const AlbumsA: React.FC = () => {
   }, []);
 
   useEffect(() => {
-  const filtrados = albums.filter(album => {
-    const titulo = album.titulo || '';
-    const artistaNombre = album.artista || '';
-    return titulo.toLowerCase().includes(tituloFiltro.toLowerCase()) &&
-           artistaNombre.toLowerCase().includes(artistaFiltro.toLowerCase());
-  });
-  setFilteredAlbums(filtrados);
-  setPage(0);
-}, [tituloFiltro, artistaFiltro, albums]);
+    const filtrados = albums.filter((album) => {
+      const titulo = album.titulo || '';
+      const artistaNombre = album.artista || '';
+
+      return (
+        titulo.toLowerCase().includes(tituloFiltro.toLowerCase()) &&
+        artistaNombre.toLowerCase().includes(artistaFiltro.toLowerCase())
+      );
+    });
+
+    setFilteredAlbums(filtrados);
+  }, [tituloFiltro, artistaFiltro, albums]);
+
+  // Mantiene página y filtros en la URL para poder restaurarlos al volver
+  // desde ConsultarAlbum o EditarAlbum.
+  useEffect(() => {
+    const params = new URLSearchParams();
+
+    if (page > 0) {
+      params.set('page', page.toString());
+    }
+
+    if (tituloFiltro.trim()) {
+      params.set('titulo', tituloFiltro);
+    }
+
+    if (artistaFiltro.trim()) {
+      params.set('artista', artistaFiltro);
+    }
+
+    setSearchParams(params, { replace: true });
+  }, [page, tituloFiltro, artistaFiltro, setSearchParams]);
+
+  // Si se borra el último elemento de la última página, retrocede una página.
+  // En cualquier otro borrado se conserva la página actual.
+  useEffect(() => {
+    const totalPages = Math.ceil(filteredAlbums.length / rowsPerPage);
+
+    if (totalPages > 0 && page >= totalPages) {
+      setPage(totalPages - 1);
+    }
+  }, [filteredAlbums.length, page, rowsPerPage]);
 
 
   const handleDelete = (id: number) => {
@@ -107,7 +144,9 @@ const AlbumsA: React.FC = () => {
       });
 
       if (response.ok) {
-        setAlbums(albums.filter((l) => l.idAlbum !== albumSeleccionado.idAlbum));
+        setAlbums((prevAlbums) =>
+          prevAlbums.filter((l) => l.idAlbum !== albumSeleccionado.idAlbum)
+        );
         toast.error("¡Album Borrado!");
       } else {
         console.error('Error al borrar el álbum');
@@ -130,12 +169,35 @@ const AlbumsA: React.FC = () => {
     navigate('/admin/albumsA/carga');
   };
 
+  const getReturnTo = () => {
+    const params = new URLSearchParams();
+
+    if (page > 0) {
+      params.set('page', page.toString());
+    }
+
+    if (tituloFiltro.trim()) {
+      params.set('titulo', tituloFiltro);
+    }
+
+    if (artistaFiltro.trim()) {
+      params.set('artista', artistaFiltro);
+    }
+
+    const query = params.toString();
+    return `/admin/albumsA${query ? `?${query}` : ''}`;
+  };
+
   const handleEditar = (id: number) => {
-    navigate(`/admin/albumsA/editar/${id}`);
+    navigate(`/admin/albumsA/editar/${id}`, {
+      state: { returnTo: getReturnTo() },
+    });
   };
 
   const handleConsultar = (id: number) => {
-    navigate(`/admin/albumsA/consultar/${id}`);
+    navigate(`/admin/albumsA/consultar/${id}`, {
+      state: { returnTo: getReturnTo() },
+    });
   };
 
   const handleBorradoMasivo = () => {
@@ -192,7 +254,10 @@ const AlbumsA: React.FC = () => {
       className="form-control"
       placeholder="Buscar por título"
       value={tituloFiltro}
-      onChange={(e) => setTituloFiltro(e.target.value)}
+      onChange={(e) => {
+        setTituloFiltro(e.target.value);
+        setPage(0);
+      }}
     />
   </div>
   <div className="col-md-3">
@@ -201,7 +266,10 @@ const AlbumsA: React.FC = () => {
       className="form-control"
       placeholder="Buscar por artista"
       value={artistaFiltro}
-      onChange={(e) => setArtistaFiltro(e.target.value)}
+      onChange={(e) => {
+        setArtistaFiltro(e.target.value);
+        setPage(0);
+      }}
     />
   </div>
   <div className="col-md-2 text-end">

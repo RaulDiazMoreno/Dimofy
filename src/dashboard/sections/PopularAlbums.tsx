@@ -21,7 +21,7 @@ export default function PopularAlbumsSection({ items }: { items: AlbumItem[] }) 
     if (idAlbum == null) return goToAlbums();
     // Ruta detalle (el componente AlbumDetail usa useParams<{id}>).
     // Si en tu router la ruta es distinta, cambia aquí el prefijo.
-    navigate(`/albums/${idAlbum}`);
+    navigate(`/albums/${idAlbum}`, { state: { returnTo: '/home' } });
   };
 
   return (

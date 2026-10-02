@@ -3,11 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDashboard } from "../hooks/useDashboardData";
 import "../common.css";
 import "../artistas.css";
-import {
-  buildArtistSources,
-  tryArtistSources,
-  ARTIST_PLACEHOLDER,
-} from "../utils/images";
+import { ARTIST_PLACEHOLDER } from "../utils/images";
+import LazyImage from "../components/LazyImage";
 import { goToArtistaDetalleByNombre } from "../utils/goToArtistaDetalle";
 
 type Props = {
@@ -41,15 +38,15 @@ export default function PopularArtistsPage({ userName }: Props) {
   });
 
   const navigate = useNavigate();
-  const items = (data?.artistas ?? []) as Array<{ artista: string }>;
+  const items = (data?.artistas ?? []) as Array<{ artista: string; imagen?: string | null }>;
 
   const goToArtistaDetalle = async (name: string) => {
     try {
-      await goToArtistaDetalleByNombre(navigate, name);
+      await goToArtistaDetalleByNombre(navigate, name, "/artistas-populares");
     } catch (e) {
       console.error(e);
       // Fallback a la ruta antigua (por si el endpoint de búsqueda falla)
-      navigate(`/artista/${encodeURIComponent(name)}`);
+      navigate("/artistas-populares");
     }
   };
 
@@ -74,9 +71,8 @@ export default function PopularArtistsPage({ userName }: Props) {
         </p>
       ) : (
         <div className="popular-artists-grid">
-          {items.map((a) => {
-            const candidates = buildArtistSources(a.artista);
-            const first = candidates[0] ?? ARTIST_PLACEHOLDER;
+          {items.map((a, index) => {
+            const src = a.imagen || ARTIST_PLACEHOLDER;
 
             return (
               <button
@@ -87,15 +83,16 @@ export default function PopularArtistsPage({ userName }: Props) {
                 aria-label={`Ver discografía de ${a.artista}`}
               >
                 <div className="popular-artist-avatar">
-                  <img
-                    src={first}
-                    data-src-idx="0"
+                  <LazyImage
+                    src={src}
                     className="popular-artist-img"
                     alt={a.artista}
-                    loading="lazy"
-                    onError={(e) =>
-                      tryArtistSources(e, candidates, ARTIST_PLACEHOLDER)
-                    }
+                    eager={index < 6}
+                    fetchPriority={index < 6 ? "high" : "auto"}
+                    onError={(e) => {
+                      if (e.currentTarget.src.endsWith(ARTIST_PLACEHOLDER)) return;
+                      e.currentTarget.src = ARTIST_PLACEHOLDER;
+                    }}
                   />
                 </div>
 

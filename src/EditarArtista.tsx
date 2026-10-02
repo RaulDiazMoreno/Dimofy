@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { Button, Form, Image, Col, Row, Container } from 'react-bootstrap';
 import { FaSave, FaArrowLeft, FaEdit } from 'react-icons/fa';
 import GenerosTable from './GenerosTable';
@@ -35,10 +35,12 @@ const EditarArtista: React.FC = () => {
   const [nuevaCaratula, setNuevaCaratula] = useState<File | null>(null);
   const [previewCaratula, setPreviewCaratula] = useState<string | null>(null);
   const [busquedaGenero, setBusquedaGenero] = useState('');
-  const [busquedaPais] = useState('');
+  const [busquedaPais, setBusquedaPais] = useState('');
   const [generoSeleccionado, setGeneroSeleccionado] = useState<Genero | null>(null);
   const [paisSeleccionado, setPaisSeleccionado] = useState<Pais | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const returnTo = location.state?.returnTo || '/admin/artistasA';
 
   
   useEffect(() => {
@@ -148,7 +150,7 @@ const EditarArtista: React.FC = () => {
 
       if (response.ok) {
         toast.success('¡Artista modificado correctamente!');
-        navigate('/admin/artistasA');
+        navigate(returnTo);
       } else {
         toast.error('¡Error al actualizar el artista!');
       }
@@ -158,7 +160,7 @@ const EditarArtista: React.FC = () => {
   };
 
   const handleVolver = () => {
-    navigate('/admin/artistasA');
+    navigate(returnTo);
   };
 
   if (!artista) return <p>Cargando...</p>;
@@ -209,11 +211,24 @@ const EditarArtista: React.FC = () => {
             </Form.Group>
           </Col>
           <Col md={6}>
+            <Row className="align-items-end mb-2">
+              <Col xs={8}>
+                <Form.Group>
+                  <Form.Label>Buscar País</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Buscar país..."
+                    value={busquedaPais}
+                    onChange={(e) => setBusquedaPais(e.target.value)}
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
             <PaisesTable
               onPaisSeleccionado={(pais) => {
                 if (pais) {
                   const paisAdaptado: Pais = {
-                    idpais: pais.id, 
+                    idpais: pais.id,
                     nombre: pais.nombre,
                     bandera: pais.bandera,
                   };

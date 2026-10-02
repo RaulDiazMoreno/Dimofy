@@ -8,7 +8,8 @@ import {
   isObject,
   isWrappedBackendItem,
 } from "../utils/NormalizeHelpers";
-import { buildArtistSources, ALBUM_PLACEHOLDER } from "../utils/images";
+import { ALBUM_PLACEHOLDER, ARTIST_PLACEHOLDER } from "../utils/images";
+import { getArtistImage } from "../../utils/imagePaths";
 
 export function adaptDashboardData(raw) {
   // Si el backend devuelve géneros "globales", intentamos derivar los géneros
@@ -92,11 +93,36 @@ export function adaptDashboardData(raw) {
  filteredGenres.map((g) => ({ genero: g.genero }));
 
   // ARTISTAS
-  const baseArtists = normalizeWrappedArray(raw.artistas);
-  const artistas = dedupeBy(baseArtists, (a) => norm(a.artista)).map((a) => ({
-    artista: a.artista,
-    imagen: buildArtistSources(a.artista)[0] ?? null,
-  }));
+  // Formato nuevo recomendado: { idArtista, nombre, foto }.
+  // También mantenemos compatibilidad con el formato antiguo basado en AlbumDTO.
+  const artistasRaw = (() => {
+    const v = raw.artistas;
+    if (v == null) return [];
+    if (Array.isArray(v)) return v;
+    const inner = extractArrayContainer(v);
+    if (inner) return inner;
+    if (isObject(v)) return [v];
+    return [];
+  })()
+    .map((x: any) => (isWrappedBackendItem(x) ? x.json : x))
+    .filter(Boolean);
+
+  const artistas = dedupeBy(
+    artistasRaw
+      .map((a: any) => {
+        const nombre = String(a?.nombre ?? a?.artista ?? "").trim();
+        if (!nombre) return null;
+        const foto = a?.foto ?? a?.fotoArtista ?? null;
+        return {
+          idArtista: a?.idArtista ?? a?.id ?? null,
+          artista: nombre,
+          // Una sola URL determinista. Si BBDD no tiene foto, usamos Nombre.webp.
+          imagen: getArtistImage(foto || `${nombre}.webp`),
+        };
+      })
+      .filter(Boolean),
+    (a: any) => norm(a.artista)
+  );
 
   // PLAYLISTS
   // El backend de listas no comparte el mismo shape que AlbumDTO.

@@ -73,3 +73,38 @@
 .admin-dash::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
+
+/* GRÁFICAS DEL DASHBOARD */
+.admin-charts-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.admin-chart-card { background:#fff; border-radius:12px; padding:24px; box-shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.06); min-width:0; }
+.admin-chart-wide { grid-column:1 / -1; }
+.admin-chart-card h2 { margin:0; color:#111; font-size:19px; }
+.admin-chart-card p { margin:5px 0 22px; color:#6b7280; font-size:13px; }
+.chart-bars { height:280px; display:flex; align-items:stretch; gap:12px; padding:12px 4px 0; border-bottom:1px solid #e5e7eb; }
+.chart-bar-item { flex:1; min-width:35px; display:flex; flex-direction:column; align-items:center; }
+.chart-value { height:24px; color:#374151; font-size:12px; font-weight:700; }
+.chart-bar-track { flex:1; width:min(44px,70%); display:flex; align-items:flex-end; background:#f3f4f6; border-radius:6px 6px 0 0; overflow:hidden; }
+.chart-bar { width:100%; background:#2563eb; border-radius:6px 6px 0 0; min-height:4px; }
+.chart-x-label { height:32px; padding-top:7px; font-size:11px; color:#4b5563; white-space:nowrap; }
+.chart-horizontal { display:flex; flex-direction:column; gap:11px; }
+.chart-row { display:grid; grid-template-columns:130px 1fr 42px; align-items:center; gap:10px; color:#111; font-size:12px; }
+.chart-row-label { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.chart-row-track { height:12px; background:#eef2f7; border-radius:999px; overflow:hidden; }
+.chart-row-bar { height:100%; background:#2563eb; border-radius:999px; min-width:3px; }
+.chart-row strong { text-align:right; }
+.chart-empty { min-height:120px; display:grid; place-items:center; color:#9ca3af; }
+@media (max-width:900px) { .admin-charts-grid { grid-template-columns:1fr; } .admin-chart-wide { grid-column:auto; } }
+@media (max-width:560px) { .admin-dash { padding:18px; } .admin-chart-card { padding:18px; } .chart-row { grid-template-columns:90px 1fr 34px; } .chart-bars { gap:5px; overflow-x:auto; } .chart-bar-item { min-width:38px; } }
+
+/* V10: contadores con formato de tarjeta y layout equilibrado */
+.admin-stats-card { width:100%; }
+.admin-kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; }
+.admin-kpi { background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; padding:16px; display:flex; flex-direction:column; gap:6px; }
+.admin-kpi span { color:#6b7280; font-size:12px; }
+.admin-kpi strong { color:#111827; font-size:25px; line-height:1; }
+.admin-charts-grid { align-items:stretch; }
+.admin-chart-left-stack { display:flex; flex-direction:column; gap:20px; min-width:0; height:100%; }
+.admin-chart-left-stack .admin-chart-card:first-child { flex:0 0 auto; height:auto; }
+.admin-chart-left-stack .admin-chart-card:last-child { flex:1 1 auto; }
+.admin-chart-genres { height:100%; }
+@media (max-width:900px) { .admin-chart-left-stack { height:auto; } .admin-chart-left-stack .admin-chart-card:last-child { flex:0 0 auto; } .admin-chart-genres { height:auto; } }
