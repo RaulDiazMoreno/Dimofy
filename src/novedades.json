@@ -1638,18 +1638,18 @@
   "artista" : {
     "idArtista" : 1657,
     "nombre" : "KATY PERRY",
-    "anyoInicio" : "1984",
+    "anyoInicio" : "2001",
     "paises" : {
       "idpais" : 57,
       "nombre" : "ESTADOS UNIDOS",
       "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\EEUU.png"
     },
-    "foto" : null,
+    "foto" : "/assets/Katy Perry.webp",
     "generos" : {
       "idGenero" : 41,
       "nombreGenero" : "POP"
     },
-    "resumenWikipedia" : null
+    "resumenWikipedia" : "Katheryn Elizabeth Hudson (Santa Bárbara, California, 25 de octubre de 1984), conocida artísticamente como Katy Perry, es una cantante, actriz, modelo, productora discográfica, bailarina, compositora, personalidad de televisión y empresaria estadounidense. Es una de las artistas musicales con mayores ventas, con más de 151 millones de unidades vendidas en todo el mundo. Ha dejado una influencia en la música pop gracias a su estilo camp, por lo que Vogue y Rolling Stone la han apodado la «Reina del Camp».[2][3] Billboard la posicionó en el cuarto lugar de su lista de «Los mejores artistas de canciones pop de todos los tiempos», en el puesto veinticinco de su ranking de «Los artistas pop más grandes del siglo XXI»,[4] y en la quinta posición de la lista «Las cantantes más populares y poderosas del siglo XXI».[5]\r\n\r\nA los 16 años, Perry lanzó un álbum de música góspel titulado Katy Hudson (2001) bajo el sello Red Hill Records, que no tuvo éxito comercial. A los 17 años, se trasladó a Los Ángeles para incursionar en la música secular, adoptando posteriormente el nombre artístico de Katy Perry, basado en el apellido de soltera de su madre. Aunque grabó un álbum con Columbia Records, fue desvinculada de la discográfica antes de firmar con Capitol Records. Perry alcanzó la fama con One of the Boys (2008), un álbum de pop rock que incluía su sencillo debut «I kissed a girl» y el sencillo sucesor «Hot n Cold», los cuales llegaron a las posiciones uno y tres, respectivamente, en el Billboard Hot 100 de Estados Unidos"
   },
   "cover" : "/assets/Cover/KatyPerry-ThinkingofTheOneThatGotAway.webp",
   "anyo" : "2026",
@@ -2206,4 +2206,28 @@
   "cover" : "/assets/Cover/ZZTop-Essentials(2026).webp",
   "anyo" : "2026",
   "titulo" : "Essentials (2026)"
+}, {
+  "genero" : {
+    "idGenero" : 83,
+    "nombreGenero" : "RECOPILATORIO"
+  },
+  "artista" : {
+    "idArtista" : 3859,
+    "nombre" : "Varios Artistas",
+    "anyoInicio" : "2025",
+    "paises" : {
+      "idpais" : 66,
+      "nombre" : "España",
+      "bandera" : "C:\\Users\\Rauld\\Downloads\\React\\sidebar-menu-app\\public\\assets\\Paises\\España.png"
+    },
+    "foto" : "/assets/Artistas/Varios Artistas.webp",
+    "generos" : {
+      "idGenero" : 83,
+      "nombreGenero" : "RECOPILATORIO"
+    },
+    "resumenWikipedia" : null
+  },
+  "cover" : "/assets/Cover/VariosArtistas-OfficialFIFAWorldCup2026™Album.jpg",
+  "anyo" : "2026",
+  "titulo" : "Official FIFA World Cup 2026™ Album"
 } ]
