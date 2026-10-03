@@ -40,31 +40,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isAdmin }) => {
 
         <ul className={styles.menu}>
           {isAdmin && (
-            <li onClick={() => handleNavigation('/admin/usuarios')}>
-              Usuarios
-            </li>
+            <li onClick={() => handleNavigation('/admin/usuarios')}><i className="bi bi-people-fill" /> <span>Usuarios</span></li>
           )}
 
-          <li onClick={() => handleNavigation(isAdmin ? '/admin/albumsA' : '/albums')}>
-            Albums
-          </li>
+          <li onClick={() => handleNavigation(isAdmin ? '/admin/albumsA' : '/albums')}><i className="bi bi-disc-fill" /> <span>Albums</span></li>
 
-          <li onClick={() => handleNavigation(isAdmin ? '/admin/artistasA' : '/artistas')}>
-            Artistas
-          </li>
+          <li onClick={() => handleNavigation(isAdmin ? '/admin/artistasA' : '/artistas')}><i className="bi bi-person-fill" /> <span>Artistas</span></li>
 
-          <li onClick={() => handleNavigation(isAdmin ? '/admin/generosA' : '/generos')}>
-            Géneros
-          </li>
+          <li onClick={() => handleNavigation(isAdmin ? '/admin/generosA' : '/generos')}><i className="bi bi-music-note-list" /> <span>Géneros</span></li>
 
-          <li onClick={() => handleNavigation(isAdmin ? '/admin/cancionesA' : '/canciones')}>
-            Canciones
-          </li>
+          <li onClick={() => handleNavigation(isAdmin ? '/admin/cancionesA' : '/canciones')}><i className="bi bi-music-note-beamed" /> <span>Canciones</span></li>
 
           {!isAdmin && (
-            <li onClick={() => handleNavigation('/listas')}>
-              Listas
-            </li>
+            <li onClick={() => handleNavigation('/listas')}><i className="bi bi-collection-play-fill" /> <span>Listas</span></li>
           )}
         </ul>
       </div>

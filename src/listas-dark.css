@@ -219,3 +219,47 @@
 .table.l-table td.actions-col{
   text-align: center;
 }
+
+/* DimoFy user light theme */
+body{background:#fff;color:#172033}
+.dark-page,.canciones-page,.listas-page,.lista-page,.albums-page,.simple-card-grid{background:#fff!important;color:#172033!important}
+.card,.simple-card,.album-card,.artist-card{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}
+h1,h2,h3,h4,h5,h6{color:#0d6efd}
+/* DimoFy light uniform overrides */
+.l-page,.l-shell,.l-panel,.l-table-wrap{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}
+.listas-title{color:#0d6efd!important}
+.table.l-table thead,.table.l-table thead tr,.table.l-table thead th{background:#eaf3ff!important;color:#0d6efd!important;border-color:#bfd8ff!important}
+.pagination.l-pagination .page-link{background:#fff!important;border-color:#cbdcf0!important;color:#0d6efd!important}
+.pagination.l-pagination .page-item.active .page-link{background:#0d6efd!important;color:#fff!important;border-color:#0d6efd!important}
+.modal-content.l-modal{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}.btn-close{filter:none!important}
+
+/* ===== DimoFy: usuario blanco/azul - Listas ===== */
+.listas-page{
+  min-height:100vh!important;
+  padding:22px 26px 34px!important;
+  background:#fff!important;
+  color:#172033!important;
+}
+.listas-panel{
+  max-width:1180px;
+  margin:0 auto;
+  padding:24px 18px 26px!important;
+  border-radius:18px!important;
+  background:#fff!important;
+  border:1px solid #dce6f2!important;
+  box-shadow:0 14px 36px rgba(32,76,121,.10)!important;
+  backdrop-filter:none!important;
+}
+.listas-title,.l-title-icon{color:#0d6efd!important}
+.l-btn,.l-btn-primary{
+  border-radius:999px!important;
+  border:1px solid #0d6efd!important;
+  background:#0d6efd!important;
+  color:#fff!important;
+  font-weight:800!important;
+  box-shadow:0 8px 18px rgba(13,110,253,.16)!important;
+}
+.l-btn:hover,.l-btn-primary:hover{background:#0b5ed7!important;border-color:#0b5ed7!important;color:#fff!important;filter:none!important}
+.l-table-wrap{background:#fff!important;border:1px solid #dce6f2!important;box-shadow:0 10px 28px rgba(32,76,121,.10)!important}
+.table.l-table thead,.table.l-table thead tr,.table.l-table thead th{background:#eaf3ff!important;color:#0d6efd!important;border-color:#bfd8ff!important}
+.table.l-table tbody,.table.l-table tbody td{background:#fff!important;color:#172033!important}

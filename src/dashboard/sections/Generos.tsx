@@ -33,7 +33,7 @@ export default function GenresSection({ items }: { items: GenreItem[] }) {
   return (
     <section className="genres-sec">
       <div className="sec-head">
-        <h2 className="sec-title">Tus Géneros</h2>
+        <h2 className="sec-title"><i className="bi bi-music-note-list" aria-hidden="true" /> Tus Géneros</h2>
         <Link className="sec-more" to="/dashboard/generos" state={{ genres: genreList }}>
            Mostrar todo
         </Link>
@@ -60,7 +60,7 @@ export default function GenresSection({ items }: { items: GenreItem[] }) {
                     <img className="genre-icon" src={src} alt={g.genero} />
                   </span>
                 </div>
-                <span className="genre-card-text">{g.genero}</span>
+                <span className={`genre-card-text ${g.genero.trim().length >= 15 ? "genre-card-text--long" : ""}`}>{g.genero}</span>
               </div>
             </button>
           );

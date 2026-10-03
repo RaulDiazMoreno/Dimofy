@@ -95,14 +95,14 @@ export default function Generos() {
     <main className="dash-new">
   <section className="genres-grid-wrap">
     <div className="dash-section-head">
-      <h2 className="dash-section-title">Géneros</h2>
+      <h2 className="dash-section-title"><i className="bi bi-music-note-list" aria-hidden="true" /> Géneros</h2>
       <button
           className="dash-section-back"
           onClick={goBack}
           type="button"
           aria-label="Volver"
           >
-          Volver
+          <i className="bi bi-arrow-left" aria-hidden="true" /> Volver
       </button>
     </div>
 
@@ -139,7 +139,7 @@ export default function Generos() {
                   />
                 </span>
               </div>
-              <span className="genre-card-text">{genero.nombreGenero}</span>
+              <span className={`genre-card-text ${genero.nombreGenero.trim().length >= 15 ? "genre-card-text--long" : ""}`}>{genero.nombreGenero}</span>
             </div>
           </button>
         );

@@ -18,7 +18,7 @@ const Layout: React.FC = () => {
   if (!user) return null; // o un loader
 
   return (
-  <div className={`${styles.layout} ${user.isAdmin ? styles.adminBackground : ""}`}>
+  <div className={`${styles.layout} ${user.isAdmin ? styles.adminBackground : styles.userBackground}`}>
     <Sidebar isAdmin={user.isAdmin} id={user.id} />
     <div className={styles.mainContent}>
       <Header />

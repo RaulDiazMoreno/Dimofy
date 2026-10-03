@@ -28,7 +28,7 @@ export default function PlaylistsSection({ items, loading, error }: Props) {
   return (
     <section className="popular-albums-sec">
       <div className="sec-head" style={{ marginTop: 6 }}>
-        <h2 className="sec-title">Tus Playlists</h2>
+        <h2 className="sec-title"><i className="bi bi-collection-play-fill" aria-hidden="true" /> Tus Playlists</h2>
         <Link className="sec-more" to="/playlists">
           Mostrar todo
         </Link>

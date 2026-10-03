@@ -188,7 +188,7 @@ const ArtistaDetalle: React.FC = () => {
       sx={{
         minHeight: "100vh",
         background:
-          "linear-gradient(180deg, #0f172a 0%, #111827 100%)",
+          "linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%)",
         pb: 6,
       }}
     >
@@ -198,10 +198,9 @@ const ArtistaDetalle: React.FC = () => {
           sx={{
             overflow: "hidden",
             borderRadius: "28px",
-            background:
-              "linear-gradient(135deg, rgba(30,41,59,0.96), rgba(15,23,42,0.92))",
-            border: "1px solid rgba(255,255,255,0.08)",
-            boxShadow: "0 25px 70px rgba(0,0,0,0.28)",
+            background: "#ffffff",
+            border: "1px solid #dbe7fb",
+            boxShadow: "0 18px 55px rgba(15, 23, 42, 0.10)",
           }}
         >
           <Grid container sx={{ alignItems: "stretch" }}>
@@ -212,8 +211,7 @@ const ArtistaDetalle: React.FC = () => {
                   minHeight: { xs: 280, md: 420 },
                   position: "relative",
                   overflow: "hidden",
-                  background:
-                    "radial-gradient(circle at center, rgba(255,255,255,0.08), rgba(255,255,255,0.02))",
+                  background: "#f8fbff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -243,8 +241,7 @@ const ArtistaDetalle: React.FC = () => {
                     position: "absolute",
                     inset: 0,
                     pointerEvents: "none",
-                    background:
-                      "linear-gradient(to top, rgba(15,23,42,0.55), rgba(15,23,42,0.04))",
+                    background: "linear-gradient(to top, rgba(13,110,253,0.06), transparent)",
                   }}
                 />
               </Box>
@@ -262,7 +259,7 @@ const ArtistaDetalle: React.FC = () => {
                 <Typography
                   variant="h3"
                   sx={{
-                    color: "#fff",
+                    color: "#0d6efd",
                     fontWeight: 800,
                     lineHeight: 1.1,
                     mb: 2,
@@ -294,25 +291,25 @@ const ArtistaDetalle: React.FC = () => {
                     <Chip
                       label={`Género: ${artista.generos?.nombreGenero ?? "-"}`}
                       sx={{
-                        backgroundColor: "rgba(59,130,246,0.18)",
-                        color: "#dbeafe",
-                        border: "1px solid rgba(96,165,250,0.24)",
+                        backgroundColor: "#eef5ff",
+                        color: "#0d6efd",
+                        border: "1px solid #bfd5ff",
                       }}
                     />
                     <Chip
                       label={`País: ${artista.paises?.nombre ?? "-"}`}
                       sx={{
-                        backgroundColor: "rgba(16,185,129,0.16)",
-                        color: "#d1fae5",
-                        border: "1px solid rgba(52,211,153,0.22)",
+                        backgroundColor: "#f3f8ff",
+                        color: "#0d6efd",
+                        border: "1px solid #cfe0ff",
                       }}
                     />
                     <Chip
                       label={`Inicio: ${artista.anyoInicio ?? "-"}`}
                       sx={{
-                        backgroundColor: "rgba(168,85,247,0.16)",
-                        color: "#f3e8ff",
-                        border: "1px solid rgba(192,132,252,0.22)",
+                        backgroundColor: "#f8fbff",
+                        color: "#0d6efd",
+                        border: "1px solid #dbe7fb",
                       }}
                     />
                   </Stack>
@@ -323,14 +320,14 @@ const ArtistaDetalle: React.FC = () => {
                       size="small"
                       sx={{
                         flexShrink: 0,
-                        color: "#fff",
-                        backgroundColor: "rgba(255,255,255,0.08)",
-                        border: "1px solid rgba(255,255,255,0.18)",
+                        color: "#0d6efd",
+                        backgroundColor: "#ffffff",
+                        border: "1px solid #0d6efd",
                         width: 34,
                         height: 34,
                         mt: "2px",
                         "&:hover": {
-                          backgroundColor: "rgba(255,255,255,0.16)",
+                          backgroundColor: "#eef5ff",
                         },
                       }}
                     >
@@ -344,8 +341,8 @@ const ArtistaDetalle: React.FC = () => {
                   sx={{
                     p: 3,
                     borderRadius: "20px",
-                    backgroundColor: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    backgroundColor: "#f8fbff",
+                    border: "1px solid #dbe7fb",
                     backdropFilter: "blur(8px)",
                     height: { xs: 220, md: 280 },
                     display: "flex",
@@ -356,7 +353,7 @@ const ArtistaDetalle: React.FC = () => {
                   <Typography
                     variant="overline"
                     sx={{
-                      color: "rgba(255,255,255,0.72)",
+                      color: "#0d6efd",
                       letterSpacing: 1.2,
                       display: "block",
                       mb: 1.5,
@@ -373,7 +370,7 @@ const ArtistaDetalle: React.FC = () => {
                       flex: 1,
                       minHeight: 0,
                       scrollbarWidth: "thin",
-                      scrollbarColor: "rgba(255,255,255,0.25) transparent",
+                      scrollbarColor: "#9bbcf3 transparent",
                       "&::-webkit-scrollbar": {
                         width: "8px",
                       },
@@ -381,18 +378,18 @@ const ArtistaDetalle: React.FC = () => {
                         background: "transparent",
                       },
                       "&::-webkit-scrollbar-thumb": {
-                        backgroundColor: "rgba(255,255,255,0.22)",
+                        backgroundColor: "#9bbcf3",
                         borderRadius: "999px",
                       },
                       "&::-webkit-scrollbar-thumb:hover": {
-                        backgroundColor: "rgba(255,255,255,0.34)",
+                        backgroundColor: "#0d6efd",
                       },
                     }}
                   >
                     <Typography
                       variant="body1"
                       sx={{
-                        color: "#e5e7eb",
+                        color: "#334155",
                         lineHeight: 1.85,
                         fontSize: "1rem",
                         whiteSpace: "pre-line",
@@ -420,7 +417,7 @@ const ArtistaDetalle: React.FC = () => {
               variant="h4"
               sx={{
                 fontWeight: 800,
-                color: "#ffffff",
+                color: "#0d6efd",
                 mb: 2.5,
               }}
             >
@@ -537,18 +534,26 @@ const ArtistaDetalle: React.FC = () => {
                 mt: 2.5,
                 pb: 1,
                 "& .MuiTypography-root": {
-                  color: "#ffffff",
-                  fontWeight: 600,
+                  color: "#0d6efd",
+                  fontWeight: 700,
                 },
                 "& .MuiButton-root": {
-                  color: "#ffffff",
-                  borderColor: "rgba(255,255,255,0.45)",
+                  color: "#0d6efd",
+                  border: "1px solid #0d6efd",
+                  borderColor: "#0d6efd",
+                  backgroundColor: "#ffffff",
                   fontWeight: 600,
+                  borderRadius: "8px",
+                  px: 1.5,
                   "&:hover": {
-                    backgroundColor: "rgba(255,255,255,0.08)",
+                    color: "#ffffff",
+                    backgroundColor: "#0d6efd",
+                    borderColor: "#0d6efd",
                   },
                   "&.Mui-disabled": {
-                    color: "rgba(255,255,255,0.35)",
+                    color: "#9bbcf3",
+                    borderColor: "#cfe0ff",
+                    backgroundColor: "#f8fbff",
                   },
                 },
               }}

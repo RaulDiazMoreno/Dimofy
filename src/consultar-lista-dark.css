@@ -187,3 +187,9 @@
 
 
 
+
+/* DimoFy user light theme */
+body{background:#fff;color:#172033}
+.dark-page,.canciones-page,.listas-page,.lista-page,.albums-page,.simple-card-grid{background:#fff!important;color:#172033!important}
+.card,.simple-card,.album-card,.artist-card{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}
+h1,h2,h3,h4,h5,h6{color:#0d6efd}

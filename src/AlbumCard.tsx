@@ -33,7 +33,7 @@ const AlbumCard: React.FC<Props> = ({ album }) => {
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden',
-        backgroundColor: '#000',
+        backgroundColor: '#ffffff',
         color: '#fff',
         transition: 'background-color 0.3s, transform 0.2s',
         '&:hover': {
@@ -54,7 +54,7 @@ const AlbumCard: React.FC<Props> = ({ album }) => {
             maxWidth: '100%',
             margin: '0 auto',
             objectFit: 'contain',
-            backgroundColor: '#1a1a1a',
+            backgroundColor: '#ffffff',
           }}
           onError={(e) => {
             (e.target as HTMLImageElement).src = '/assets/Cover/default.jpg';

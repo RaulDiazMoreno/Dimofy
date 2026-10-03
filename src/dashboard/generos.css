@@ -179,3 +179,47 @@
     height: 160px;
   }
 }
+
+
+/* =========================================================
+   DimoFy FIX FINAL - contenido de las cards de género centrado
+   y tipografía adaptable para nombres largos.
+   ========================================================= */
+.genre-card-colored {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.genre-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 16px !important;
+}
+
+.genre-card-text {
+  font-size: 1.45rem !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* 15 caracteres o más: reducir para que el nombre quepa en la card */
+.genre-card-text--long {
+  font-size: 1.05rem !important;
+  line-height: 1.12 !important;
+}
+
+@media (max-width: 640px) {
+  .genre-content { gap: 10px !important; }
+  .genre-card-text { font-size: 1.15rem !important; }
+  .genre-card-text--long { font-size: .9rem !important; }
+}

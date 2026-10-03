@@ -5,7 +5,7 @@
   display: block;
   padding: 16px 24px;
   color: #fff;
-  background: #0f0f10;
+  background: #ffffff;
 }
 
 .loading-section {
@@ -76,7 +76,7 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
-  background: #111;
+  background: #ffffff;
   border: 1px solid #222;
 }
 
@@ -103,7 +103,7 @@
   aspect-ratio: 1 / 1; /* cuadrada */
   object-fit: cover;    /* sin deformación */
   border-radius: 8px;
-  background: #111;
+  background: #ffffff;
   border: 1px solid #222;
 }
 
@@ -248,7 +248,7 @@
 /* Fondo blanco solo para dashboard admin */
 .dash-admin {
   background-color: #ffffff;
-  color: #111;
+  color: #ffffff;
   min-height: 100vh;
 }
 
@@ -259,5 +259,5 @@
 
 /* texto en oscuro */
 .dash-admin .dash-title {
-  color: #111;
+  color: #ffffff;
 }

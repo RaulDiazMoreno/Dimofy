@@ -330,3 +330,104 @@
   display: inline-flex;
   align-items: center;
 }
+
+/* DimoFy user light theme */
+body{background:#fff;color:#172033}
+.dark-page,.canciones-page,.listas-page,.lista-page,.albums-page,.simple-card-grid{background:#fff!important;color:#172033!important}
+.card,.simple-card,.album-card,.artist-card{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}
+h1,h2,h3,h4,h5,h6{color:#0d6efd}
+/* DimoFy light uniform overrides */
+.c-page,.c-shell,.c-panel,.c-table-wrap{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}
+.canciones-title{color:#0d6efd!important}
+.table.c-table thead,.table.c-table thead tr,.table.c-table thead th{background:#eaf3ff!important;color:#0d6efd!important;border-color:#bfd8ff!important}
+.pagination.c-pagination .page-link{background:#fff!important;border-color:#cbdcf0!important;color:#0d6efd!important}
+.pagination.c-pagination .page-item.active .page-link{background:#0d6efd!important;color:#fff!important;border-color:#0d6efd!important}
+.modal-content.c-modal{background:#fff!important;color:#172033!important;border-color:#dce6f2!important}.btn-close{filter:none!important}
+
+/* ===== DimoFy: usuario blanco/azul - Canciones ===== */
+.canciones-page{
+  min-height:100vh!important;
+  padding:22px 26px 34px!important;
+  background:#fff!important;
+  color:#172033!important;
+}
+.canciones-panel{
+  max-width:1180px;
+  margin:0 auto;
+  padding:24px 18px 26px;
+  border-radius:18px;
+  background:#fff!important;
+  border:1px solid #dce6f2!important;
+  box-shadow:0 14px 36px rgba(32,76,121,.10)!important;
+}
+.canciones-title,.c-title-icon{color:#0d6efd!important}
+.canciones-title::after{background:linear-gradient(90deg,#bfd8ff,transparent)!important}
+.canciones-filters{gap:12px!important}
+.c-input{
+  min-height:48px!important;
+  border-radius:999px!important;
+  border:1px solid #dce6f2!important;
+  background:#fff!important;
+  color:#172033!important;
+  box-shadow:none!important;
+}
+.c-input:focus{border-color:#0d6efd!important;box-shadow:0 0 0 3px rgba(13,110,253,.10)!important}
+.c-actions{display:flex!important;flex-direction:column!important;gap:10px!important}
+.c-btn,.c-btn-primary{
+  width:100%;
+  border-radius:999px!important;
+  border:1px solid #0d6efd!important;
+  background:#0d6efd!important;
+  color:#fff!important;
+  font-weight:800!important;
+  box-shadow:0 8px 18px rgba(13,110,253,.16)!important;
+}
+.c-btn:hover,.c-btn-primary:hover{background:#0b5ed7!important;border-color:#0b5ed7!important;color:#fff!important}
+.c-table-wrap{background:#fff!important;border:1px solid #dce6f2!important;box-shadow:0 10px 28px rgba(32,76,121,.10)!important}
+
+
+/* =========================================================
+   DimoFy FIX FINAL - filtros de Buscar Canciones
+   Debe permanecer al final para prevalecer sobre tema oscuro heredado.
+   ========================================================= */
+.canciones-page .form-control.c-input,
+.canciones-page .form-select.c-input {
+  background-color: #ffffff !important;
+  color: #172033 !important;
+  border: 1px solid #bfd8ff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #172033 !important;
+}
+
+.canciones-page .form-control.c-input::placeholder {
+  color: #0d6efd !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #0d6efd !important;
+}
+
+.canciones-page .form-control.c-input::-webkit-input-placeholder {
+  color: #0d6efd !important;
+  opacity: 1 !important;
+}
+
+.canciones-page .form-control.c-input::-moz-placeholder {
+  color: #0d6efd !important;
+  opacity: 1 !important;
+}
+
+.canciones-page .form-select.c-input {
+  color: #0d6efd !important;
+  -webkit-text-fill-color: #0d6efd !important;
+}
+
+.canciones-page .form-select.c-input option {
+  background: #ffffff;
+  color: #172033;
+}
+
+.canciones-page .form-control.c-input:focus,
+.canciones-page .form-select.c-input:focus {
+  background-color: #ffffff !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 3px rgba(13,110,253,.12) !important;
+}

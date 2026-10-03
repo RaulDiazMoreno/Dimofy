@@ -110,7 +110,7 @@ const Listas: React.FC = () => {
     <div className="listas-panel">
       <div className="listas-head">
           <h2 className="listas-title">
-            <span className="l-title-icon" aria-hidden="true">📋</span>
+            <i className="bi bi-collection-play-fill l-title-icon" aria-hidden="true" />
             Listas
           </h2>
 

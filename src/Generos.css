@@ -352,3 +352,86 @@
   min-width: 0;
 }
 
+
+/* ===== DimoFy: usuario blanco/azul - Géneros ===== */
+.dash-new{min-height:100vh;background:#fff!important;color:#172033!important;padding:22px 26px 34px!important}
+.genres-grid-wrap{max-width:1180px;margin:0 auto}
+.dash-section-title{color:#0d6efd!important}
+.dash-section-back{
+  background:#0d6efd!important;
+  border:1px solid #0d6efd!important;
+  color:#fff!important;
+  box-shadow:0 8px 18px rgba(13,110,253,.16)!important;
+}
+.dash-section-back:hover{background:#0b5ed7!important;border-color:#0b5ed7!important;color:#fff!important}
+
+/* DimoFy: botón volver secundario */
+.dash-section-back{background:#fff!important;border:1px solid #0d6efd!important;color:#0d6efd!important;display:inline-flex!important;align-items:center!important;gap:7px!important;box-shadow:none!important}
+.dash-section-back:hover{background:#eef5ff!important;border-color:#0b5ed7!important;color:#0b5ed7!important}
+
+
+/* =========================================================
+   DimoFy FIX FINAL - contenido de las cards de género centrado
+   y tipografía adaptable para nombres largos.
+   ========================================================= */
+.genre-card-colored {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.genre-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 16px !important;
+}
+
+.genre-card-text {
+  font-size: 1.45rem !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* 15 caracteres o más: reducir para que el nombre quepa en la card */
+.genre-card-text--long {
+  font-size: 1.05rem !important;
+  line-height: 1.12 !important;
+}
+
+@media (max-width: 640px) {
+  .genre-content { gap: 10px !important; }
+  .genre-card-text { font-size: 1.15rem !important; }
+  .genre-card-text--long { font-size: .9rem !important; }
+}
+
+/* =========================================================
+   DimoFy FIX - centrar el bloque completo de Géneros.
+   La regla global .dash-new > section sobrescribe el margin
+   del wrapper, por eso se fuerza aquí el centrado horizontal.
+   ========================================================= */
+.dash-new > section.genres-grid-wrap {
+  width: min(1180px, 100%) !important;
+  max-width: 1180px !important;
+  margin: 34px auto 46px !important;
+}
+
+.genres-grid-wrap .genres-grid-2 {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Icono + texto centrados como un único bloque */
+.genres-grid-wrap .genre-content {
+  justify-content: center !important;
+  text-align: center !important;
+}

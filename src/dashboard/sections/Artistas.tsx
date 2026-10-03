@@ -27,7 +27,7 @@ export default function ArtistsSection({ items }: { items: ArtistItem[] }) {
   return (
     <section className="popular-artists-sec">
       <div className="sec-head">
-        <h2 className="sec-title">Artistas favoritos</h2>
+        <h2 className="sec-title"><i className="bi bi-person-heart" aria-hidden="true" /> Artistas favoritos</h2>
         {/* Mantengo la ruta antigua para no romper el router existente */}
         <Link className="sec-more" to="/artistas-populares">
           Mostrar todo

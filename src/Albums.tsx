@@ -21,7 +21,6 @@
   } from '@mui/material';
   import { ThemeProvider, createTheme } from '@mui/material/styles';
   import CssBaseline from '@mui/material/CssBaseline';
-  import AlbumIcon from '@mui/icons-material/Album';
   import { FaArrowLeft } from 'react-icons/fa';
   import { useUser } from './UserContext';
   import { useNavigate, useSearchParams, Link } from 'react-router-dom';
@@ -234,16 +233,16 @@
       return `/albums?${params.toString()}`;
     }, [currentPage, appliedFilters]);
 
-    const darkPageTheme = createTheme({
+    const lightPageTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     background: {
-      default: '#070a0e',
-      paper: 'rgba(10, 14, 20, .62)',
+      default: '#f7f9fc',
+      paper: '#ffffff',
     },
     text: {
-      primary: 'rgba(255,255,255,.92)',
-      secondary: 'rgba(255,255,255,.65)',
+      primary: '#172033',
+      secondary: '#64748b',
     },
   },
   shape: { borderRadius: 14 },
@@ -251,40 +250,35 @@
 
 
   return (
-  <ThemeProvider theme={darkPageTheme}>
+  <ThemeProvider theme={lightPageTheme}>
     <CssBaseline />
 
     <Box
       sx={{
         minHeight: '100vh',
         pb: '4rem',
-        color: 'rgba(255,255,255,.92)',
-        background: `
-          radial-gradient(1200px 700px at 12% 8%, rgba(255,255,255,.08), transparent 60%),
-          radial-gradient(900px 600px at 90% 12%, rgba(255,255,255,.06), transparent 55%),
-          radial-gradient(900px 700px at 70% 90%, rgba(255,255,255,.05), transparent 55%),
-          #070a0e
-        `,
+        color: '#172033',
+        background: 'linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%)',
       }}
     >
-      <Container sx={{ pt: '1.4rem', maxWidth: '1180px !important' }}>
+      <Container maxWidth="lg" sx={{ pt: 5, pb: 4 }}>
         {/* Panel central (como en home) */}
         <Box
           sx={{
-            p: { xs: 1.6, sm: 2.2 },
-            borderRadius: 2,
-            background: 'rgba(10, 14, 20, .62)',
-            border: '1px solid rgba(255,255,255,.08)',
-            boxShadow: '0 14px 36px rgba(0,0,0,.55)',
+            p: { xs: 2, sm: 2.5 },
+            borderRadius: 3,
+            background: '#ffffff',
+            border: '1px solid #dce6f2',
+            boxShadow: '0 12px 36px rgba(30,64,175,.10)',
             backdropFilter: 'blur(10px)',
           }}
         >
           <Typography
-            variant="h5"
+            variant="h4"
             gutterBottom
-            sx={{ display: 'flex', alignItems: 'center', fontWeight: 800, letterSpacing: '.2px' }}
+            sx={{ fontWeight: 900, mb: 2, color: '#0d6efd', fontSize: { xs: '2rem', md: '2.35rem' } }}
           >
-            <AlbumIcon sx={{ mr: 1 }} /> Buscar Álbumes
+            Buscar álbumes
           </Typography>
 
           {/* Filtros */}
@@ -295,13 +289,13 @@
                   <FormControl
                     fullWidth
                     sx={{
-                      '& .MuiInputLabel-root': { color: 'rgba(255,255,255,.65)' },
+                      '& .MuiInputLabel-root': { color: '#64748b' },
                       '& .MuiOutlinedInput-root': {
-                        background: 'rgba(0,0,0,.35)',
-                        borderRadius: 2,
-                        '& fieldset': { borderColor: 'rgba(255,255,255,.12)' },
-                        '&:hover fieldset': { borderColor: 'rgba(255,255,255,.18)' },
-                        '&.Mui-focused fieldset': { borderColor: 'rgba(255,255,255,.22)' },
+                        background: '#ffffff',
+                        borderRadius: 999,
+                        '& fieldset': { borderColor: '#e6f0fb' },
+                        '&:hover fieldset': { borderColor: '#9ec5fe' },
+                        '&.Mui-focused fieldset': { borderColor: '#0d6efd' },
                       },
                     }}
                   >
@@ -315,8 +309,8 @@
                       MenuProps={{
                         PaperProps: {
                           sx: {
-                            backgroundColor: '#0b0f14',
-                            border: '1px solid rgba(255,255,255,.10)',
+                            backgroundColor: '#ffffff',
+                            border: '1px solid #dce6f2',
                           },
                         },
                       }}
@@ -343,15 +337,15 @@
                     error={!!errors[field as keyof typeof errors]}
                     helperText={errors[field as keyof typeof errors]}
                     sx={{
-                      '& .MuiInputLabel-root': { color: 'rgba(255,255,255,.65)' },
+                      '& .MuiInputLabel-root': { color: '#64748b' },
                       '& .MuiFormHelperText-root': { color: 'rgba(255,150,150,.85)' },
                       '& .MuiOutlinedInput-root': {
-                        background: 'rgba(0,0,0,.35)',
-                        borderRadius: 2,
-                        color: 'rgba(255,255,255,.92)',
-                        '& fieldset': { borderColor: 'rgba(255,255,255,.12)' },
-                        '&:hover fieldset': { borderColor: 'rgba(255,255,255,.18)' },
-                        '&.Mui-focused fieldset': { borderColor: 'rgba(255,255,255,.22)' },
+                        background: '#ffffff',
+                        borderRadius: 999,
+                        color: '#172033',
+                        '& fieldset': { borderColor: '#e6f0fb' },
+                        '&:hover fieldset': { borderColor: '#9ec5fe' },
+                        '&.Mui-focused fieldset': { borderColor: '#0d6efd' },
                       },
                       '& input::placeholder': { color: 'rgba(255,255,255,.45)', opacity: 1 },
                     }}
@@ -362,19 +356,21 @@
           </Grid>
 
           {/* Acciones */}
-          <Box sx={{ mt: 1.2, display: 'flex', gap: 1.2, flexWrap: 'wrap' }}>
+          <Box sx={{ mt: 1.5, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 1.1, flexWrap: 'wrap' }}>
             <Button
               onClick={handleBuscar}
+              startIcon={<i className="bi bi-search" aria-hidden="true" />}
               aria-label="Buscar álbumes"
               sx={{
-                height: 38,
+                height: 40,
+                width: { xs: '100%', sm: '25%' }, minWidth: 150,
                 px: 2,
                 fontWeight: 800,
-                borderRadius: 2,
+                borderRadius: 999,
                 color: '#fff',
                 background:
-                  'linear-gradient(135deg, rgba(255,110,196,.92), rgba(120,115,245,.92))',
-                boxShadow: '0 10px 24px rgba(0,0,0,.35)',
+                  'linear-gradient(135deg, #0d6efd, #3d8bfd)',
+                boxShadow: '0 10px 24px rgba(13,110,253,.20)',
                 '&:hover': { filter: 'brightness(1.05)' },
               }}
             >
@@ -383,19 +379,18 @@
 
             <Button
               onClick={handleLimpiar}
+              startIcon={<i className="bi bi-brush" aria-hidden="true" />}
               aria-label="Limpiar filtros"
               sx={{
-                height: 38,
+                height: 40,
+                width: { xs: '100%', sm: '25%' }, minWidth: 150,
                 px: 2,
                 fontWeight: 800,
-                borderRadius: 2,
-                border: '1px solid rgba(255,255,255,.14)',
-                color: 'rgba(255,255,255,.92)',
-                background: 'rgba(255,255,255,.08)',
-                '&:hover': {
-                  background: 'rgba(255,255,255,.12)',
-                  borderColor: 'rgba(255,255,255,.22)',
-                },
+                borderRadius: 999,
+                border: '1px solid #0d6efd',
+                color: '#0d6efd',
+                background: '#fff',
+                '&:hover': { background: '#eef5ff', borderColor: '#0b5ed7' },
               }}
             >
               Limpiar
@@ -421,7 +416,7 @@
           {/* Resultados */}
           {!loading && albums.length > 0 && (
             <Box sx={{ mt: 2 }}>
-              <Typography variant="h6" gutterBottom sx={{ fontWeight: 800 }}>
+              <Typography variant="h6" gutterBottom sx={{ fontWeight: 900, color: '#0d6efd' }}>
                 Resultados ({totalElements})
               </Typography>
 
@@ -435,15 +430,15 @@
                     >
                       <Card
                         sx={{
-                          borderRadius: 2,
+                          borderRadius: 3,
                           overflow: 'hidden',
-                          background: 'rgba(0,0,0,.35)',
-                          border: '1px solid rgba(255,255,255,.10)',
-                          boxShadow: '0 10px 24px rgba(0,0,0,.45)',
+                          background: '#ffffff',
+                          border: '1px solid #dce6f2',
+                          boxShadow: '0 8px 24px rgba(30,64,175,.10)',
                           transition: 'transform 160ms ease, border-color 160ms ease',
                           '&:hover': {
                             transform: 'translateY(-2px)',
-                            borderColor: 'rgba(255,255,255,.18)',
+                            borderColor: '#9ec5fe',
                           },
                         }}
                       >
@@ -466,11 +461,11 @@
                           <Typography
                             variant="subtitle1"
                             noWrap
-                            sx={{ fontWeight: 800, color: 'rgba(255,255,255,.92)' }}
+                            sx={{ fontWeight: 900, color: '#0d6efd' }}
                           >
                             {album.titulo}
                           </Typography>
-                          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,.65)' }}>
+                          <Typography variant="body2" sx={{ color: '#64748b' }}>
                             Año: {album.anyo}
                           </Typography>
                         </CardContent>
@@ -497,7 +492,7 @@
             <Typography
               variant="body1"
               align="center"
-              sx={{ mt: 3, color: 'rgba(255,255,255,.65)' }}
+              sx={{ mt: 3, color: '#64748b' }}
             >
               No se encontraron álbumes con los criterios seleccionados.
             </Typography>
@@ -509,16 +504,17 @@
               onClick={() => navigate('/home')}
               startIcon={<FaArrowLeft />}
               sx={{
-                height: 38,
+                height: 40,
+                width: 'auto', minWidth: 130,
                 px: 2,
                 fontWeight: 800,
-                borderRadius: 2,
-                border: '1px solid rgba(255,255,255,.14)',
-                color: 'rgba(255,255,255,.92)',
-                background: 'rgba(255,255,255,.08)',
+                borderRadius: 999,
+                border: '1px solid #0d6efd',
+                color: '#0d6efd',
+                background: '#fff',
                 '&:hover': {
-                  background: 'rgba(255,255,255,.12)',
-                  borderColor: 'rgba(255,255,255,.22)',
+                  background: '#eef5ff',
+                  borderColor: '#0b5ed7',
                 },
               }}
             >

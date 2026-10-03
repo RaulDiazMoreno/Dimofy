@@ -81,7 +81,7 @@ export default function GenerosPage() {
                     <img className="genre-icon" src={src} alt={g.genero} />
                   </span>
                 </div>
-                <span className="genre-card-text">{g.genero}</span>
+                <span className={`genre-card-text ${g.genero.trim().length >= 15 ? "genre-card-text--long" : ""}`}>{g.genero}</span>
               </div>
             </button>
           );

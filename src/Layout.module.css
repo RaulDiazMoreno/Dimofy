@@ -17,3 +17,8 @@
 .adminBackground {
   background-color: #ffffff;
 }
+.layout{background:#f7f9fc}.mainContent{background:#f7f9fc}.pageContent{background:#f7f9fc;color:#172033}
+
+.userBackground{background:#fff;color:#172033}
+.userBackground .mainContent,.userBackground .pageContent{background:#fff;color:#172033}
+.userBackground .pageContent h1,.userBackground .pageContent h2,.userBackground .pageContent h3,.userBackground .pageContent h4,.userBackground .pageContent h5,.userBackground .pageContent h6{color:#0d6efd}

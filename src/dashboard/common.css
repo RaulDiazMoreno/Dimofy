@@ -266,3 +266,20 @@ body {
 .dash-admin-saas .novedades-table tbody tr:hover td{
   background: #f3f4f6;
 }
+
+/* ===== DimoFy light redesign (usuario) ===== */
+:root{--bg:#f7f9fc;--surface:#ffffff;--surface-2:#f1f6fc;--text:#172033;--muted:#64748b;--muted-2:#475569;--brand:#0d6efd;--brand-2:#3d8bfd;--brand-3:#0a58ca;--border:#dce6f2;--shadow-1:0 8px 24px rgba(30,64,175,.08);--shadow-2:0 14px 34px rgba(30,64,175,.14)}
+html,body,#root{background:var(--bg);color:var(--text)}
+.dash-new:not(.dash-admin-saas){background:linear-gradient(180deg,#fff 0,#f7faff 100%);color:var(--text)}
+.dash-new:not(.dash-admin-saas) .sec-title{color:#172033;display:flex;align-items:center;gap:10px}
+.dash-new:not(.dash-admin-saas) .sec-title i{color:var(--brand);font-size:1.08em}
+.dash-new:not(.dash-admin-saas) .sec-more{color:var(--brand);background:#edf5ff}
+.dash-new:not(.dash-admin-saas) .sec-more:hover{background:#dcecff;color:#0a58ca}
+.card{background:#fff;border-color:var(--border)}
+.img-square{background:#eef4fb;border-color:var(--border)}
+.chip{background:#f3f7fc;color:var(--text);border-color:var(--border)}
+
+/* Uniform user theme */
+.dash-new:not(.dash-admin-saas){background:#fff!important;color:#172033!important}
+.dash-new:not(.dash-admin-saas) .section-title,.dash-new:not(.dash-admin-saas) h1,.dash-new:not(.dash-admin-saas) h2,.dash-new:not(.dash-admin-saas) h3{color:#0d6efd!important}
+.dash-new:not(.dash-admin-saas) .sec,.dash-new:not(.dash-admin-saas) .section,.dash-new:not(.dash-admin-saas) .card{background:#fff!important;border-color:#dce6f2!important;color:#172033!important}

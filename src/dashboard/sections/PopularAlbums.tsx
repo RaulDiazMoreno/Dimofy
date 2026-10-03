@@ -27,7 +27,7 @@ export default function PopularAlbumsSection({ items }: { items: AlbumItem[] }) 
   return (
     <section className="popular-albums-sec">
       <div className="sec-head">
-        <h2 className="sec-title">Novedades</h2>
+        <h2 className="sec-title"><i className="bi bi-disc-fill" aria-hidden="true" /> Novedades</h2>
         {/* Mantengo la ruta antigua para no romper el router existente */}
         <Link className="sec-more" to="/albums-populares">
           Mostrar todo

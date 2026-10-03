@@ -130,10 +130,9 @@ const AlbumDetail: React.FC = () => {
           sx={{
             overflow: "hidden",
             borderRadius: "28px",
-            background:
-              "linear-gradient(135deg, rgba(30,41,59,0.96), rgba(15,23,42,0.92))",
-            border: "1px solid rgba(255,255,255,0.08)",
-            boxShadow: "0 25px 70px rgba(0,0,0,0.20)",
+            background: "#ffffff",
+            border: "1px solid #dbeafe",
+            boxShadow: "0 18px 50px rgba(15,23,42,0.10)",
           }}
         >
           <Grid container sx={{ alignItems: "stretch" }}>
@@ -144,8 +143,7 @@ const AlbumDetail: React.FC = () => {
                   minHeight: { xs: 300, md: 430 },
                   position: "relative",
                   overflow: "hidden",
-                  background:
-                    "radial-gradient(circle at center, rgba(255,255,255,0.08), rgba(255,255,255,0.02))",
+                  background: "#eff6ff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -176,8 +174,7 @@ const AlbumDetail: React.FC = () => {
                     position: "absolute",
                     inset: 0,
                     pointerEvents: "none",
-                    background:
-                      "linear-gradient(to top, rgba(15,23,42,0.50), rgba(15,23,42,0.05))",
+                    background: "linear-gradient(to top, rgba(13,110,253,0.06), transparent)",
                   }}
                 />
               </Box>
@@ -196,7 +193,7 @@ const AlbumDetail: React.FC = () => {
                 <Typography
                   variant="overline"
                   sx={{
-                    color: "rgba(255,255,255,0.65)",
+                    color: "#64748b",
                     letterSpacing: 1.5,
                     mb: 1,
                   }}
@@ -207,7 +204,7 @@ const AlbumDetail: React.FC = () => {
                 <Typography
                   variant="h3"
                   sx={{
-                    color: "#fff",
+                    color: "#0d6efd",
                     fontWeight: 800,
                     lineHeight: 1.08,
                     mb: 1.5,
@@ -220,7 +217,7 @@ const AlbumDetail: React.FC = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    color: "#cbd5e1",
+                    color: "#2563eb",
                     fontWeight: 500,
                     mb: 2.5,
                   }}
@@ -250,27 +247,27 @@ const AlbumDetail: React.FC = () => {
                     <Chip
                       label={`Género: ${album.genero ?? "-"}`}
                       sx={{
-                        backgroundColor: "rgba(59,130,246,0.18)",
-                        color: "#dbeafe",
-                        border: "1px solid rgba(96,165,250,0.24)",
+                        backgroundColor: "#eff6ff",
+                        color: "#0d6efd",
+                        border: "1px solid #bfdbfe",
                       }}
                     />
 
                     <Chip
                       label={`Año: ${album.anyo ?? "-"}`}
                       sx={{
-                        backgroundColor: "rgba(16,185,129,0.16)",
-                        color: "#d1fae5",
-                        border: "1px solid rgba(52,211,153,0.22)",
+                        backgroundColor: "#eff6ff",
+                        color: "#0d6efd",
+                        border: "1px solid #bfdbfe",
                       }}
                     />
 
                     <Chip
                       label={`Canciones: ${numeroCanciones}`}
                       sx={{
-                        backgroundColor: "rgba(168,85,247,0.16)",
-                        color: "#f3e8ff",
-                        border: "1px solid rgba(192,132,252,0.22)",
+                        backgroundColor: "#eff6ff",
+                        color: "#0d6efd",
+                        border: "1px solid #bfdbfe",
                       }}
                     />
                   </Stack>
@@ -281,14 +278,14 @@ const AlbumDetail: React.FC = () => {
                       size="small"
                       sx={{
                         flexShrink: 0,
-                        color: "#fff",
-                        backgroundColor: "rgba(255,255,255,0.08)",
-                        border: "1px solid rgba(255,255,255,0.18)",
+                        color: "#0d6efd",
+                        backgroundColor: "#ffffff",
+                        border: "1px solid #0d6efd",
                         width: 34,
                         height: 34,
                         mt: "2px",
                         "&:hover": {
-                          backgroundColor: "rgba(255,255,255,0.16)",
+                          backgroundColor: "#eff6ff",
                         },
                       }}
                     >
@@ -314,7 +311,7 @@ const AlbumDetail: React.FC = () => {
             variant="h4"
             sx={{
               fontWeight: 800,
-              color: "#0f172a",
+              color: "#0d6efd",
               mb: 3,
             }}
           >

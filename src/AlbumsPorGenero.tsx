@@ -68,7 +68,7 @@ const AlbumsPorGenero = () => {
   }, [albums, currentPage]);
 
   return (
-    <Box sx={{ minHeight: "100vh", background: "#050505", p: { xs: 2, md: 4 } }}>
+    <Box sx={{ minHeight: "100vh", background: "#ffffff", p: { xs: 2, md: 4 } }}>
       <Box sx={{ maxWidth: 1400, mx: "auto" }}>
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
           <Typography variant="h4" sx={{ color: "#fff", fontWeight: 800 }}>
