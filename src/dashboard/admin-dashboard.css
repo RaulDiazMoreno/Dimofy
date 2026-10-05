@@ -108,3 +108,18 @@
 .admin-chart-left-stack .admin-chart-card:last-child { flex:1 1 auto; }
 .admin-chart-genres { height:100%; }
 @media (max-width:900px) { .admin-chart-left-stack { height:auto; } .admin-chart-left-stack .admin-chart-card:last-child { flex:0 0 auto; } .admin-chart-genres { height:auto; } }
+
+/* V14: mapa mundial interactivo de artistas por país */
+.admin-world-map-card { overflow:visible; }
+.world-map-wrapper { position:relative; width:100%; min-height:300px; }
+.world-map-svg { display:block; width:100%; height:auto; max-height:390px; background:#f8fbff; border:1px solid #dbeafe; border-radius:12px; }
+.world-map-country { cursor:pointer; transition:filter .15s ease, stroke-width .15s ease; vector-effect:non-scaling-stroke; }
+.world-map-country:hover { filter:brightness(.88); stroke:#0d6efd; stroke-width:1.6; }
+.world-map-tooltip { position:absolute; z-index:20; min-width:150px; max-width:230px; pointer-events:none; background:#fff; border:1px solid #bfdbfe; border-radius:10px; box-shadow:0 8px 24px rgba(15,23,42,.18); padding:10px 12px; color:#1f2937; transform:translateY(-100%); }
+.world-map-tooltip-title { display:flex; align-items:center; gap:8px; margin-bottom:4px; color:#0d6efd; }
+.world-map-tooltip-title img { width:28px; height:18px; object-fit:cover; border-radius:2px; border:1px solid #e5e7eb; }
+.world-map-tooltip span { font-size:12px; color:#475569; }
+.world-map-legend { display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:10px; font-size:11px; color:#64748b; }
+.world-map-gradient { width:130px; height:9px; border-radius:999px; background:linear-gradient(90deg,#eef2f7,#93c5fd,#0d6efd); }
+.world-map-empty { min-height:280px; display:grid; place-items:center; color:#64748b; background:#f8fbff; border:1px solid #dbeafe; border-radius:12px; }
+@media (max-width:700px) { .world-map-wrapper { min-height:220px; } .world-map-tooltip { max-width:180px; } .world-map-legend { justify-content:center; } }
