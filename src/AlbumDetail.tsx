@@ -329,7 +329,7 @@ const AlbumDetail: React.FC = () => {
               overflow: "hidden",
             }}
           >
-            <CancionesTabla canciones={album.canciones || []} />
+            <CancionesTabla canciones={album.canciones || []} artistaFallback={album.artista} albumTitulo={album.titulo} />
           </Paper>
         </Box>
       </Container>

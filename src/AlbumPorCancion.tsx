@@ -146,7 +146,7 @@ const AlbumPorCancion: React.FC = () => {
               <Typography variant="h6">Canciones</Typography>
             </Grid>
             <Grid item xs={12}>
-                <CancionesTabla canciones={album?.canciones || []} />
+                <CancionesTabla canciones={album?.canciones || []} artistaFallback={album?.artista} albumTitulo={album?.titulo} />
             </Grid>
           </Grid>
         </>

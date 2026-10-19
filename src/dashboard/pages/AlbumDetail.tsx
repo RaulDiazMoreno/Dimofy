@@ -156,7 +156,7 @@ const AlbumDetail: React.FC = () => {
           <Typography variant="h6">Canciones</Typography>
         </Grid>
         <Grid item xs={12}>
-          <CancionesTabla canciones={album?.canciones || []} />
+          <CancionesTabla canciones={(album?.canciones || []).map((c) => ({ ...c, artista: (c as Cancion & { artista?: string }).artista || album?.artista }))} albumTitulo={album?.titulo} />
         </Grid>
       </Grid>
     </Paper>

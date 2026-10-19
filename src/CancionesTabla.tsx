@@ -1,14 +1,36 @@
-import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
-import { FaClock } from "react-icons/fa";
+import { Box, Button, Divider, Paper, Stack, Typography } from "@mui/material";
+import { FaClock, FaYoutube } from "react-icons/fa";
 
 interface Cancion {
   id: number;
   titulo: string;
   duracion: string;
+  artista?: string;
 }
 
 interface Props {
   canciones: Cancion[];
+  artistaFallback?: string;
+  albumTitulo?: string;
+}
+
+function esVariosArtistas(artista?: string) {
+  const normalizado = (artista || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim()
+    .toLowerCase();
+  return normalizado === "varios artistas" || normalizado === "various artists";
+}
+
+function abrirBusquedaYouTube(titulo: string, artista?: string, albumTitulo?: string) {
+  // En recopilatorios, el nombre genérico del artista no ayuda a encontrar el vídeo.
+  const consulta = esVariosArtistas(artista)
+    ? [titulo, albumTitulo].filter(Boolean).join(" ").trim()
+    : [titulo, artista].filter(Boolean).join(" ").trim();
+  if (!consulta) return;
+  const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(consulta)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
 }
 
 const formatDuration = (value?: string) => {
@@ -16,7 +38,7 @@ const formatDuration = (value?: string) => {
   return value;
 };
 
-export default function CancionesTabla({ canciones }: Props) {
+export default function CancionesTabla({ canciones, artistaFallback, albumTitulo }: Props) {
   if (!canciones || canciones.length === 0) {
     return (
       <Paper
@@ -42,7 +64,7 @@ export default function CancionesTabla({ canciones }: Props) {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "70px 1fr 100px",
+          gridTemplateColumns: "50px minmax(0, 1fr) 100px minmax(110px, auto)",
           alignItems: "center",
           px: { xs: 2, md: 3 },
           py: 1.2,
@@ -56,6 +78,7 @@ export default function CancionesTabla({ canciones }: Props) {
         <Box>#</Box>
         <Box>Título</Box>
         <Box sx={{ textAlign: "right" }}>Duración</Box>
+        <Box sx={{ textAlign: "right" }}>YouTube</Box>
       </Box>
 
       <Divider />
@@ -81,7 +104,7 @@ export default function CancionesTabla({ canciones }: Props) {
             <Box
               sx={{
                 display: "grid",
-                gridTemplateColumns: "70px 1fr 100px",
+                gridTemplateColumns: "50px minmax(0, 1fr) 100px minmax(110px, auto)",
                 alignItems: "center",
                 px: { xs: 2, md: 3 },
                 py: 1.5,
@@ -138,6 +161,27 @@ export default function CancionesTabla({ canciones }: Props) {
                   {formatDuration(cancion.duracion)}
                 </Typography>
               </Stack>
+
+              {/* Búsqueda del tema en YouTube (sin API ni cambios en backend) */}
+              <Box sx={{ display: "flex", justifyContent: "flex-end", pl: 1 }}>
+                <Button
+                  variant="outlined"
+                  size="small"
+                  startIcon={<FaYoutube />}
+                  onClick={() => abrirBusquedaYouTube(cancion.titulo, cancion.artista || artistaFallback, albumTitulo)}
+                  aria-label={`Buscar ${cancion.titulo}${esVariosArtistas(cancion.artista || artistaFallback) ? (albumTitulo ? ` del álbum ${albumTitulo}` : "") : (cancion.artista || artistaFallback ? ` de ${cancion.artista || artistaFallback}` : "")} en YouTube`}
+                  sx={{
+                    textTransform: "none",
+                    whiteSpace: "nowrap",
+                    minWidth: 0,
+                    borderColor: "#d1d5db",
+                    color: "#b91c1c",
+                    "&:hover": { borderColor: "#b91c1c", backgroundColor: "#fef2f2" },
+                  }}
+                >
+                  Buscar
+                </Button>
+              </Box>
             </Box>
           </Paper>
         ))}
